@@ -5,6 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    isPhishing: false,
+    currentPhishing: 1
   },
   mutations: {
   },
