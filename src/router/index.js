@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import Phishing1 from '@/components/Phishing1'
 import Phishing2 from '@/components/Phishing2'
 import Phishing3 from '@/components/Phishing3'
+import Mail03 from '@/components/Campaign/Mail03'
+
 import Home from '@/views/Home'
 import About from '@/views/About'
 
@@ -14,6 +16,18 @@ Vue.use(VueRouter)
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/c',
+    name:'Campaign',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Campaign.vue'),
+    children:[
+      {
+        path:'1',
+        name: 'mail03',
+        component: Mail03,
+      },
+    ]
   },
   {
     path: '/test',
