@@ -39,7 +39,12 @@
 								<tr>
 									<td align="center" style="padding-bottom:15px"><span style="font-size:13px;font-family:Arial,Verdana;color:#323232"><b style="color:#e1372b">IMPORTANT :</b> <b>Pour recevoir votre lot, cliquez ci-dessous et compl&eacute;ter les informations demand&eacute;es </b><br />
 									<br />
-									<a href="http://grossearnarque.com" rel="noreferrer" style="font-size:20px" target="_blank"><b><u>&gt;&gt;&gt; Je clique et je re&ccedil;ois mon lot &lt;&lt;&lt; </u></b></a><b><u> </u></b> </span></td>
+									<div class="modal-feedback">
+										<span class="modal-feedback_error"> ici on explique le pourquoi </span>		
+									<a class="focus-error" href="http://grossearnarque.com" rel="noreferrer" style="font-size:20px" target="_blank"><b><u>&gt;&gt;&gt; Je clique et je re&ccedil;ois mon lot &lt;&lt;&lt; </u></b></a>
+									</div>
+									<b><u> </u></b> </span></td>
+									
 								</tr>
 							</tbody>
 						</table>
@@ -60,6 +65,7 @@
 
 <script>
 export default {
+	props:["error"],
 	mounted(){
 	
 			this.$store.state.isPhishing = false

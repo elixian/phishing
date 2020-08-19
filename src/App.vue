@@ -7,8 +7,16 @@
   </div>
 </template>
 
-<style lang="scss">
 
+<script>
+
+export default {
+  
+}
+</script>
+
+<style lang="scss">
+@import "@/scss/main.scss";
 html{
   font-size:62.5%;
   

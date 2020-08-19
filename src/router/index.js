@@ -6,6 +6,7 @@ import Phishing3 from '@/components/Phishing3'
 import Home from '@/views/Home'
 import About from '@/views/About'
 
+
 Vue.use(VueRouter)
 
   const routes = [
@@ -18,11 +19,12 @@ Vue.use(VueRouter)
     path: '/test',
     name: 'About',
     component: About,
+    
     children:[
       {
         path:'/test/1',
         name: 'Phishing1',
-        component: Phishing1
+        component: Phishing1,
       },
       {
         path:'/test/2',
@@ -44,7 +46,7 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
   mode: 'history',
-  base: process.env.BASE_URL,
+ 
   routes
 })
 

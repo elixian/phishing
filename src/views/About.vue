@@ -20,18 +20,27 @@
       <router-view :error="answer"/>
     </div>
 
-    <img v-if="answer === false" class="img-result" src="@/assets/homer.png" alt="" />
-    <img v-if="answer === true" class="img-result" src="@/assets/homer-succes.gif" alt="" />
+    <!-- <img v-if="answer === false" class="img-result" src="@/assets/homer.png" alt="" />
+    <img v-if="answer === true" class="img-result" src="@/assets/homer-succes.gif" alt="" /> -->
 
   </div>
 </template>
 
 <script>
+import {gsap, Power2} from 'gsap';
 export default {
+  mounted(){
+    console.log(this.$route.path)
+    if(this.$route.path !== '/test/1'){
+      this.$router.push('/test/1');
+    }
+  
+  },
   data() {
     return {
-      nextPhishing: 1,
+      nextPhishing:2,
       answer: null,
+      tl: gsap.timeline()
 
     };
   },
@@ -43,6 +52,13 @@ export default {
     checkAnsw(v) {
       console.log(v);
       this.answer = v == this.$store.state.isPhishing;
+      if(!this.answer){
+        let panError = '.modal-feedback_error'
+        gsap.set(panError,{display:'block'})
+        this.tl
+        .to('.focus-error',0.8,{ background:'white', transform:"scale(1.2)", display:'block',y:10, boxShadow:'0px 0px 5px #c2c2c2', padding:'1rem'})
+        .from(panError,0.9, { display:'block',opacity:0, height:30, width:0, ease: Power2.easeOut})
+      }
     },
   },
 };

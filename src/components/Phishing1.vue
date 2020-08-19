@@ -33,7 +33,7 @@
 								<tr>
 									<td align="center" style="padding-bottom:15px"><span style="font-size:13px;font-family:Arial,Verdana;color:#323232"><b>Malgré plusieurs relances de notre part, nous n&#39;avons toujours pas re&ccedil;u le paiement. Pour mettre fin &agrave; ce contentieux, nous vous recommandons vivement de r&eacute;gler votre d&ucirc; en cliquant sur le lien ci-dessous</b><br />
 									<br />
-									<div class="modal-feedback">
+									<div class="modal-feedback" >
 									<span class="modal-feedback_error"> ici on explique le pourquoi </span>
 									<a href="" rel="noreferrer" style="font-size:20px" target="_blank"><b><u> Cliquez ici pour régler votre facture </u></b></a></div><b><u> </u></b> </span><br />
 									&nbsp;</td>
@@ -57,51 +57,25 @@
 	</tbody>
 </table>
 </div>
-<div v-if="!error" class="feedback">
+<!-- <div v-if="!error" class="feedback">
 	<h1>A retenir</h1>
-</div>
+</div> -->
 </div>
 </template>
 
 <script>
+
 export default {
 	props:['error'],
+
 	mounted(){
-	
-			this.$store.state.isPhishing = true
-			console.log('number 1',this.$store.state.isPhishing)
+		this.$store.state.isPhishing = true;
+		
 	}
 }
 </script>
 
 
-<style lang="scss" scoped>
-.feedback{
-	position:absolute;
-	right:10%;
-	top:23%;
-	width:230px;
-	height:200px;
-	background:hsl(0,0%,50%);
-}
-.phishing--tile{
-	border:1px solid hsl(0,0%,90%);
-	border-radius:10px;
-	width:max-content;
-	margin:0 auto;
-	padding:2rem;
-}
-.modal-feedback{
-	position: relative;
-	&_error{
-	display:block;
-	position: absolute;
-	background:white;
-	right: 50%;
-    transform: translate(50%, -110%);
-	width:80%;
-	height:150px;
-	box-shadow: 0px 0px 3px hsl(0,0%,50%);
-}
-}
+<style lang="scss" >
+
 </style>
