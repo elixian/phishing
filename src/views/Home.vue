@@ -14,7 +14,6 @@
 // @ is an alias to /src
 import { TimelineLite, Back } from 'gsap'
 
-
 export default {
   mounted() { 
     
