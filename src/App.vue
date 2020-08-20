@@ -12,41 +12,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import "@/scss/main.scss";
-html{
-  font-size:62.5%;
-  
 
-button::-moz-focus-inner {
-  border: 0;
-}
-
-}
-body{
-  font-size:1.6rem;
-}
-*,*::before,*::after{
-  box-sizing: border-box;
-}
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
