@@ -31,7 +31,15 @@
       <div class="title-info"><span class="bold">Oups</span>, je me suis fait avoir</div>
       <div class="description-info">Vous venez de cliquer sur un email de phishing. Pas de panique, il s’agit d’un exercice mis en place par la RSSI pour sensibiliser au phishing.</div>
     </div>
-    <router-view />
+    
+    
+      <div class="visual-report">
+          Qu’est-ce qui m’a echappé ?
+        <router-view />
+      </div>
+      
+ 
+    
   </div>
 
   <!-- <img v-if="answer === false" class="img-result" src="@/assets/homer.png" alt="" />
