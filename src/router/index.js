@@ -23,9 +23,15 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "about" */ '../views/Campaign.vue'),
     children:[
       {
-        path:'1',
+        path:'3',
         name: 'mail03',
         component: Mail03,
+      },
+      {
+        path:'1',
+        name: 'mail01',
+        component: () => import(/* webpackChunkName: "mail01" */ '../components/Campaign/Mail01.vue'),
+
       },
     ]
   },
