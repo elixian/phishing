@@ -30,7 +30,7 @@ pipeline {
 
     stage('Integration') {
       agent {
-        label 'phishing-int'
+        label 'organicnav-int'
       }
       when { branch 'develop' }
       steps {
@@ -40,7 +40,7 @@ pipeline {
 
     stage('Production') {
       agent {
-        label 'phishing-prod'
+        label 'organicnav-prod'
       }
       when { branch 'master' }
       steps {
