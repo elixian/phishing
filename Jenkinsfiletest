@@ -10,7 +10,7 @@ pipeline {
   }
   
   environment {
-    version = readJSON(file: './package.json').version
+    version = readJSON(file: './package.json')
   }
   
   stages {
