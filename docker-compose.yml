@@ -1,0 +1,10 @@
+version: "3.5"
+
+services:
+
+  ui:
+    build:
+      context: ui
+      args:
+        - VERSION=${version:-latest}
+    image: rodolpheche/phishing-ui:${VERSION:-latest}
