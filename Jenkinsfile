@@ -10,7 +10,7 @@ pipeline {
   }
 
   parameters {
-    string(name: 'version', defaultValue: '1.0.0', description: 'Version à déployer')
+    string(name: 'VERSION', defaultValue: '1.0.0', description: 'Version à déployer')
     booleanParam(name: 'integration', defaultValue: false, description: 'Deployer le produit en intégration')
     booleanParam(name: 'production', defaultValue: false, description: 'Deployer le produit en production')
   }
@@ -34,7 +34,7 @@ pipeline {
       }
       when { branch 'develop' }
       steps {
-        sh "./release.sh ${params.version}"
+        sh "./release.sh ${params.VERSION}"
       }
     }
 
@@ -44,7 +44,7 @@ pipeline {
       }
       when { branch 'master' }
       steps {
-        sh "./release.sh ${params.version}"
+        sh "./release.sh ${params.VERSION}"
       }
     }
   }
