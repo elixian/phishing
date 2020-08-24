@@ -10,7 +10,7 @@ pipeline {
   }
 
   parameters {
-    string(name: 'version', defaultValue: '1.0.0', description: 'Version à déployer')
+    string(name: 'VERSION', defaultValue: '1.0.0', description: 'Version à déployer')
     booleanParam(name: 'integration', defaultValue: false, description: 'Deployer le produit en intégration')
     booleanParam(name: 'production', defaultValue: false, description: 'Deployer le produit en production')
   }
@@ -22,7 +22,7 @@ pipeline {
       }
       steps {
         sh """
-          version=${params.version} docker-compose build --build-arg http_proxy=http://proxy-ul.dev.n18.an.cnav:8080 --build-arg https_proxy=http://proxy-ul.dev.n18.an.cnav:8080
+          docker-compose build --build-arg http_proxy=http://proxy-ul.dev.n18.an.cnav:8080 --build-arg https_proxy=http://proxy-ul.dev.n18.an.cnav:8080
           docker-compose push
         """
       }
@@ -30,21 +30,21 @@ pipeline {
 
     stage('Integration') {
       agent {
-        label 'phishing-int'
+        label 'organicnav-int'
       }
       when { branch 'develop' }
       steps {
-        sh "./release.sh ${params.version}"
+        sh "./release.sh ${params.VERSION}"
       }
     }
 
     stage('Production') {
       agent {
-        label 'phishing-prod'
+        label 'organicnav-prod'
       }
       when { branch 'master' }
       steps {
-        sh "./release.sh ${params.version}"
+        sh "./release.sh ${params.VERSION}"
       }
     }
   }

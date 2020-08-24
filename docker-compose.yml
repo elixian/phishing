@@ -1,0 +1,7 @@
+version: "3.5"
+
+services:
+
+  ui:
+    build: .
+    image: rodolpheche/phishing-ui:${VERSION:-latest}
