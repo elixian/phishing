@@ -8,7 +8,11 @@ pipeline {
     timeout(time: 1, unit: 'HOURS')
     disableConcurrentBuilds()
   }
-
+  
+  environment {
+    version = 'test'
+  }
+  
   stages {
     stage('Build') {
       agent {
@@ -16,7 +20,7 @@ pipeline {
       }
       steps {
         sh """
-          echo 'juii'
+          echo $version
         """
       }
     }
