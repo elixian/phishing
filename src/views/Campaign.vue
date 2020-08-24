@@ -39,6 +39,10 @@
         <router-view />
       </div>
       
+      <div class="curiosity text-center" >
+        <h2 class="text-center">Pour aller plus loin...</h2>
+        <p>Formez-vous à travers le e-learning sécurité mis à votre disposition</p>
+      </div>
  
     
   </div>
