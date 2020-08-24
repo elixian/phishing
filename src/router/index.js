@@ -58,6 +58,12 @@ Vue.use(VueRouter)
         component: () => import(/* webpackChunkName: "mail06" */ '../components/Campaign/Mail06.vue'),
 
       },
+      {
+        path:'7',
+        name: 'mail07',
+        component: () => import(/* webpackChunkName: "mail07" */ '../components/Campaign/Mail07.vue'),
+
+      },
       
     ]
   },
