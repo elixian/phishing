@@ -22,7 +22,7 @@ pipeline {
       }
       steps {
         sh """
-          version=${params.version} docker-compose build --build-arg http_proxy=http://proxy-ul.dev.n18.an.cnav:8080 --build-arg https_proxy=http://proxy-ul.dev.n18.an.cnav:8080
+          docker-compose build --build-arg http_proxy=http://proxy-ul.dev.n18.an.cnav:8080 --build-arg https_proxy=http://proxy-ul.dev.n18.an.cnav:8080
           docker-compose push
         """
       }
