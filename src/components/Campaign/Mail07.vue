@@ -26,10 +26,8 @@
       </Tooltip>
       <Tooltip infoOverlay="overlay-3" positionSpot="position-3">
         <template v-slot:textinfo>
-          Le mails présente des erreur dans l’interprétation des caractères.
-          Soyez vigilants lorsque des mails présentent des problèmes de
-          formulation, des fautes d’orthographe ou des erreurs dans la
-          présentation des caractères.
+          Un principe, général, méfiez-vous des services/documents gratuits. A minima l’objectif est de récupérer votre adresse mail afin de vous envoyer des publicités. Qui plus est sur des sujets accrocheurs en lien avec l’actualité (contexte sanitaire, politique, soldes, périodes particulières..)
+
         </template>
       </Tooltip>
     </div>

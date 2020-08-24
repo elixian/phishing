@@ -27,7 +27,8 @@ body {
     }
 
     .visual-report {
-        width: 118rem;
+        max-width: 118rem;
+        min-width: 95rem;
         min-height: 55rem;
         background: #fff;
         margin: 0 auto;

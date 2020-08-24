@@ -119,7 +119,7 @@ export default {
 
 // Animation
 @keyframes social-button-beat{
-    0%{opacity: .8;
+    0%{opacity: .4;
         transform: scale(1);
     } 
 
