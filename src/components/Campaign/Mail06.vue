@@ -21,6 +21,12 @@
 
         </template>
       </Tooltip>
+      <Tooltip infoOverlay="overlay-3" positionSpot="position-3">
+        <template v-slot:textinfo>
+          Le mails présente des erreur dans l’interprétation des caractères. Soyez vigilants lorsque des mails présentent des problèmes de formulation, des fautes d’orthographe ou des erreurs dans la présentation des caractères.
+
+        </template>
+      </Tooltip>
     </div>
   </div>
 </template>
@@ -42,6 +48,10 @@ export default {
   top: 3rem;
   left: 7rem;
 }
+.position-3 {
+  top: 41rem;
+left: 33rem;
+}
 
 .overlay-1 {
   clip-path: polygon(
@@ -61,6 +71,9 @@ export default {
 
 .overlay-2 {
   clip-path: polygon(0% 0%, 0% 100%, 54.45% 99.77%, 0.79% 4.71%, 0.79% 1.06%, 13.78% 1.06%, 13.78% 4.71%, 0.79% 4.71%, 54.45% 99.82%, 100% 100%, 100% 0%);
+}
+.overlay-3 {
+clip-path: polygon(0% 0%, 0% 100%, 14.71% 100%, 14.71% 54.82%, 84.22% 54.82%, 84.22% 67.72%, 14.71% 67.72%, 14.71% 100%, 100% 100%, 100% 0%);
 }
 
 
