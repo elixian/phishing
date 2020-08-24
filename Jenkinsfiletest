@@ -9,16 +9,13 @@ pipeline {
     disableConcurrentBuilds()
   }
   
-  environment {
-    version = "${readJSON(file: './package.json').version}"
-  }
-  
   stages {
     stage('Build') {
       agent {
         label 'organicnav-int'
       }
       steps {
+        def version = readJSON(file: './package.json').version
         sh """
           echo $version
         """
