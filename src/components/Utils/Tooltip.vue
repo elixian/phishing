@@ -94,6 +94,7 @@ export default {
   right: 50%;
   font-size: $f-S;
   padding-bottom: 1.5rem;
+  box-shadow: 0px 3px 2px #0000003d;
   top: -15px;
   &::before {
     bottom: 100%;

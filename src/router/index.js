@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Phishing1 from '@/components/Phishing1'
 import Phishing2 from '@/components/Phishing2'
 import Phishing3 from '@/components/Phishing3'
-import Mail03 from '@/components/Campaign/Mail03'
+
 
 import Home from '@/views/Home'
 import About from '@/views/About'
@@ -23,16 +23,42 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "about" */ '../views/Campaign.vue'),
     children:[
       {
-        path:'3',
-        name: 'mail03',
-        component: Mail03,
-      },
-      {
         path:'1',
         name: 'mail01',
         component: () => import(/* webpackChunkName: "mail01" */ '../components/Campaign/Mail01.vue'),
 
       },
+      {
+        path:'2',
+        name: 'mail02',
+        component: () => import(/* webpackChunkName: "mail02" */ '../components/Campaign/Mail02.vue'),
+
+      },
+      {
+        path:'3',
+        name: 'mail03',
+        component: () => import(/* webpackChunkName: "mail03" */ '../components/Campaign/Mail03.vue'),
+
+      },
+      {
+        path:'4',
+        name: 'mail04',
+        component: () => import(/* webpackChunkName: "mail04" */ '../components/Campaign/Mail04.vue'),
+
+      },
+      {
+        path:'5',
+        name: 'mail05',
+        component: () => import(/* webpackChunkName: "mail05" */ '../components/Campaign/Mail05.vue'),
+
+      },
+      {
+        path:'6',
+        name: 'mail06',
+        component: () => import(/* webpackChunkName: "mail06" */ '../components/Campaign/Mail06.vue'),
+
+      },
+      
     ]
   },
   {

@@ -30,7 +30,6 @@ body {
         width: 118rem;
         min-height: 55rem;
         background: #fff;
-        
         margin: 0 auto;
         margin-top: 5rem;
         padding:2rem;
@@ -41,10 +40,20 @@ body {
         width: 780px;
         margin: 0 auto;
 
-       
+       .img-phishing{
+           max-width: 780px;;
+       }
     }
 
-
+    span[class^="overlay"] {
+        width: 100%;
+        display: block;
+        height: 100%;
+        top: 0;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+      }
 }
 
 
