@@ -1,0 +1,29 @@
+@Library("shared-libs/cnav-pipeline-libs@1.0.2") _
+import cnav.ptn.*
+
+pipeline {
+  agent none
+
+  options {
+    timeout(time: 1, unit: 'HOURS')
+    disableConcurrentBuilds()
+  }
+
+  environment {
+    version = readJSON('package.json').version
+  }
+
+
+  stages {
+    stage('Build') {
+      agent {
+        label 'organicnav-int'
+      }
+      steps {
+        sh """
+          echo $version
+        """
+      }
+    }
+  }
+}
