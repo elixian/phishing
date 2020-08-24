@@ -9,11 +9,6 @@ pipeline {
     disableConcurrentBuilds()
   }
 
-  environment {
-    version = readJSON file: 'package.json'
-  }
-
-
   stages {
     stage('Build') {
       agent {
