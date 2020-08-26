@@ -28,8 +28,8 @@
           </defs>
         </svg>
       </div>
-      <div class="title-info"><span class="bold">Oups</span>, je me suis fait avoir</div>
-      <div class="description-info">Vous venez de cliquer sur un <span class="bold">email de phishing</span>. Pas de panique, il s’agit d’un exercice mis en place par <span class="bold">la sécurité informatique de l’Assurance retraite </span>pour <span class="bold">sensibiliser au phishing</span>.</div>
+      <div class="title-info"><span class="bold black">Oups</span>, je me suis fait avoir</div>
+      <div class="description-info">Vous venez de cliquer sur un <span class="bold wrapper-tooltip"  @mouseover.self="showTip" @mouseleave="hideTip">email de hameçonnage</span>. Pas de panique, il s’agit d’un exercice mis en place par <span class="bold">la sécurité informatique de l’Assurance retraite </span>pour <span class="bold">sensibiliser au phishing</span>.</div>
     </div>
     
     
@@ -50,3 +50,37 @@
   <!-- <img v-if="answer === false" class="img-result" src="@/assets/homer.png" alt="" />
     <img v-if="answer === true" class="img-result" src="@/assets/homer-succes.gif" alt="" /> -->
 </template>
+
+
+<script>
+export default {
+  methods:{
+    showTip(event){
+      console.log(event.target.innerHTML);
+     event.target.innerHTML = event.target.innerHTML + `<div id='Tooltips'><p>Le hameçonnage est une pratique de piratage informatiques qui consiste à envoyer un message destiné à amener une personne à se connecter sur un site et fournir des informations personnelles.</p></div>` ;
+    },
+    hideTip(){
+      document.getElementById("Tooltips").remove();
+    }
+  }
+}
+</script>
+
+<style lang="scss" >
+.wrapper-tooltip{
+  position: relative;;
+}
+  #Tooltips {
+    display: block;
+    height:50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: chartreuse;
+  p{
+    background: burlywood;
+  }
+  
+  }
+</style>
