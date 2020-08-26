@@ -21,7 +21,7 @@
 
         </template>
       </Tooltip>
-      <Tooltip infoOverlay="overlay-3" positionSpot="position-3">
+      <Tooltip infoOverlay="overlay-3" positionSpot="position-3" spot-darken=true>
         <template v-slot:textinfo>
           Le mails présente des erreur dans l’interprétation des caractères. Soyez vigilants lorsque des mails présentent des problèmes de formulation, des fautes d’orthographe ou des erreurs dans la présentation des caractères.
 

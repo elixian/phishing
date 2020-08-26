@@ -24,7 +24,7 @@
           un critère discriminant, cela doit attirer votre attention.
         </template>
       </Tooltip>
-      <Tooltip infoOverlay="overlay-3" positionSpot="position-3">
+      <Tooltip infoOverlay="overlay-3" positionSpot="position-3" spot-darken="true">
         <template v-slot:textinfo>
           Un principe, général, méfiez-vous des services/documents gratuits. A minima l’objectif est de récupérer votre adresse mail afin de vous envoyer des publicités. Qui plus est sur des sujets accrocheurs en lien avec l’actualité (contexte sanitaire, politique, soldes, périodes particulières..)
 

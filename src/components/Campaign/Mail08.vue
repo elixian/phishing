@@ -25,7 +25,7 @@
           Même si le sujet est urgent, prenez toujours le temps de la réflexion.
         </template>
       </Tooltip>
-      <Tooltip infoOverlay="overlay-3" positionSpot="position-3">
+      <Tooltip infoOverlay="overlay-3" positionSpot="position-3" spot-darken=true>
         <template v-slot:textinfo>
           Afin d’ajouter de la confiance au mail, les données (N° de facture,
           montant…) sont souvent très précises. Cependant dans les mails
@@ -34,7 +34,7 @@
           informations précises
         </template>
       </Tooltip>
-      <Tooltip infoOverlay="overlay-4" positionSpot="position-4">
+      <Tooltip infoOverlay="overlay-4" positionSpot="position-4" spot-darken=true>
         <template v-slot:textinfo>
           Attention au faux sentiment de sécurité. Pour rendre légitime et
           &laquo;sécurisé&raquo; un mail les pirates informatiques n’hésites pas

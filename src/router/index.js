@@ -12,13 +12,18 @@ import About from '@/views/About'
 Vue.use(VueRouter)
 
   const routes = [
+    {
+      path: '*',
+      name: 'NotFound',
+      component: () => import(/* webpackChunkName: "NotFound" */ '../views/NotFound.vue')
+    },
   {
     path: '/d',
     name: 'Home',
     component: Home
   },
   {
-    path: '/',
+    path: '/camp',
     name:'Campaign',
     component: () => import(/* webpackChunkName: "about" */ '../views/Campaign.vue'),
     children:[
@@ -68,15 +73,12 @@ Vue.use(VueRouter)
         path:'8',
         name: 'mail08',
         component: () => import(/* webpackChunkName: "mail08" */ '../components/Campaign/Mail08.vue'),
-
       },
       {
         path:'9',
         name: 'mail09',
         component: () => import(/* webpackChunkName: "mail09" */ '../components/Campaign/Mail09.vue'),
-
       },
-      
     ]
   },
   {

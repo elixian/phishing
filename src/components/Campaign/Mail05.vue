@@ -2,7 +2,7 @@
   <div>
     <div class="wrapper--img">
       <img src="@/assets/images/campaign/mail05.jpg" alt="" srcset="" />
-      <Tooltip infoOverlay="overlay-1" positionSpot="position-1">
+      <Tooltip infoOverlay="overlay-1" positionSpot="position-1" spot-darken=true>
         <template v-slot:textinfo>
           Un principe, général, méfiez-vous des services/documents gratuits. A
           minima l’objectif est de récupérer votre adresse mail afin de vous
@@ -79,13 +79,4 @@ export default {
   );
 }
 
-span[class^="overlay"] {
-  width: 100%;
-  display: block;
-  height: 100%;
-  top: 0;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.4);
-  display: none;
-}
 </style>
