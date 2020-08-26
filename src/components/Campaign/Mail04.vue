@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="wrapper--img">
-      <img src="@/assets/images/campaign/mail04.jpg" alt="" srcset="" />
-      <Tooltip infoOverlay="overlay-1" positionSpot="position-1">
+      <img class="img-phishing" src="@/assets/images/campaign/mail04.jpg" alt="" srcset="" />
+      <Tooltip infoOverlay="overlay-1" positionSpot="position-1" spot-darken=true>
         <template v-slot:textinfo>
           L’adresse d’envoi et l’URL de redirection sont cohérentes et ressemble
           très fortement à des adresses légitimes. Cependant elles ne sont pas
@@ -11,13 +11,10 @@
           messages.
         </template>
       </Tooltip>
-      <Tooltip infoOverlay="overlay-2" positionSpot="position-2">
+      <Tooltip infoOverlay="overlay-2" positionSpot="position-2" spot-darken=true>
         <template v-slot:textinfo>
-          Un principe, général, méfiez-vous des gains financiers &laquo;trop
-          faciles&raquo;. A minima l’objectif est de récupérer votre adresse
-          mail afin de vous envoyer des publicités. Qui plus est sur des sujets
-          accrocheurs en lien avec l’actualité (contexte sanitaire, politique,
-          soldes, périodes particulières..).
+          Ce mail rappel les mails de factures reçus il y a quelques temps. Le principe de base, si je n’attends pas forcément de document, je suis vigilant.
+
         </template>
       </Tooltip>
     </div>
@@ -78,13 +75,4 @@ export default {
   );
 }
 
-span[class^="overlay"] {
-  width: 100%;
-  display: block;
-  height: 100%;
-  top: 0;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.4);
-  display: none;
-}
 </style>

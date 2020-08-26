@@ -121,13 +121,5 @@ export default {
     100% 0%
   );
 }
-span[class^="overlay"] {
-  width: 100%;
-  display: block;
-  height: 100%;
-  top: 0;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.4);
-  display: none;
-}
+
 </style>
