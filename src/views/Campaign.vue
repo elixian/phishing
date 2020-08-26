@@ -29,7 +29,7 @@
         </svg>
       </div>
       <div class="title-info"><span class="bold">Oups</span>, je me suis fait avoir</div>
-      <div class="description-info">Vous venez de cliquer sur un email de phishing. Pas de panique, il s’agit d’un exercice mis en place par la RSSI pour sensibiliser au phishing.</div>
+      <div class="description-info">Vous venez de cliquer sur un <span class="bold">email de phishing</span>. Pas de panique, il s’agit d’un exercice mis en place par <span class="bold">la sécurité informatique de l’Assurance retraite </span>pour <span class="bold">sensibiliser au phishing</span>.</div>
     </div>
     
     
