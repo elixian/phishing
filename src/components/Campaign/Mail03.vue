@@ -1,8 +1,17 @@
 <template>
   <div>
     <div class="wrapper--img">
-      <img src="@/assets/images/campaign/mail03.jpg" alt="" srcset="" />
-      <Tooltip infoOverlay="overlay-1" positionSpot="position-1">
+      <img
+        class="img-phishing"
+        src="@/assets/images/campaign/mail03.jpg"
+        alt=""
+        srcset=""
+      />
+      <Tooltip
+        infoOverlay="overlay-1"
+        positionSpot="position-1"
+        spot-darken="true"
+      >
         <template v-slot:textinfo>
           L’adresse d’envoi et l’URL de redirection sont cohérentes cependant on
           remarque qu’il s’agit d’un domaine en .info. Les services légitimes
@@ -12,19 +21,28 @@
           exemple (car plutôt plausible), cela doit attirer votre attention
         </template>
       </Tooltip>
-      <Tooltip infoOverlay="overlay-2" positionSpot="position-2">
+      <Tooltip
+        infoOverlay="overlay-2"
+        positionSpot="position-2"
+        spot-darken="true"
+      >
         <template v-slot:textinfo>
-          Un principe, général, méfiez-vous des gains financiers &laquo;trop faciles&raquo;.
-          A minima l’objectif est de récupérer votre adresse mail afin de vous
-          envoyer des publicités. Qui plus est sur des sujets accrocheurs en
-          lien avec l’actualité (contexte sanitaire, politique, soldes, périodes
-          particulières..).
+          Un principe, général, méfiez-vous des gains financiers &laquo;trop
+          faciles&raquo;. A minima l’objectif est de récupérer votre adresse
+          mail afin de vous envoyer des publicités. Qui plus est sur des sujets
+          accrocheurs en lien avec l’actualité (contexte sanitaire, politique,
+          soldes, périodes particulières..).
         </template>
       </Tooltip>
-      <Tooltip infoOverlay="overlay-3" positionSpot="position-3">
+      <Tooltip
+        infoOverlay="overlay-3"
+        positionSpot="position-3"
+        spot-darken="true"
+      >
         <template v-slot:textinfo>
-          Généralement lors de remboursements, les dispositions d’applications sont précisées dans les mails. Ici aucune information sur les dispositions en questions.
-
+          Généralement lors de remboursements, les dispositions d’applications
+          sont précisées dans les mails. Ici aucune information sur les
+          dispositions en questions.
         </template>
       </Tooltip>
     </div>
@@ -42,7 +60,7 @@ export default {
 <style lang="scss">
 .position-1 {
   top: 6.8rem;
-  left: 33rem;
+  left: 29rem;
 }
 .position-2 {
   top: 3rem;
@@ -63,6 +81,12 @@ export default {
     48.82% 8.5%,
     48.82% 12.74%,
     23.29% 12.85%,
+    23.29% 54.07%,
+    56.2% 54.07%,
+    56.2% 48.4%,
+    81.4% 48.4%,
+    81.4% 54.07%,
+    23.29% 54.07%,
     23.29% 100%,
     100% 100%,
     100% 0%
@@ -84,7 +108,18 @@ export default {
   );
 }
 .overlay-3 {
-  clip-path: polygon(0% 0%, 0% 100%, 61.62% 99.64%, 61.12% 44.00%, 82.41% 44%, 82.41% 48.24%, 61.11% 48.35%, 61.63% 99.64%, 100% 100%, 100% 0%);
+  clip-path: polygon(
+    0% 0%,
+    0% 100%,
+    61.62% 99.64%,
+    61.12% 44%,
+    82.41% 44%,
+    82.41% 48.24%,
+    61.11% 48.35%,
+    61.63% 99.64%,
+    100% 100%,
+    100% 0%
+  );
 }
 span[class^="overlay"] {
   width: 100%;
