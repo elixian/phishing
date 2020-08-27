@@ -58,17 +58,20 @@
       <p class="curiosity-formation">
         Formez-vous à travers le e-learning sécurité mis à votre disposition
       </p>
-      <a class="no-style_link" href="https://retraite.syfadis.com/Catalog/TrainingShops/TrainingView.aspx?idTraining=7046070273" target="_blank">
+      
         <figure>
           <div class="security">
+            <a class="no-style_link" href="https://retraite.syfadis.com/Catalog/TrainingShops/TrainingView.aspx?idTraining=7046070273" target="_blank">
             <img
               src="@/assets/images/campaign/security-formation.png"
               alt="securité formation"
             />
+            </a>
           </div>
           <figcaption class="figcaption">Cybersécurité : mission Agent Cyber-responsable</figcaption>
+          
         </figure>
-      </a>
+      
     </div>
   </div>
 

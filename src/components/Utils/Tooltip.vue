@@ -26,7 +26,7 @@ export default {
       timeline
         .to(event.target.nextSibling, 0.5, { autoAlpha: 1, display: "block" })
         .to(".spot", 0.8, { visibility: "hidden", opacity:0 }, "-= 0.5")
-        .to(overlay, 0.9, { autoAlpha: 1, display: "block" }, "-= .3");
+        .to(overlay, 0.5, { opacity: 1, display: "block" }, "-= .3");
     },
     hideInfo(event) {
       const timeline = new TimelineLite();
@@ -34,7 +34,7 @@ export default {
 
       timeline
         .to(event.target.parentElement, 0.5, { autoAlpha: 0, display: "none" })
-        .to(overlay, 0, { autoAlpha: 1, display: "none" }, "-= .8")
+        .to(overlay, 0, { opacity: 1, display: "none" }, "-= .8")
         .to(".spot", 0, { visibility: "visible",opacity:1  }, "-= .8");
     },
   },
