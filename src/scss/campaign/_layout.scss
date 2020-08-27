@@ -1,15 +1,15 @@
-
-
 .campaign {
 
-    h2{
-        font-size:$f-M;
-        padding:5rem 0;
-        margin:0;
+    h2 {
+        font-size: $f-M;
+        padding: 5rem 0;
+        margin: 0;
     }
+
     .header {
         text-align: center;
-        margin-top:5rem;
+        margin-top: 5rem;
+
         >div {
             margin-bottom: 1.5rem;
         }
@@ -30,42 +30,92 @@
 
     .visual-report {
         background-color: $bg-color;
-       // max-width: 118rem;
+        // max-width: 118rem;
         min-width: 95rem;
         min-height: 40rem;
-       // background: #fff;
+        // background: #fff;
         margin: 0 auto;
         margin-top: 5rem;
-        padding-bottom:5rem;
+        padding-bottom: 5rem;
     }
 
     .wrapper--img {
         position: relative;
         width: 780px;
         margin: 0 auto;
-        
-       // overflow: hidden;
-       .img-phishing{
-           max-width: 780px;;
-           border:1px solid #BDBDBD;
-            border-radius:5px;
-       }
+
+        // overflow: hidden;
+        .img-phishing {
+            max-width: 780px;
+            ;
+            border: 1px solid #BDBDBD;
+            border-radius: 5px;
+        }
     }
 
     span[class^="overlay"] {
         width: 100%;
         display: block;
-        border-radius:5px;
+        border-radius: 5px;
         border: 1px solid transparent;
         height: 99.6%;
         top: 0;
         position: absolute;
         background: rgba(0, 0, 0, 0.5);
         display: none;
-      }
+    }
+
+
+    /****************************
+      *          Tooltip Wiki                
+      *****************************/
+    .wrapper-tooltip {
+        position: relative;
+        color: $spot-color-darken;
+        border-bottom: 2px dashed currentColor ;
+        cursor: help;
+    }
+
+    #Tooltips {
+        display: block;
+        height: 50px;
+        position: absolute;
+        top: 20px;
+        left: -50%;
+        z-index: 5;
+
+        .box-tip {
+            color:initial;
+            font-size: $f-R;
+            font-weight: normal;
+            position: relative;
+            width: 385px;
+            padding: 1rem;
+            opacity: 0;
+            background: #fff;
+            border: 1px solid $spot-color-darken;
+            border-radius: 5px;
+            animation: fade-in 0.3s forwards ease-in-out;
+            &::before{
+                content:"";
+                position:absolute;
+                top:-7px;
+                left:calc(385px / 2);
+                transform:rotate(44deg) ;
+                width:11px;
+                height:11px;
+                background-color: #fff;
+                border-left:1px solid $spot-color-darken;
+                border-right:1px solid transparent;
+                border-bottom:1px solid transparent;
+                border-top:1px solid $spot-color-darken;
+            }
+        }
+    }
+
+    @keyframes fade-in {
+        to {
+            opacity: 1;
+        }
+    }
 }
-
-
-
-	
-		

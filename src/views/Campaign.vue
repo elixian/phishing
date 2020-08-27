@@ -2,7 +2,7 @@
   <div class="campaign">
     <div class="header">
       <div class="oops-info">
-        <svg          
+        <svg
           viewBox="0 0 60 60"
           fill="none"
           class="oops-img"
@@ -28,59 +28,58 @@
           </defs>
         </svg>
       </div>
-      <div class="title-info"><span class="bold black">Oups</span>, je me suis fait avoir</div>
-      <div class="description-info">Vous venez de cliquer sur un <span class="bold wrapper-tooltip"  @mouseover.self="showTip" @mouseleave="hideTip">email de hameçonnage</span>. Pas de panique, il s’agit d’un exercice mis en place par <span class="bold">la sécurité informatique de l’Assurance retraite </span>pour <span class="bold">sensibiliser au phishing</span>.</div>
+      <div class="title-info">
+        <span class="bold black">Oups</span>, je me suis fait avoir
+      </div>
+      <div class="description-info">
+        Vous venez de cliquer sur un
+        <span
+          class="bold wrapper-tooltip"
+          @mouseover="showTip"
+          @mouseleave="hideTip"
+          @mouseout="hideTip"
+          >email de hameçonnage</span
+        >. Pas de panique, il s’agit d’un exercice mis en place par
+        <span class="bold"
+          >la sécurité informatique de l’Assurance retraite </span
+        >pour <span class="bold">sensibiliser au phishing</span>.
+      </div>
     </div>
-    
-    
-      <div class="visual-report">
-       <h2 class="text-center">Qu’est-ce qui m’a echappé ?</h2>
-          
-        <router-view />
-      </div>
-      
-      <div class="curiosity text-center" >
-        <h2 class="text-center">Pour aller plus loin...</h2>
-        <p>Formez-vous à travers le e-learning sécurité mis à votre disposition</p>
-      </div>
- 
-    
+
+    <div class="visual-report">
+      <h2 class="text-center">Qu’est-ce qui m’a echappé ?</h2>
+
+      <router-view />
+    </div>
+
+    <div class="curiosity text-center">
+      <h2 class="text-center">Pour aller plus loin...</h2>
+      <p>
+        Formez-vous à travers le e-learning sécurité mis à votre disposition
+      </p>
+    </div>
   </div>
 
   <!-- <img v-if="answer === false" class="img-result" src="@/assets/homer.png" alt="" />
     <img v-if="answer === true" class="img-result" src="@/assets/homer-succes.gif" alt="" /> -->
 </template>
 
-
 <script>
 export default {
-  methods:{
-    showTip(event){
+  methods: {
+    showTip(event) {
       console.log(event.target.innerHTML);
-     event.target.innerHTML = event.target.innerHTML + `<div id='Tooltips'><p>Le hameçonnage est une pratique de piratage informatiques qui consiste à envoyer un message destiné à amener une personne à se connecter sur un site et fournir des informations personnelles.</p></div>` ;
+      event.target.innerHTML =
+        event.target.innerHTML +
+        `<div id='Tooltips'><p class="box-tip" @mouseleave.self="hideTip">Le hameçonnage est une pratique de piratage informatiques qui consiste à envoyer un message destiné à amener une personne à se connecter sur un site et fournir des informations personnelles.</p></div>`;
     },
-    hideTip(){
+    hideTip() {
       document.getElementById("Tooltips").remove();
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
-<style lang="scss" >
-.wrapper-tooltip{
-  position: relative;;
-}
-  #Tooltips {
-    display: block;
-    height:50px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  background: chartreuse;
-  p{
-    background: burlywood;
-  }
-  
-  }
+<style lang="scss">
+
 </style>
