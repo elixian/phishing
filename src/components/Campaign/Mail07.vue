@@ -9,24 +9,24 @@
       />
       <Tooltip infoOverlay="overlay-1" positionSpot="position-1">
         <template v-slot:textinfo>
-          Lorsque les équipements de sécurité ont un doute sur un mail, le
-          &laquo;TAG&raquo; SPAM est ajouté en objet du mail. Par principe il
+          Lorsque les équipements de sécurité ont un doute sur un mail, 
+          <span class="emphasis">le &laquo;TAG&raquo; SPAM est ajouté en objet du mail</span>. Par principe il
           est fort probable que le mail soit effectivement un SPAM.
         </template>
       </Tooltip>
       <Tooltip infoOverlay="overlay-2" positionSpot="position-2">
         <template v-slot:textinfo>
           L’adresse d’envoi et l’URL de redirection sont cohérentes cependant on
-          remarque qu’il s’agit d’un domaine en <code>.online</code> . Les
+          remarque qu’il s’agit d’un domaine en <code class="emphasis">.online</code> . Les
           services légitimes français sont généralement hébergés sur des
-          domaines en .fr ou en .com (pour l’aspect international). Si vous
+          domaines en <code class="emphasis">.fr</code> ou en <code class="emphasis">.com</code> (pour l’aspect international). Si vous
           voyez un domaine d’émission un peu particulier, même si ce n’est pas
           un critère discriminant, cela doit attirer votre attention.
         </template>
       </Tooltip>
       <Tooltip infoOverlay="overlay-3" positionSpot="position-3" spot-darken="true">
         <template v-slot:textinfo>
-          Un principe, général, méfiez-vous des services/documents gratuits. A minima l’objectif est de récupérer votre adresse mail afin de vous envoyer des publicités. Qui plus est sur des sujets accrocheurs en lien avec l’actualité (contexte sanitaire, politique, soldes, périodes particulières..)
+          Un principe, général, <span class="emphasis">méfiez-vous des services/documents gratuits</span>. A minima l’objectif est de récupérer votre adresse mail afin de vous envoyer des publicités. Qui plus est sur des sujets accrocheurs en lien avec l’actualité (contexte sanitaire, politique, soldes, périodes particulières..)
 
         </template>
       </Tooltip>

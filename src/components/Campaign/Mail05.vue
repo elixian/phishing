@@ -4,7 +4,7 @@
       <img src="@/assets/images/campaign/mail05.jpg" alt="" srcset="" />
       <Tooltip infoOverlay="overlay-1" positionSpot="position-1" spot-darken=true>
         <template v-slot:textinfo>
-          Un principe, général, méfiez-vous des services/documents gratuits. A
+          Un principe, général, <span class="emphasis">méfiez-vous des services/documents gratuits</span>. A
           minima l’objectif est de récupérer votre adresse mail afin de vous
           envoyer des publicités. Qui plus est sur des sujets accrocheurs en
           lien avec l’actualité (contexte sanitaire, politique, soldes, périodes
@@ -16,8 +16,8 @@
       <Tooltip infoOverlay="overlay-2" positionSpot="position-2">
         <template v-slot:textinfo>
           L’adresse d’envoi et l’URL de redirection ressemble fortement à celle
-          d’amazone, cependant en lieu et place du &laquo;o&raquo;, a été mise
-          le chiffre &laquo;0&raquo;. Il s’agit d’une nouvelle pratique assez
+          d’amazone, cependant en lieu et place du <span class="emphasis">&laquo;o&raquo;</span>, a été mise
+          le chiffre <span class="emphasis">&laquo;0&raquo;</span>. Il s’agit d’une nouvelle pratique assez
           répandue pour faire croire à un site légitime.
         </template>
       </Tooltip>

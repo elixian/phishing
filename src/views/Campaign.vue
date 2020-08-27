@@ -47,16 +47,28 @@
     </div>
 
     <div class="visual-report">
-      <h2 class="text-center">Qu’est-ce qui m’a echappé ?</h2>
-
+      <h2 class="visual-report__title text-center">
+        Qu’est-ce qui m’a echappé ?
+      </h2>
       <router-view />
     </div>
 
     <div class="curiosity text-center">
-      <h2 class="text-center">Pour aller plus loin...</h2>
-      <p>
+      <h2 class="curiosity-title text-center">Pour aller plus loin...</h2>
+      <p class="curiosity-formation">
         Formez-vous à travers le e-learning sécurité mis à votre disposition
       </p>
+      <a class="no-style_link" href="https://retraite.syfadis.com/Catalog/TrainingShops/TrainingView.aspx?idTraining=7046070273" target="_blank">
+        <figure>
+          <div class="security">
+            <img
+              src="@/assets/images/campaign/security-formation.png"
+              alt="securité formation"
+            />
+          </div>
+          <figcaption class="figcaption">Cybersécurité : mission Agent Cyber-responsable</figcaption>
+        </figure>
+      </a>
     </div>
   </div>
 
@@ -80,6 +92,26 @@ export default {
 };
 </script>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+.curiosity{
+  margin-bottom:5rem;
+}
+.curiosity-title {
+  margin-bottom: 2rem;
+}
+.curiosity-formation {
+  text-align: center;
+  margin: 0 auto;
+  width: 332px;
+}
+.security {
+  width: 381px;
+  background-color: #f2f2f2;
+  margin: 2rem auto 0;
+ 
+}
+.figcaption{
+    width:245px;
+    margin:1rem auto;
+  }
 </style>

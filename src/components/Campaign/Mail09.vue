@@ -29,11 +29,11 @@
       >
         <template v-slot:textinfo>
           L’adresse d’envoi et l’URL de redirection sont cohérentes cependant on
-          remarque qu’il s’agit d’un domaine en .info. Les services légitimes
-          français sont généralement hébergés sur des domaines en .fr ou en .com
-          (pour l’aspect international). Si vous voyez un domaine d’émission un
-          peu particulier, même si ce n’est pas un critère discriminant dans cet
-          exemple (car plutôt plausible), cela doit attirer votre attention.
+          remarque qu’il s’agit d’un domaine en <code class="emphasis">.info</code>. Les services légitimes
+          français sont généralement hébergés sur des domaines en <code class="emphasis">.fr</code> ou en <code class="emphasis">.com</code>
+          (pour l’aspect international). Si vous voyez un <span class="emphasis">domaine d’émission un
+          peu particulier</span>, même si ce n’est pas un critère discriminant dans cet
+          exemple (car plutôt plausible), cela <span class="emphasis">doit attirer votre attention</span>.
         </template>
       </Tooltip>
     </div>

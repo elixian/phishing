@@ -20,8 +20,8 @@
         spot-darken="true"
       >
         <template v-slot:textinfo>
-          Pour vous inciter à cliquer rapidement &laquo;sans trop
-          réfléchir&raquo; il est instauré un sentiment d’urgence dans le mail.
+          Pour vous inciter à cliquer rapidement <span class="emphasis">&laquo;sans trop
+          réfléchir&raquo;</span> il est instauré un sentiment d’urgence dans le mail.
           Même si le sujet est urgent, prenez toujours le temps de la réflexion.
         </template>
       </Tooltip>

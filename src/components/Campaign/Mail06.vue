@@ -11,13 +11,13 @@
         <template v-slot:textinfo>
           L’adresse d’envoi et l’URL de redirection sont cohérentes et ressemble
           très fortement à des adresses légitimes. Cependant elles ne sont pas
-          bonnes. La véritable adresse est lassuranceretraite.fr. Avez-vous vu
+          bonnes. <span class="emphasis">La véritable adresse est lassuranceretraite.fr</span>. Avez-vous vu
           la différence?
         </template>
       </Tooltip>
       <Tooltip infoOverlay="overlay-2" positionSpot="position-2">
         <template v-slot:textinfo>
-          Pour vous inciter à cliquer rapidement &laquo;sans trop réfléchir&raquo; il est instauré un sentiment d’urgence dans le mail. Même si le sujet est important, prenez toujours le temps de la réflexion.
+          Pour vous inciter à cliquer rapidement <span class="emphasis">&laquo;sans trop réfléchir&raquo;</span> il est instauré un sentiment d’urgence dans le mail. Même si le sujet est important, prenez toujours le temps de la réflexion.
 
         </template>
       </Tooltip>
