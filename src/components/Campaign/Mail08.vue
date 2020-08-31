@@ -10,9 +10,11 @@
       <Tooltip infoOverlay="overlay-1" positionSpot="position-1">
         <template v-slot:textinfo>
           L’adresse d’envoi et l’URL de redirection sont cohérentes cependant on
-          remarque qu’il s’agit d’un domaine en <code class="emphasis">.email</code> . Les
-          services légitimes français sont généralement hébergés sur des
-          domaines en <code class="emphasis">.fr</code> ou en <code class="emphasis">.com</code>
+          remarque qu’il s’agit d’un domaine en
+          <code class="emphasis">.email</code> . Les services légitimes français
+          sont généralement hébergés sur des domaines en
+          <code class="emphasis">.fr</code> ou en
+          <code class="emphasis">.com</code>
           (pour l’aspect international). Si vous voyez un domaine d’émission un
           peu particulier, même si ce n’est pas un critère discriminant, cela
           doit attirer votre attention.
@@ -21,8 +23,11 @@
       <Tooltip infoOverlay="overlay-2" positionSpot="position-2">
         <template v-slot:textinfo>
           Pour vous inciter à cliquer rapidement &laquo;sans trop
-          réfléchir&raquo; <span class="emphasis">il est instauré un sentiment d’urgence dans le mail</span>.
-          Même si le sujet est urgent, prenez toujours le temps de la réflexion.
+          réfléchir&raquo;
+          <span class="emphasis"
+            >il est instauré un sentiment d’urgence dans le mail</span
+          >. Même si le sujet est urgent, prenez toujours le temps de la
+          réflexion.
         </template>
       </Tooltip>
       <Tooltip
@@ -32,10 +37,12 @@
       >
         <template v-slot:textinfo>
           Afin d’ajouter de la confiance au mail, les données (N° de facture,
-          montant…) sont souvent très précises. <span class="emphasis">Cependant dans les mails
-          légitimes, aucune données précise n’est normalement indiquée</span>, vous
-          êtes généralement invité à vous connecter au service pour accéder aux
-          informations précises
+          montant…) sont souvent très précises.
+          <span class="emphasis"
+            >Cependant dans les mails légitimes, aucune donnée précise n’est
+            normalement indiquée</span
+          >, vous êtes généralement invité à vous connecter au service pour
+          accéder aux informations précises
         </template>
       </Tooltip>
       <Tooltip
@@ -45,10 +52,12 @@
       >
         <template v-slot:textinfo>
           Attention au faux sentiment de sécurité. Pour rendre légitime et
-          &laquo;sécurisé&raquo; un mail les pirates informatiques n’hésites pas
-          à agréger les multiples logos &laquo;sécurité&raquo; qu’ils peuvent
-          trouver. Soyez vigilant, <span class="emphasis">un logo sécurité ne veut pas dire confiance
-          aveugle au mail</span>
+          &laquo;sécurisé&raquo; un mail les pirates informatiques n’hésitent
+          pas à agréger les multiples logos &laquo;sécurité&raquo; qu’ils
+          peuvent trouver. Soyez vigilant,
+          <span class="emphasis"
+            >un logo sécurité ne veut pas dire confiance aveugle au mail</span
+          >
         </template>
       </Tooltip>
       <Tooltip
@@ -57,7 +66,9 @@
         spot-darken="true"
       >
         <template v-slot:textinfo>
-          Soyez vigilants aux formulations des mails. Un ton trop familier, des fautes d’orthographe ou des phrases mal formulées sont des indices qui doivent vous alerter.
+          Soyez vigilants aux formulations des mails. Un ton trop familier, des
+          fautes d’orthographe ou des phrases mal formulées sont des indices qui
+          doivent vous alerter.
         </template>
       </Tooltip>
     </div>
@@ -84,15 +95,15 @@ export default {
 
 .position-3 {
   top: 20rem;
-left: 55rem;
+  left: 55rem;
 }
 .position-4 {
   top: 37rem;
   left: 44rem;
 }
-.position-5{
+.position-5 {
   top: 32rem;
-left: 18rem;
+  left: 18rem;
 }
 
 .overlay-1 {
@@ -180,6 +191,24 @@ left: 18rem;
   );
 }
 .overlay-5 {
-  clip-path: polygon(0% 0%, 0% 100%, 39.23% 100%, 28.82% 83.34%, 9.16% 83.29%, 9.18% 78.63%, 28.92% 78.75%, 26.82% 55.72%, 26.84% 51.35%, 46.81% 51.57%, 46.83% 55.79%, 26.84% 55.77%, 28.86% 78.57%, 28.83% 85.16%, 39.23% 100%, 100% 100%, 100% 0%);
+  clip-path: polygon(
+    0% 0%,
+    0% 100%,
+    39.23% 100%,
+    28.82% 83.34%,
+    9.16% 83.29%,
+    9.18% 78.63%,
+    28.92% 78.75%,
+    26.82% 55.72%,
+    26.84% 51.35%,
+    46.81% 51.57%,
+    46.83% 55.79%,
+    26.84% 55.77%,
+    28.86% 78.57%,
+    28.83% 85.16%,
+    39.23% 100%,
+    100% 100%,
+    100% 0%
+  );
 }
 </style>
