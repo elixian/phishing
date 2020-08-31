@@ -42,7 +42,7 @@
         >. Pas de panique, il s’agit d’un exercice mis en place par
         <span class="bold"
           >la sécurité informatique de l’Assurance retraite </span
-        >pour <span class="bold">sensibiliser au phishing</span>. Vos données n’ont pas été sauvegardé.
+        >pour <span class="bold">sensibiliser à cette pratique</span>. Vos données n’ont pas été sauvegardées.
       </div>
     </div>
 
