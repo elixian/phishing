@@ -20,4 +20,8 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
 dist.zip
+_img-campaign
+_ref_phishing
+

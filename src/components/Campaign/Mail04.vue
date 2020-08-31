@@ -13,11 +13,9 @@
         spot-darken="true"
       >
         <template v-slot:textinfo>
-          L’adresse d’envoi et l’URL de redirection sont cohérentes et ressemble
-          très fortement à des adresses légitimes. Cependant elles ne sont pas
-          bonnes. Cet exemple vous illustre que même en étant vigilant il est
-          possible d’aller assez loin dans l’usurpation des adresses d’envoi de
-          messages.
+          L’adresse d’envoi et l’URL de redirection sont cohérentes mais
+          attention ce ne sont pas celles de microsoft. Regardez bien le domaine
+          : <code class="emphasis">crosoft.online</code>.
         </template>
       </Tooltip>
       <Tooltip
@@ -65,7 +63,7 @@ export default {
 }
 .position-3 {
   top: 22rem;
-left: 40rem;
+  left: 40rem;
 }
 
 .overlay-1 {
