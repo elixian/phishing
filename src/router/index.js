@@ -26,6 +26,12 @@ Vue.use(VueRouter)
     path: '/camp',
     name:'Campaign',
     component: () => import(/* webpackChunkName: "about" */ '../views/Campaign.vue'),
+    beforeEnter:(to,from,next)=>{
+      if(to.name === 'Campaign'){
+        next({name: 'NotFound'});
+      }
+      next();
+    },
     children:[
       {
         path:'1',
