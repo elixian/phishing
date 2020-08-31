@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div @click.self='hideOverlay'>
     <span :class="infoOverlay"></span>
 
     <div :class="['wrapper--tooltip', positionSpot]">
-      <div :class="['spot', {darken:spotDarken} ]" @click="showInfo"></div>
+      <div :class="['spot', {darken:spotDarken} ]" @click.self="showInfo"></div>
       <div class="tooltip--info">
         <p>
           <slot name="textinfo"></slot>
@@ -15,28 +15,20 @@
 </template>
 
 <script>
-import { TimelineLite } from "gsap";
+// import { TimelineLite } from "gsap";
+import {  mapActions} from 'vuex'
 export default {
   props: ["infoOverlay", "positionSpot","spotDarken"],
   methods: {
-    showInfo(event) {
-      const timeline = new TimelineLite();
-      const overlay = document.getElementsByClassName(this.infoOverlay);
-
-      timeline
-        .to(event.target.nextSibling, 0.5, { autoAlpha: 1, display: "block" })
-        .to(".spot", 0.8, { visibility: "hidden", opacity:0 }, "-= 0.5")
-        .to(overlay, 0.5, { opacity: 1, display: "block" }, "-= .3");
+    ...mapActions(['showOverlay','hideOverlay']),
+    showInfo(event) { 
+      this.showOverlay({'overlay' :`.${this.infoOverlay}`, 'tooltipInfo' :event.target.nextSibling});
     },
-    hideInfo(event) {
-      const timeline = new TimelineLite();
-      const overlay = document.getElementsByClassName(this.infoOverlay);
-
-      timeline
-        .to(event.target.parentElement, 0.5, { autoAlpha: 0, display: "none" })
-        .to(overlay, 0, { opacity: 1, display: "none" }, "-= .8")
-        .to(".spot", 0, { visibility: "visible",opacity:1  }, "-= .8");
+    hideInfo() {
+     
+        this.hideOverlay();
     },
+    
   },
 };
 </script>

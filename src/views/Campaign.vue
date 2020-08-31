@@ -1,6 +1,5 @@
 <template>
-  <div class="campaign">
-
+  <div class="campaign" >
     <div class="header">
       <div class="oops-info">
         <svg
@@ -43,15 +42,17 @@
         >. Pas de panique, il s’agit d’un exercice mis en place par
         <span class="bold"
           >la sécurité informatique de l’Assurance retraite </span
-        >pour <span class="bold">sensibiliser au phishing</span>.
+        >pour <span class="bold">sensibiliser au phishing</span>. Vos données n’ont pas été sauvegardé.
       </div>
     </div>
 
     <div class="visual-report">
+      
       <h2 class="visual-report__title text-center">
         Qu’est-ce qui m’a echappé ?
       </h2>
       <router-view />
+      
     </div>
 
     <div class="curiosity text-center">
@@ -74,6 +75,7 @@
         </figure>
       
     </div>
+    <div v-if='overlay' class='overlay-off' @click.self='hideOverlay'></div>
   </div>
 
   <!-- <img v-if="answer === false" class="img-result" src="@/assets/homer.png" alt="" />
@@ -81,8 +83,15 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 export default {
+  computed:{
+    ...mapGetters([
+      'overlay'
+    ])
+  },
   methods: {
+    ...mapActions(['hideOverlay']),
     showTip(event) {
       let tooltip = document.getElementById("Tooltips");
       if(tooltip === null){
@@ -121,5 +130,15 @@ export default {
 .figcaption{
     width:245px;
     margin:1rem auto;
+  }
+
+  .overlay-off{
+    position:fixed;
+    background-color:transparent;
+    width:100%;
+    height:100vh;
+    top:0;
+    bottom:0;
+        z-index: 9;
   }
 </style>
