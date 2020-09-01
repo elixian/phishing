@@ -34,25 +34,25 @@ Vue.use(VueRouter)
     },
     children:[
       {
-        path:'Alm1P',
+        path:'AlP1',
         name: 'mail01',
         component: () => import(/* webpackChunkName: "mail01" */ '../components/Campaign/Mail01.vue'),
 
       },
       {
-        path:'hIm2a',
+        path:'2Pak',
         name: 'mail02',
         component: () => import(/* webpackChunkName: "mail02" */ '../components/Campaign/Mail02.vue'),
 
       },
       {
-        path:'kPi3g',
+        path:'3ggS',
         name: 'mail03',
         component: () => import(/* webpackChunkName: "mail03" */ '../components/Campaign/Mail03.vue'),
 
       },
       {
-        path:'BlF4s',
+        path:'R4ton',
         name: 'mail04',
         component: () => import(/* webpackChunkName: "mail04" */ '../components/Campaign/Mail04.vue'),
 
@@ -70,13 +70,13 @@ Vue.use(VueRouter)
 
       },
       {
-        path:'R4ton',
+        path:'7Sins',
         name: 'mail07',
         component: () => import(/* webpackChunkName: "mail07" */ '../components/Campaign/Mail07.vue'),
 
       },
       {
-        path:'za8zi',
+        path:'8==8',
         name: 'mail08',
         component: () => import(/* webpackChunkName: "mail08" */ '../components/Campaign/Mail08.vue'),
       },
