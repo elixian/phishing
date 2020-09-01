@@ -1,5 +1,5 @@
 <template>
-  <div @click.self='hideOverlay'>
+  <div >
     <span :class="infoOverlay"></span>
 
     <div :class="['wrapper--tooltip', positionSpot]">
@@ -8,7 +8,7 @@
         <p>
           <slot name="textinfo"></slot>
         </p>
-        <button class="validationInfo" @click="hideInfo">Compris</button>
+        <button class="validationInfo" @click.self.prevent="hideInfo">Compris</button>
       </div>
     </div>
   </div>
@@ -20,7 +20,7 @@ import {  mapActions} from 'vuex'
 export default {
   props: ["infoOverlay", "positionSpot","spotDarken"],
   methods: {
-    ...mapActions(['showOverlay','hideOverlay']),
+    ...mapActions('presentation',['showOverlay','hideOverlay']),
     showInfo(event) { 
       this.showOverlay({'overlay' :`.${this.infoOverlay}`, 'tooltipInfo' :event.target.nextSibling});
     },

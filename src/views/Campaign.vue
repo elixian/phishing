@@ -75,7 +75,7 @@
         </figure>
       
     </div>
-    <div v-if='overlay' class='overlay-off' @click.self='hideOverlay'></div>
+    <!-- <div v-if='overlay' class='overlay-off' @click.self='hideOverlay'></div> -->
   </div>
 
   <!-- <img v-if="answer === false" class="img-result" src="@/assets/homer.png" alt="" />
@@ -86,12 +86,12 @@
 import { mapGetters, mapActions } from 'vuex'
 export default {
   computed:{
-    ...mapGetters([
+    ...mapGetters('presentation',[
       'overlay'
     ])
   },
   methods: {
-    ...mapActions(['hideOverlay']),
+    ...mapActions('presentation',['hideOverlay']),
     showTip(event) {
       let tooltip = document.getElementById("Tooltips");
       if(tooltip === null){
