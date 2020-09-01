@@ -9,5 +9,17 @@ export default new Vuex.Store({
   modules: {
     presentation
   },
+  state:{
+
+  },
+  getters:{
+
+  },
+  mutations:{
+
+  },
+  actions:{
+    
+  }
 
 })

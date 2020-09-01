@@ -15,7 +15,7 @@
 </template>
 
 <script>
-// import { TimelineLite } from "gsap";
+
 import {  mapActions} from 'vuex'
 export default {
   props: ["infoOverlay", "positionSpot","spotDarken"],

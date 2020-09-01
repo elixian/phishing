@@ -75,7 +75,7 @@
         </figure>
       
     </div>
-    <!-- <div v-if='overlay' class='overlay-off' @click.self='hideOverlay'></div> -->
+    <div v-if='overlay' class='overlay-off' @click.self='hideOverlay'></div>
   </div>
 
   <!-- <img v-if="answer === false" class="img-result" src="@/assets/homer.png" alt="" />

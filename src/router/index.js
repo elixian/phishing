@@ -8,7 +8,7 @@ import Phishing3 from '@/components/Phishing3'
 import Home from '@/views/Home'
 import About from '@/views/About'
 
-
+const dev = process.env.NODE_ENV !== 'production';
 Vue.use(VueRouter)
 
   const routes = [
@@ -34,19 +34,19 @@ Vue.use(VueRouter)
     },
     children:[
       {
-        path:'AlP1',
+        path:dev ? '1':'(AlP1|d_1)',
         name: 'mail01',
         component: () => import(/* webpackChunkName: "mail01" */ '../components/Campaign/Mail01.vue'),
 
       },
       {
-        path:'2Pak',
+        path:'(2Pak|d_2)',
         name: 'mail02',
         component: () => import(/* webpackChunkName: "mail02" */ '../components/Campaign/Mail02.vue'),
 
       },
       {
-        path:'3ggS',
+        path:'(3ggS|d_3)',
         name: 'mail03',
         component: () => import(/* webpackChunkName: "mail03" */ '../components/Campaign/Mail03.vue'),
 
