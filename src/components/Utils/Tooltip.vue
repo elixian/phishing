@@ -5,7 +5,7 @@
     <div :class="['wrapper--tooltip', positionSpot]">
       <div
         :class="['spot', { darken: spotDarken }]"
-        @click="showInfo"
+        @mouseup="showInfo"
         @keyup.enter="showInfo"
         tabindex="1"
         role="button"
@@ -15,7 +15,7 @@
         <p>
           <slot name="textinfo"></slot>
         </p>
-        <button class="validationInfo" @click.prevent="hideInfo">
+        <button class="validationInfo" @mouseup="hideInfo">
           Compris
         </button>
       </div>
