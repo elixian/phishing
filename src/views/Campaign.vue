@@ -45,7 +45,7 @@
         >. Pas de panique, il s’agit d’un exercice mis en place par
         <span class="bold"
           >la sécurité informatique de l’Assurance retraite </span
-        >pour <span class="bold">sensibiliser à cette pratique .</span><div class="span italic">Ce traitement ne fait pas l’objet de conservation des données</div>.
+        >pour <span class="bold">sensibiliser à cette pratique.</span><span class="span italic"> Ce traitement ne fait pas l’objet de conservation des données.</span>
       </div>
     </div>
 
