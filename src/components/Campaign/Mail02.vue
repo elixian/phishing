@@ -3,7 +3,7 @@
     <div class="wrapper--img">
       <img
         src="@/assets/images/campaign/mail02.jpg"
-        alt=""
+        alt="mail phishing"
         srcset=""
         class="img-phishing"
       />

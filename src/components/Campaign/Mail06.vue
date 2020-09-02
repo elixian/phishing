@@ -4,7 +4,7 @@
       <img
         class="img-phishing"
         src="@/assets/images/campaign/mail06.png"
-        alt=""
+        alt="mail phishing"
         srcset=""
       />
       <Tooltip infoOverlay="overlay-1" positionSpot="position-1">

@@ -4,7 +4,7 @@
       <img
         class="img-phishing"
         src="@/assets/images/campaign/mail03.jpg"
-        alt=""
+        alt="mail phishing"
         srcset=""
       />
       <Tooltip

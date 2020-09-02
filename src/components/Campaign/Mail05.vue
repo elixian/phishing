@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="wrapper--img">
-      <img src="@/assets/images/campaign/mail05.jpg" alt="" srcset="" />
+      <img src="@/assets/images/campaign/mail05.jpg" alt="mail phishing" srcset="" />
       <Tooltip infoOverlay="overlay-1" positionSpot="position-1" spot-darken=true>
         <template v-slot:textinfo>
           Un principe, général, <span class="emphasis">méfiez-vous des services/documents gratuits</span>. A
