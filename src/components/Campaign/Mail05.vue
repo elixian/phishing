@@ -16,7 +16,7 @@
       <Tooltip infoOverlay="overlay-2" positionSpot="position-2">
         <template v-slot:textinfo>
           L’adresse d’envoi et l’URL de redirection ressemble fortement à celle
-          d’amazone, cependant en lieu et place du <span class="emphasis">&laquo;o&raquo;</span>, a été mise
+          d’amazon, cependant en lieu et place du <span class="emphasis">&laquo;o&raquo;</span>, a été mise
           le chiffre <span class="emphasis">&laquo;0&raquo;</span>. Il s’agit d’une nouvelle pratique assez
           répandue pour faire croire à un site légitime.
         </template>

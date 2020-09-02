@@ -15,6 +15,7 @@
     overflow: hidden;
     position: relative;
     font-family: 'Gingerbread House',Arial, Helvetica, sans-serif;
+    height:100vh;
 }
 img{
     width:50%;

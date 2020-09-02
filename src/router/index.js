@@ -40,48 +40,48 @@ Vue.use(VueRouter)
 
       },
       {
-        path:'(2Pak|d_2)',
+        path:dev ? '2':'(2Pak|d_2)',
         name: 'mail02',
         component: () => import(/* webpackChunkName: "mail02" */ '../components/Campaign/Mail02.vue'),
 
       },
       {
-        path:'(3ggS|d_3)',
+        path:dev ? '3':'(3ggS|d_3)',
         name: 'mail03',
         component: () => import(/* webpackChunkName: "mail03" */ '../components/Campaign/Mail03.vue'),
 
       },
       {
-        path:'R4ton',
+        path:dev ? '4':'(R4ton|d_4)',
         name: 'mail04',
         component: () => import(/* webpackChunkName: "mail04" */ '../components/Campaign/Mail04.vue'),
 
       },
       {
-        path:'Wsu5Q',
+        path:dev ? '5':'(Wsu5Q|d_5)',
         name: 'mail05',
         component: () => import(/* webpackChunkName: "mail05" */ '../components/Campaign/Mail05.vue'),
 
       },
       {
-        path:'w6ki',
+        path:dev ? '6':'(w6ki|d_6)',
         name: 'mail06',
         component: () => import(/* webpackChunkName: "mail06" */ '../components/Campaign/Mail06.vue'),
 
       },
       {
-        path:'7Sins',
+        path:dev ? '7':'(7Sins|d_7)',
         name: 'mail07',
         component: () => import(/* webpackChunkName: "mail07" */ '../components/Campaign/Mail07.vue'),
 
       },
       {
-        path:'8==8',
+        path:dev ? '8':'(8==8|d_8)',
         name: 'mail08',
         component: () => import(/* webpackChunkName: "mail08" */ '../components/Campaign/Mail08.vue'),
       },
       {
-        path:'9below0',
+        path:dev ? '9':'(9below0|d_9)',
         name: 'mail09',
         component: () => import(/* webpackChunkName: "mail09" */ '../components/Campaign/Mail09.vue'),
       },

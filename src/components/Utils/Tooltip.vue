@@ -1,34 +1,43 @@
 <template>
-  <div >
+  <div>
     <span :class="infoOverlay"></span>
 
     <div :class="['wrapper--tooltip', positionSpot]">
-      <div :class="['spot', {darken:spotDarken} ]" @click.self="showInfo"></div>
-      <div class="tooltip--info">
+      <div
+        :class="['spot', { darken: spotDarken }]"
+        @click="showInfo"
+        @keyup.enter="showInfo"
+        tabindex="1"
+        role="button"
+        aria-label="tooltip phishing"
+      ></div>
+      <div class="tooltip--info" role="tooltip">
         <p>
           <slot name="textinfo"></slot>
         </p>
-        <button class="validationInfo" @click.self.prevent="hideInfo">Compris</button>
+        <button class="validationInfo" @click.prevent="hideInfo">
+          Compris
+        </button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-
-import {  mapActions} from 'vuex'
+import { mapActions } from "vuex";
 export default {
-  props: ["infoOverlay", "positionSpot","spotDarken"],
+  props: ["infoOverlay", "positionSpot", "spotDarken"],
   methods: {
-    ...mapActions('presentation',['showOverlay','hideOverlay']),
-    showInfo(event) { 
-      this.showOverlay({'overlay' :`.${this.infoOverlay}`, 'tooltipInfo' :event.target.nextSibling});
+    ...mapActions("presentation", ["showOverlay", "hideOverlay"]),
+    showInfo(event) {
+      this.showOverlay({
+        overlay: `.${this.infoOverlay}`,
+        tooltipInfo: event.target.nextSibling,
+      });
     },
     hideInfo() {
-     
-        this.hideOverlay();
+      this.hideOverlay();
     },
-    
   },
 };
 </script>
@@ -58,7 +67,7 @@ export default {
   border-radius: 50%;
   background-color: $spot-color;
   cursor: pointer;
-   &:before,
+  &:before,
   &:after {
     content: "";
     display: block;
@@ -74,11 +83,9 @@ export default {
     transition: all 0.25s ease-in-out;
     animation: social-button-beat 1.5s ease-out infinite;
   }
-  &.darken{
+  &.darken {
     background-color: $spot-color-darken;
-   
   }
- 
 }
 
 .tooltip--info {
@@ -115,19 +122,19 @@ export default {
 }
 
 // Animation
-@keyframes social-button-beat{
-    0%{opacity: .0;
-        transform: scale(1);
-    } 
+@keyframes social-button-beat {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
 
-    70%{
-        opacity: .4;
-        transform: scale(2);
-    }
-        
-    100%{
-        opacity: .4;
-    }
-        
+  70% {
+    opacity: 0.4;
+    transform: scale(2);
+  }
+
+  100% {
+    opacity: 0.4;
+  }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="wrapper--img">
-      <img class="img-phishing" src="@/assets/images/campaign/mail01.jpg" alt="" srcset="" />
+      <img class="img-phishing" src="@/assets/images/campaign/mail01.jpg" alt="mail phishing" srcset="" />
       <Tooltip
         infoOverlay="overlay-1"
         positionSpot="position-1"

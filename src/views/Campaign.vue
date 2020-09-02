@@ -1,6 +1,9 @@
 <template>
-  <div class="campaign" >
+  <div class="campaign">
     <div class="header">
+      <div id="logo">
+        <img src="@/assets/images/AR.png" alt="logo cnav" srcset="" />
+      </div>
       <div class="oops-info">
         <svg
           viewBox="0 0 60 60"
@@ -42,17 +45,16 @@
         >. Pas de panique, il s’agit d’un exercice mis en place par
         <span class="bold"
           >la sécurité informatique de l’Assurance retraite </span
-        >pour <span class="bold">sensibiliser à cette pratique</span>. Vos données n’ont pas été sauvegardées.
+        >pour <span class="bold">sensibiliser à cette pratique</span>. Vos
+        données n’ont pas été sauvegardées.
       </div>
     </div>
 
     <div class="visual-report">
-      
       <h2 class="visual-report__title text-center">
         Qu’est-ce qui m’a echappé ?
       </h2>
       <router-view />
-      
     </div>
 
     <div class="curiosity text-center">
@@ -60,22 +62,26 @@
       <p class="curiosity-formation">
         Formez-vous à travers le e-learning sécurité mis à votre disposition
       </p>
-      
-        <figure>
-          <div class="security">
-            <a class="no-style_link" href="https://retraite.syfadis.com/Catalog/TrainingShops/TrainingView.aspx?idTraining=7046070273" target="_blank">
+
+      <figure>
+        <div class="security">
+          <a
+            class="no-style_link"
+            href="https://retraite.syfadis.com/Catalog/TrainingShops/TrainingView.aspx?idTraining=7046070273"
+            target="_blank"
+          >
             <img
               src="@/assets/images/campaign/security-formation.png"
               alt="securité formation"
             />
-            </a>
-          </div>
-          <figcaption class="figcaption">Cybersécurité : mission Agent Cyber-responsable</figcaption>
-          
-        </figure>
-      
+          </a>
+        </div>
+        <figcaption class="figcaption">
+          Cybersécurité : mission Agent Cyber-responsable
+        </figcaption>
+      </figure>
     </div>
-    <div v-if='overlay' class='overlay-off' @click.self='hideOverlay'></div>
+    <div v-if="overlay" class="overlay-off" @click.self="hideOverlay"></div>
   </div>
 
   <!-- <img v-if="answer === false" class="img-result" src="@/assets/homer.png" alt="" />
@@ -83,38 +89,42 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters, mapActions } from "vuex";
 export default {
-  computed:{
-    ...mapGetters('presentation',[
-      'overlay'
-    ])
+  computed: {
+    ...mapGetters("presentation", ["overlay"]),
   },
   methods: {
-    ...mapActions('presentation',['hideOverlay']),
+    ...mapActions("presentation", ["hideOverlay"]),
     showTip(event) {
       let tooltip = document.getElementById("Tooltips");
-      if(tooltip === null){
+      if (tooltip === null) {
         event.target.innerHTML =
-        event.target.innerHTML +
-        `<div id='Tooltips'><p class="box-tip" @mouseleave.self="hideTip">Le hameçonnage est une pratique de piratage informatiques qui consiste à envoyer un message destiné à amener une personne à se connecter sur un site et fournir des informations personnelles.</p></div>`;
+          event.target.innerHTML +
+          `<div id='Tooltips' role="tooltip"><p class="box-tip" @mouseleave.self="hideTip">Le hameçonnage est une pratique de piratage informatiques qui consiste à envoyer un message destiné à amener une personne à se connecter sur un site et fournir des informations personnelles.</p></div>`;
       }
-      
     },
     hideTip() {
       let tooltip = document.getElementById("Tooltips");
-      tooltip !== null ? tooltip.remove(): null;
+      tooltip !== null ? tooltip.remove() : null;
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.curiosity{
-  margin-bottom:5rem;
+#logo {
+  position: absolute;
+  left: 12rem;
+  top: 5rem;
+}
+.curiosity {
+  margin-bottom: 5rem;
 }
 .curiosity-title {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+
+  margin-top: 5rem;
 }
 .curiosity-formation {
   text-align: center;
@@ -125,20 +135,19 @@ export default {
   width: 381px;
   background-color: #f2f2f2;
   margin: 2rem auto 0;
- 
 }
-.figcaption{
-    width:245px;
-    margin:1rem auto;
-  }
+.figcaption {
+  width: 245px;
+  margin: 1rem auto;
+}
 
-  .overlay-off{
-    position:fixed;
-    background-color:transparent;
-    width:100%;
-    height:100vh;
-    top:0;
-    bottom:0;
-        z-index: 9;
-  }
+.overlay-off {
+  position: fixed;
+  background-color: transparent;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  z-index: 9;
+}
 </style>
