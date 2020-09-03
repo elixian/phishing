@@ -41,7 +41,7 @@
           @mouseover="showTip"
           @mouseleave="hideTip"
           @mouseout="hideTip"
-          >email de hameçonnage</span
+          >email d'hameçonnage</span
         >. Pas de panique, il s’agit d’un exercice mis en place par
         <span class="bold"
           >la sécurité informatique de l’Assurance retraite </span
