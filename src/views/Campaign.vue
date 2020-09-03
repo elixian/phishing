@@ -51,7 +51,7 @@
 
     <div class="visual-report">
       <h2 class="visual-report__title text-center">
-        Qu’est-ce qui m’a echappé ?
+        Qu’est-ce qui m’a échappé ?
       </h2>
       <router-view />
     </div>
