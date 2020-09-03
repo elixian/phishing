@@ -1,6 +1,5 @@
 <template>
   <div>
-    {{totalSteps}}
     <ul id="stepper">
       <li 
         v-for="(step,index) in totalSteps"
@@ -23,8 +22,9 @@ export default {
 <style lang="scss" scoped>
 #stepper{
     display: flex;
-    width:227px;
-    margin:0;
+    margin:0 auto;
+    width:min-content;
+    padding:0;
     .step{
         width:20px;
         height:1px;
