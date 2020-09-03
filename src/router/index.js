@@ -88,6 +88,13 @@ Vue.use(VueRouter)
     ]
   },
   {
+    path: '/game',
+      name: 'GamePhishing',
+      component: () => import(/* webpackChunkName: "Game" */ '../views/Game.vue')
+    
+
+  },
+  {
     path: '/test',
     name: 'About',
     component: About,
