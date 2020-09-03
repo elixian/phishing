@@ -2,7 +2,10 @@
   <div>
     {{totalSteps}}
     <ul id="stepper">
-      <li v-for="(step,index) in totalSteps" :key='index'></li>
+      <li 
+        v-for="(step,index) in totalSteps"
+        :class="['step',{active: index === activePage}]"
+       :key='index'></li>
     </ul>
   </div>
 </template>
@@ -12,7 +15,7 @@ import {mapState} from 'vuex';
 export default {
   
   computed:{
-    ...mapState('stepper',['totalSteps'])
+    ...mapState('stepper',['totalSteps','activePage'])
   }
 };
 </script>
@@ -22,7 +25,7 @@ export default {
     display: flex;
     width:227px;
     margin:0;
-    li{
+    .step{
         width:20px;
         height:1px;
         border:none;
@@ -31,6 +34,9 @@ export default {
         background-color:#C4C4C4;
         &:not(:first-child){
           margin-left:3px;
+        }
+        &.active{
+          background-color:#0C7193;
         }
     }
 }

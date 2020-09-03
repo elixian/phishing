@@ -2,6 +2,7 @@
 export default {
     namespaced: true,
     state:{
-        totalSteps: 5
+        totalSteps: 5,
+        activePage:2
     }
 }
