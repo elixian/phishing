@@ -27,30 +27,16 @@
 </template>
 
 <script>
-import { TimelineLite } from "gsap";
-import {mapState} from 'vuex';
+import { TimelineMax,Power4 } from "gsap";
 export default {
   mounted(){
-const timeline = new TimelineLite({delay:0.5});
-                timeline.fromTo('#wrapper-choice',0.5,{y:"200px"},{y:"0"});
+      const timeline = new TimelineMax({delay:0.5});
+      timeline.fromTo('#wrapper-choice',0.5,{y:"200px", autoAlpha:0},{y:"0", autoAlpha:1, ease:Power4.easeOut});
   },
   data() {
     return {
       isPhishing: null, //default null no choice
     };
-  },
-  computed: {
-    ...mapState("game", ["gameIsStarted"]),
-    
-  },
-  watch:{
-      gameIsStarted(v){
-          console.log("new value",v);
-          if(v){
-              const timeline = new TimelineLite();
-                timeline.to('#wrapper-choice',6,{y:"-100px"});
-          }
-      }
   },
   methods: {
     setValue(v) {
