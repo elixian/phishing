@@ -1,5 +1,6 @@
 <template>
   <div>
+    
     <div class="wrapper--img">
       <img class="img-phishing" src="@/assets/images/campaign/mail01.jpg" alt="mail phishing" srcset="" />
       <Tooltip
@@ -31,7 +32,15 @@
 
 <script>
 import Tooltip from "@/components/Utils/Tooltip";
+import {mapActions} from 'vuex';
 export default {
+  created(){
+ this.setCurrentStatus(true);
+  
+  },
+  methods:{
+    ...mapActions('game',['setCurrentStatus'])
+  },
   components: {
     Tooltip,
   },

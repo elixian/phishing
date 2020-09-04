@@ -91,7 +91,15 @@ Vue.use(VueRouter)
     path: '/game',
       name: 'GamePhishing',
       component: () => import(/* webpackChunkName: "Game" */ '../views/Game.vue')
-    
+      ,
+      children:[
+        {
+          path:dev ? '1':'(AlP1|d_1)',
+          name: 'mailgame01',
+          component: () => import(/* webpackChunkName: "mail01" */ '../components/Campaign/Mail01.vue'),
+  
+        }
+      ]
 
   },
   {

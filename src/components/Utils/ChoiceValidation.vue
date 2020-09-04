@@ -1,36 +1,62 @@
 <template>
+
   <div id="wrapper-choice">
     <div class="choices">
-      <div :class="['choice choice__left',{active : isPhishing } ]">
-          <label for="phishing" @mouseup="setValue(true)">
-                <input id="phishing" type="radio" name="choices">
-                <span>Phishing</span>
-            </label>
+      <div :class="['choice choice__left', { active: isPhishing }]">
+        <label for="phishing" @mouseup="setValue(true)">
+          <input id="phishing" type="radio" name="choices" />
+          <span>Phishing</span>
+        </label>
       </div>
-      <div :class="['choice choice__right',{active : (!isPhishing && isPhishing !== null)}]">
-          <label for="authentic" @mouseup="setValue(false)">
-                <input id="authentic" type="radio" name="choices">
-                <span>Authentique</span>
-            </label>
+      <div
+        :class="[
+          'choice choice__right',
+          { active: !isPhishing && isPhishing !== null },
+        ]"
+      >
+        <label for="authentic" @mouseup="setValue(false)">
+          <input id="authentic" type="radio" name="choices" />
+          <span>Authentique</span>
+        </label>
       </div>
-      <span class="separator"></span>
+      <span class="separator" v-if="isPhishing === null"></span>
     </div>
-    <button class="choice__validation">Valider</button>
+    <button class="choice__validation" type="button">Valider</button>  
   </div>
+ 
 </template>
 
 <script>
+import { TimelineLite } from "gsap";
+import {mapState} from 'vuex';
 export default {
-    data(){
-        return{
-            isPhishing:null //default null no choice
-        }
+  mounted(){
+const timeline = new TimelineLite({delay:0.5});
+                timeline.fromTo('#wrapper-choice',0.5,{y:"200px"},{y:"0"});
+  },
+  data() {
+    return {
+      isPhishing: null, //default null no choice
+    };
+  },
+  computed: {
+    ...mapState("game", ["gameIsStarted"]),
+    
+  },
+  watch:{
+      gameIsStarted(v){
+          console.log("new value",v);
+          if(v){
+              const timeline = new TimelineLite();
+                timeline.to('#wrapper-choice',6,{y:"-100px"});
+          }
+      }
+  },
+  methods: {
+    setValue(v) {
+      this.isPhishing = v;
     },
-    methods:{
-        setValue(v){
-            this.isPhishing = v;
-        }
-    }
+  },
 };
 </script>
 
@@ -43,16 +69,27 @@ export default {
 
   justify-content: center;
 }
-
+.separator {
+  width: 1px;
+  height: 33px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: 50%;
+  transform: translate(0, -50%);
+  background-color: #e0e0e0;
+}
 .choices {
+  display: flex;
+  position: relative;
   height: 6.6rem;
   width: 40rem;
-  display: flex;
+
   margin-right: 2rem;
   margin-left: calc(2rem + var(--width-button));
- border-width:1px;
+  border-width: 1px;
   border-color: #bdbdbd;
-  border-radius:4px;
+  border-radius: 4px;
   border-style: solid;
   //overflow: hidden;
 }
@@ -60,14 +97,14 @@ export default {
   $border-color: #bdbdbd;
   width: 200px;
   position: relative;
- background-color: #fff;
- display: flex;
- justify-content: center;
- &.active{
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  &.active {
+    background-color: #f2f2f2;
+    &::after {
       background-color: #f2f2f2;
-      &::after{
-          background-color: #f2f2f2;
-      }
+    }
   }
   &::before,
   &::after {
@@ -75,7 +112,7 @@ export default {
     position: absolute;
     width: 12px;
     height: 12px;
-     background-color: #fff;
+    background-color: #fff;
     transform-origin: center center;
   }
   &::before {
@@ -83,16 +120,15 @@ export default {
     clip-path: polygon(1px 1px, 2px 12px, 12px 12px);
   }
   &::after {
-   
     clip-path: polygon(1px 1px, 1px 12px, 12px 12px);
   }
   &__left {
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
     &::before {
       bottom: -12px;
       right: -1px;
-      
+
       transform: rotate(180deg);
     }
     &::after {
@@ -102,8 +138,8 @@ export default {
     }
   }
   &__right {
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
     &::before {
       bottom: -12px;
       left: -1px;
@@ -115,7 +151,6 @@ export default {
       transform: rotate(180deg) rotateY(180deg);
     }
   }
-  
 }
 // Radio button
 
@@ -132,8 +167,6 @@ label {
       }
     }
   }
-
-
   span {
     display: flex;
     align-items: center;
@@ -144,19 +177,19 @@ label {
     &:before {
       display: flex;
       content: "";
-      background-color: hsl(205,100%,65%);
+      background-color: hsl(205, 100%, 65%);
       width: 18px;
       height: 18px;
       border-radius: 50%;
       margin-right: 6px;
       transition: 0.25s;
       box-shadow: inset 0 0 0 20px #fff;
-      border: 1px solid #BDBDBD;
+      border: 1px solid #bdbdbd;
     }
   }
 }
 
-  // Button validation
+// Button validation
 .choice__validation {
   background-color: #0c7193;
   border-radius: 4px;
@@ -166,4 +199,5 @@ label {
   font-family: "Pacifico", Arial, Helvetica, sans-serif;
   border: none;
 }
+
 </style>
