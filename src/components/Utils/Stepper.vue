@@ -3,7 +3,7 @@
     <ul id="stepper">
       <li 
         v-for="(step,index) in totalSteps"
-        :class="['step',{active: index === activePage}]"
+        :class="['step',{active: (index +1) === activePage}]"
        :key='index'></li>
     </ul>
   </div>

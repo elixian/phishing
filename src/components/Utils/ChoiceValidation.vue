@@ -21,13 +21,14 @@
       </div>
       <span class="separator" v-if="isPhishing === null"></span>
     </div>
-    <button class="choice__validation" type="button">Valider</button>  
+    <button class="choice__validation" type="button" @click="next">Valider</button>  
   </div>
  
 </template>
 
 <script>
 import { TimelineMax,Power4 } from "gsap";
+import { mapActions, mapState} from 'vuex';
 export default {
   mounted(){
       const timeline = new TimelineMax({delay:0.5});
@@ -38,10 +39,18 @@ export default {
       isPhishing: null, //default null no choice
     };
   },
+  computed:{
+    ...mapState('stepper',['activePage'])
+  },
   methods: {
     setValue(v) {
       this.isPhishing = v;
     },
+    next(){
+      this.$router.replace({name: `mailgame0${this.activePage + 1}`});
+      this.incrementStepper();
+    },
+    ...mapActions('stepper',['incrementStepper'])
   },
 };
 </script>
