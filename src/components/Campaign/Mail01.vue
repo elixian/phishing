@@ -46,7 +46,7 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style lang="scss" >
 .position-1 {
   top: 37rem;
   left: 44rem;

@@ -8,8 +8,8 @@
         class="img-phishing"
       />
       <Tooltip
-        infoOverlay="overlay-1"
-        positionSpot="position-1"
+        infoOverlay="overlay-2-1"
+        positionSpot="position-2-1"
         spot-darken="true"
       >
         <template v-slot:textinfo>
@@ -18,8 +18,8 @@
         </template>
       </Tooltip>
       <Tooltip
-        infoOverlay="overlay-2"
-        positionSpot="position-2"
+        infoOverlay="overlay-2-2"
+        positionSpot="position-2-2"
         spot-darken="true"
       >
         <template v-slot:textinfo>
@@ -29,8 +29,8 @@
         </template>
       </Tooltip>
       <Tooltip
-        infoOverlay="overlay-3"
-        positionSpot="position-3"
+        infoOverlay="overlay-2-3"
+        positionSpot="position-2-3"
         spot-darken="true"
       >
         <template v-slot:textinfo>
@@ -51,21 +51,21 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-.position-1 {
+<style lang="scss" >
+.position-2-1 {
   top: 17rem;
   left: 52rem;
 }
-.position-2 {
+.position-2-2 {
   top: 19.7rem;
   left: 29rem;
 }
-.position-3 {
+.position-2-3 {
   top: 23rem;
   left: 35rem;
 }
 
-.overlay-1 {
+.overlay-2-1 {
   clip-path: polygon(
     0% 0%,
     0% 100%,
@@ -79,7 +79,7 @@ export default {
     100% 0%
   );
 }
-.overlay-2 {
+.overlay-2-2 {
   clip-path: polygon(
     0% 0%,
     0% 100%,
@@ -100,7 +100,7 @@ export default {
     100% 0%
   );
 }
-.overlay-3 {
+.overlay-2-3 {
   clip-path: polygon(
     0% 0%,
     0% 100%,
