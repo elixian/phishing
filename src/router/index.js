@@ -110,7 +110,19 @@ Vue.use(VueRouter)
           name: 'mailgame03',
           component: () => import(/* webpackChunkName: "mail03" */ '../components/Campaign/Mail03.vue'),
   
-        }
+        },
+        {
+          path:dev ? '4':'(AlP1|d_1)',
+          name: 'mailgame04',
+          component: () => import(/* webpackChunkName: "mail04" */ '../components/Campaign/Mail04.vue'),
+  
+        },
+        {
+          path:dev ? '5':'(AlP1|d_1)',
+          name: 'mailgame05',
+          component: () => import(/* webpackChunkName: "mail05" */ '../components/Campaign/Mail05.vue'),
+  
+        },
       ]
 
   },

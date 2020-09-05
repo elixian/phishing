@@ -1,61 +1,111 @@
 <template>
-
   <div id="wrapper-choice">
-    <div class="choices">
-      <div :class="['choice choice__left', { active: isPhishing }]">
-        <label for="phishing" @mouseup="setValue(true)">
-          <input id="phishing" type="radio" name="choices" />
-          <span>Phishing</span>
-        </label>
+    
+      <div class="choices" v-if="!nextStatmentButton">
+        <div :class="['choice choice__left', { active: isPhishing }]">
+          <label for="phishing" @mouseup="setValue(true)">
+            <input id="phishing" type="radio" name="choices" class="js_radio"  />
+            <span>Phishing</span>
+          </label>
+        </div>
+        <div
+          :class="[
+            'choice choice__right',
+            { active: !isPhishing && isPhishing !== null },
+          ]"
+        >
+          <label for="authentic" @mouseup="setValue(false)">
+            <input
+              id="authentic"
+              type="radio"
+              name="choices"
+              class="js_radio"
+            />
+            <span>Authentique</span>
+          </label>
+        </div>
+        <span class="separator" v-if="isPhishing === null"></span>
       </div>
-      <div
-        :class="[
-          'choice choice__right',
-          { active: !isPhishing && isPhishing !== null },
-        ]"
-      >
-        <label for="authentic" @mouseup="setValue(false)">
-          <input id="authentic" type="radio" name="choices" />
-          <span>Authentique</span>
-        </label>
+      <transition name="bounce" >
+    
+      
+      <div :class="['wrapper-result',d]" v-if="nextStatmentButton" >
+        <div class="result-info" v-if="isPhishing == currentGame.isPhishing"><img src="@/assets/images/game/clapping-hands.png" alt=""> <p> Bien vu ! c’est bien un mail frauduleux</p></div>
+        <div class="result-info" v-else><img src="@/assets/images/game/anxious.png" alt=""> <p>Raté, c’est un mail frauduleux</p></div>
       </div>
-      <span class="separator" v-if="isPhishing === null"></span>
-    </div>
-    <button class="choice__validation" type="button" @click="next">Valider</button>  
+    </transition>
+
+    <button
+      :class="['choice__validation']"
+      type="button"
+      @click.prevent="checkResponse"
+      v-if="!nextStatmentButton"
+    >
+      Valider
+    </button>
+    <button
+      :class="['choice__validation', { inactive: isLastPage }]"
+      type="button"
+      @click="next"
+      v-else
+    >
+      Suivant
+    </button>
   </div>
- 
 </template>
 
 <script>
-import { TimelineMax,Power4 } from "gsap";
-import { mapActions, mapState} from 'vuex';
+import { TimelineMax, Power4 } from "gsap";
+import { mapActions, mapState, mapGetters } from "vuex";
 export default {
-  mounted(){
-      const timeline = new TimelineMax({delay:0.5});
-      timeline.fromTo('#wrapper-choice',0.5,{y:"200px", autoAlpha:0},{y:"0", autoAlpha:1, ease:Power4.easeOut});
+  mounted() {
+    const timeline = new TimelineMax({ delay: 0.5 });
+    timeline.fromTo(
+      "#wrapper-choice",
+      0.5,
+      { y: "200px", autoAlpha: 0 },
+      { y: "0", autoAlpha: 1, ease: Power4.easeOut }
+    );
   },
   data() {
     return {
       isPhishing: null, //default null no choice
+      nextStatmentButton: false,
     };
   },
-  computed:{
-    ...mapState('stepper',['activePage'])
+  computed: {
+    ...mapState("stepper", ["activePage"]),
+    ...mapState('game',["currentGame"]),
+    ...mapGetters("stepper", ["isLastPage"]),
+    d:function(){
+      return this.currentGame.isPhishing === this.isPhishing ? 'success' : 'error';
+    }
   },
   methods: {
     setValue(v) {
       this.isPhishing = v;
     },
-    next(){
-      this.$router.replace({name: `mailgame0${this.activePage + 1}`});
-      this.incrementStepper();
+    checkResponse() {
+      this.nextStatmentButton = true;
     },
-    ...mapActions('stepper',['incrementStepper'])
+    next() {
+      //get input checked and set to false
+      let radios = [...document.querySelectorAll(".js_radio")];
+      let f = radios.find((b) => b.checked);
+      f !== undefined ?? (f.checked = false);
+
+      this.$router.replace({ name: `mailgame0${this.activePage + 1}` });
+      this.incrementStepper();
+      this.nextStatmentButton = false; // initialise le boutton suivant à false
+      this.isPhishing = null; //on set à null
+    },
+    ...mapActions("stepper", ["incrementStepper"]),
   },
 };
 </script>
 
 <style lang="scss" scoped>
+$grey-border: #bdbdbd;
 #wrapper-choice {
   --width-button: 9.3rem;
   display: flex;
@@ -79,17 +129,61 @@ export default {
   position: relative;
   height: 6.6rem;
   width: 40rem;
-
   margin-right: 2rem;
   margin-left: calc(2rem + var(--width-button));
   border-width: 1px;
-  border-color: #bdbdbd;
+  border-color: $grey-border;
   border-radius: 4px;
   border-style: solid;
   //overflow: hidden;
 }
+.wrapper-result {
+  @extend .choices;
+  background-color: #fff;
+  &::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border: 1px solid $grey-border;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    transform: rotate(45deg);
+    left: 0;
+    right: 0;
+    margin: -9px auto;
+    transform-origin: center center;
+    border-left: none;
+    border-top: none;
+    border-bottom-right-radius: 3px;
+  }
+  &.error{
+    border-color:#eb5757;
+    &::before{
+      border-color:red#eb5757;
+    }
+  }
+  &.success{
+    border-color:#219653;
+    &::before{
+      border-color: #219653;
+    }
+  }
+  .result-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto;
+    img{
+      width:20px;
+      height:20px;
+      margin-right: 1rem;
+    }
+  
+  }
+}
 .choice {
-  $border-color: #bdbdbd;
   width: 200px;
   position: relative;
   background-color: #fff;
@@ -111,7 +205,7 @@ export default {
     transform-origin: center center;
   }
   &::before {
-    background: $border-color;
+    background: $grey-border;
     clip-path: polygon(1px 1px, 2px 12px, 12px 12px);
   }
   &::after {
@@ -193,6 +287,28 @@ label {
   color: #fff;
   font-family: "Pacifico", Arial, Helvetica, sans-serif;
   border: none;
+  &.inactive {
+    visibility: hidden;
+  }
 }
 
+//transition
+
+.bounce-enter-active {
+  animation: bounce-in 0.5s;
+}
+.bounce-leave-active {
+  display: none;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 </style>

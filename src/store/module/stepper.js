@@ -5,6 +5,11 @@ export default {
         totalSteps: 5,
         activePage:1
     },
+    getters:{
+        isLastPage(state){
+            return state.totalSteps === state.activePage;
+        }
+    },
     mutations:{
         SET_ACTIVE_PAGE(state){
             state.activePage = state.activePage + 1; 

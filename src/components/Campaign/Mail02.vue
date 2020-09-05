@@ -45,7 +45,15 @@
 
 <script>
 import Tooltip from "@/components/Utils/Tooltip";
+import {mapActions} from "vuex";
 export default {
+  created(){
+ this.setCurrentStatus(true);
+  
+  },
+  methods:{
+    ...mapActions('game',['setCurrentStatus'])
+  },
   components: {
     Tooltip,
   },

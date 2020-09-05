@@ -8,8 +8,8 @@
         srcset=""
       />
       <Tooltip
-        infoOverlay="overlay-1"
-        positionSpot="position-1"
+        infoOverlay="overlay-4-1"
+        positionSpot="position-4-1"
         spot-darken="true"
       >
         <template v-slot:textinfo>
@@ -19,8 +19,8 @@
         </template>
       </Tooltip>
       <Tooltip
-        infoOverlay="overlay-2"
-        positionSpot="position-2"
+        infoOverlay="overlay-4-2"
+        positionSpot="position-4-2"
         spot-darken="true"
       >
         <template v-slot:textinfo>
@@ -30,8 +30,8 @@
         </template>
       </Tooltip>
       <Tooltip
-        infoOverlay="overlay-3"
-        positionSpot="position-3"
+        infoOverlay="overlay-4-3"
+        positionSpot="position-4-3"
         spot-darken="true"
       >
         <template v-slot:textinfo>
@@ -53,20 +53,20 @@ export default {
 };
 </script>
 <style lang="scss">
-.position-1 {
+.position-4-1 {
   top: 12.8rem;
   left: 35rem;
 }
-.position-2 {
+.position-4-2 {
   top: 19rem;
   left: 15rem;
 }
-.position-3 {
+.position-4-3 {
   top: 22rem;
   left: 40rem;
 }
 
-.overlay-1 {
+.overlay-4-1 {
   clip-path: polygon(
     0% 0%,
     0% 100%,
@@ -87,7 +87,7 @@ export default {
   );
 }
 
-.overlay-2 {
+.overlay-4-2 {
   clip-path: polygon(
     0% 0%,
     0% 100%,
@@ -101,7 +101,7 @@ export default {
     100% 0%
   );
 }
-.overlay-3 {
+.overlay-4-3 {
   clip-path: polygon(
     0% 0%,
     0% 100%,
