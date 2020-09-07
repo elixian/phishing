@@ -4,7 +4,8 @@ export default{
     state:{
         gameIsStarted:false,
         currentGame:{
-            isPhishing:null
+            isPhishing:null,
+            showSpot:false,
         }
     },
     mutations:{
@@ -13,6 +14,9 @@ export default{
         },
         SET_GAME_STARTED(state){
             state.gameIsStarted = true;
+        },
+        TOGGLE_SHOW_SPOT(state,payload){
+            state.currentGame.showSpot = payload
         }
     },
     actions:{
@@ -21,6 +25,9 @@ export default{
         },
         startGame({commit}){
             commit('SET_GAME_STARTED');
+        },
+        setShowSpot({commit},isVisible){
+            commit('TOGGLE_SHOW_SPOT', isVisible);
         }
     },   
 }

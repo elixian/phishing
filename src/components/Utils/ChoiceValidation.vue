@@ -39,7 +39,7 @@
       :class="['choice__validation']"
       type="button"
       @click.prevent="checkResponse"
-      v-if="!nextStatmentButton"
+      v-if="!nextStatmentButton && isPhishing !== null"
     >
       Valider
     </button>
@@ -47,7 +47,7 @@
       :class="['choice__validation', { inactive: isLastPage }]"
       type="button"
       @click="next"
-      v-else
+      v-if="nextStatmentButton"
     >
       Suivant
     </button>
@@ -87,6 +87,7 @@ export default {
     },
     checkResponse() {
       this.nextStatmentButton = true;
+      this.setShowSpot(true);
     },
     next() {
       //get input checked and set to false
@@ -98,8 +99,11 @@ export default {
       this.incrementStepper();
       this.nextStatmentButton = false; // initialise le boutton suivant à false
       this.isPhishing = null; //on set à null
+
+     
     },
     ...mapActions("stepper", ["incrementStepper"]),
+    ...mapActions("game", ["setShowSpot"]),
   },
 };
 </script>
@@ -110,8 +114,9 @@ $grey-border: #bdbdbd;
   --width-button: 9.3rem;
   display: flex;
   align-items: center;
-  margin-top: 3rem;
-
+  
+  width:40rem;
+  margin:3rem auto 0;
   justify-content: center;
 }
 .separator {
@@ -129,8 +134,8 @@ $grey-border: #bdbdbd;
   position: relative;
   height: 6.6rem;
   width: 40rem;
-  margin-right: 2rem;
-  margin-left: calc(2rem + var(--width-button));
+  //margin-right: 2rem;
+  //margin-left: calc(2rem + var(--width-button));
   border-width: 1px;
   border-color: $grey-border;
   border-radius: 4px;
@@ -280,6 +285,8 @@ label {
 
 // Button validation
 .choice__validation {
+  position:absolute;
+  right:-15rem;
   background-color: #0c7193;
   border-radius: 4px;
   width: var(--width-button);

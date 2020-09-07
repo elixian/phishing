@@ -1,9 +1,9 @@
 <template>
   <div>
-    
     <div class="wrapper--img">
       <img class="img-phishing" src="@/assets/images/campaign/mail01.jpg" alt="mail phishing" srcset="" />
-      <Tooltip
+      <template v-if="currentGame.showSpot ">
+        <Tooltip
         infoOverlay="overlay-1"
         positionSpot="position-1"
         spot-darken="true"
@@ -26,20 +26,24 @@
           Même si le sujet est urgent, prenez toujours le temps de la réflexion.
         </template>
       </Tooltip>
+      </template>    
     </div>
   </div>
 </template>
 
 <script>
 import Tooltip from "@/components/Utils/Tooltip";
-import {mapActions} from 'vuex';
+import {mapActions,mapState} from 'vuex';
 export default {
   created(){
  this.setCurrentStatus(true);
   
   },
+  computed:{
+    ...mapState('game',['currentGame'])
+  },
   methods:{
-    ...mapActions('game',['setCurrentStatus'])
+    ...mapActions('game',['setCurrentStatus']),
   },
   components: {
     Tooltip,

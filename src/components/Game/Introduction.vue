@@ -124,6 +124,10 @@ p{
     outline:none;
     border-radius: 5px;
     color: #0c7193;
+    line-height: 4.25rem;
+    text-align: center;
+    text-decoration: none;
+    font-size:2.1rem;
     font-family: 'Pacifico', Arial, Helvetica, sans-serif;
     cursor:pointer;
 
