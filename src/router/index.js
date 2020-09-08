@@ -113,7 +113,7 @@ Vue.use(VueRouter)
         {
           path:'4',
           name: 'mailgame04',
-          component: () => import(/* webpackChunkName: "mail04" */ '../components/Campaign/Mail04.vue'),
+          component: () => import(/* webpackChunkName: "mail04" */ '../components/Game/MailHtml4.vue'),
   
         },
         {
