@@ -84,7 +84,7 @@
 					<tr>
 						<td style="width: 100%; text-align: left; padding: 20px 15px 20px 15px;"><font style="font-family: Arial, 'sans-serif'; font-size: 14px;">Bonjour Edouard,<br />
 						<br />
-						T&eacute;l&eacute;charger via le lien ci-dessous votre remboursement de 150&euro; suite aux dispositions prises par la SNCF dans le cadre du CORONAVIRUS. </font></td>
+						T&eacute;l&eacute;charger via le lien ci-dessous votre remboursement de 150&euro; <span class="tips-3">suite aux dispositions prises </span> par la SNCF dans le cadre du CORONAVIRUS. </font></td>
 					</tr>
 					<tr class="tips-1">
 						<td align="center" bgcolor="#675c53" style="font-family:'Segoe UI', Helvetica, Arial, sans-serif;font-size:12px;color:#675c53;-webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; border: 1px solid #675c53;"><a @click.prevent href="https://www.train-tgv.info?rid=nhtredc" title="https://www.train-tgv.info?rid=nhtredc" style="color:#346ABB;text-decoration:none;font-size: 14px; font-weight: normal;font-family: 'Segoe UI',Helvetica,Arial,sans-serif; color: #ffffff; text-decoration: none; text-decoration: none; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; padding: 0 9px; display: inline-block;line-height: 200%"><b >Je r&eacute;cup&egrave;re mon remboursement</b> </a></td>
@@ -206,7 +206,7 @@ export default {
 }
 
 .position3-3 {
-  top: 26.4rem;
+  top: 33.4rem;
   left: 55rem;
 }
 
