@@ -95,31 +95,31 @@ Vue.use(VueRouter)
       ,
       children:[
         {
-          path:dev ? '1':'(AlP1|d_1)',
+          path:'1',
           name: 'mailgame01',
           component: () => import(/* webpackChunkName: "mail01" */ '../components/Game/MailHtml1.vue'),
   
         },
         {
-          path:dev ? '2':'(AlP1|d_1)',
+          path:'2',
           name: 'mailgame02',
           component: () => import(/* webpackChunkName: "mail02" */ '../components/Campaign/Mail02.vue'),
   
         },
         {
-          path:dev ? '3':'(AlP1|d_1)',
+          path:'3',
           name: 'mailgame03',
           component: () => import(/* webpackChunkName: "mail03" */ '../components/Game/MailHtml3.vue'),
   
         },
         {
-          path:dev ? '4':'(AlP1|d_1)',
+          path:'4',
           name: 'mailgame04',
           component: () => import(/* webpackChunkName: "mail04" */ '../components/Campaign/Mail04.vue'),
   
         },
         {
-          path:dev ? '5':'(AlP1|d_1)',
+          path:'5',
           name: 'mailgame05',
           component: () => import(/* webpackChunkName: "mail05" */ '../components/Campaign/Mail05.vue'),
   

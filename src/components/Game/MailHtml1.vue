@@ -171,9 +171,6 @@ export default {
   top: 57.7rem;
   left: 47rem;
 }
-[class^="tips-"]{
-	
-  z-index: 300;
-}
+
 
 </style>
