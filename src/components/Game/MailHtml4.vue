@@ -36,7 +36,7 @@
     </div>
     <template v-if="currentGame.showSpot ">
       <Tooltip
-        infoOverlay="overlay-4-1"
+        infoOverlay="overlay4-1"
         positionSpot="position4-1"
         spot-darken="true"
       >
@@ -47,7 +47,7 @@
         </template>
       </Tooltip>
       <Tooltip
-        infoOverlay="overlay-4-2"
+        infoOverlay="overlay4-2"
         positionSpot="position4-2"
         spot-darken="true"
       >
@@ -58,7 +58,7 @@
         </template>
       </Tooltip>
       <Tooltip
-        infoOverlay="overlay-4-3"
+        infoOverlay="overlay4-3"
         positionSpot="position4-3"
         spot-darken="true"
       >
