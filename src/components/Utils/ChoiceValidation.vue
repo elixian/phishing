@@ -87,6 +87,9 @@ export default {
     },
     checkResponse() {
       this.nextStatmentButton = true;
+     if(this.isPhishing === this.currentGame.isPhishing){
+        this.setScore();
+     }
       this.setShowSpot(true);
     },
     next() {
@@ -104,7 +107,7 @@ export default {
      
     },
     ...mapActions("stepper", ["incrementStepper"]),
-    ...mapActions("game", ["setShowSpot"]),
+    ...mapActions("game", ["setShowSpot","setScore"]),
   },
 };
 </script>

@@ -6,7 +6,8 @@ export default{
         currentGame:{
             isPhishing:null,
             showSpot:false, //TODO
-        }
+        },
+        scoring:0
     },
     mutations:{
         SET_CURRENT_STATUS_PHISHING(state,isPhishing){
@@ -17,6 +18,9 @@ export default{
         },
         TOGGLE_SHOW_SPOT(state,payload){
             state.currentGame.showSpot = payload
+        },
+        SET_SCORING(state){
+            state.scoring ++;
         }
     },
     actions:{
@@ -28,6 +32,9 @@ export default{
         },
         setShowSpot({commit},isVisible){
             commit('TOGGLE_SHOW_SPOT', isVisible);
+        },
+        setScore({commit}){
+            commit('SET_SCORING');
         }
     },   
 }
