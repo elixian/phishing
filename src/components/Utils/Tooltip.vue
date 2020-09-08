@@ -35,7 +35,6 @@ export default {
   methods: {
     ...mapActions("presentation", ["showOverlay", "hideOverlay"]),
     showInfo(event) {
-      console.log(this.positionSpot.split("-"));
       let tipnumber = this.positionSpot.split("-")[1];
       this.showOverlay({
         overlay: `.${this.infoOverlay}`,

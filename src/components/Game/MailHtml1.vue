@@ -69,7 +69,7 @@
 								</tr>
 								<tr>
 									<td align="center" style="padding-bottom:15px"><br />
-									<a href="https://www.vanc.email?rid=qsdlkjziu" rel="noreferrer" style="font-size:20px" target="_blank"><b><u>&gt;&gt;&gt; LIEN &lt;&lt;&lt; </u></b></a><b><u> </u></b></td>
+									<a @click.prevent href="https://www.vanc.email?rid=qsdlkjziu" rel="noreferrer" style="font-size:20px" target="_blank"><b><u>&gt;&gt;&gt; LIEN &lt;&lt;&lt; </u></b></a><b><u> </u></b></td>
 								</tr>
 								<tr>
 									<td style="padding:10px 20px">
@@ -115,7 +115,7 @@
 </div>
 <template v-if="true ">
         <Tooltip
-        infoOverlay="overlay-1"
+        infoOverlay="overlay"
         positionSpot="position-1"
         spot-darken="true"
       >
@@ -127,7 +127,7 @@
         </template>
       </Tooltip>
       <Tooltip
-        infoOverlay="overlay-2"
+        infoOverlay="overlay"
         positionSpot="position-2"
         spot-darken="true"
       >
