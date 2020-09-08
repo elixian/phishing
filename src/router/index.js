@@ -119,7 +119,7 @@ Vue.use(VueRouter)
         {
           path:'5',
           name: 'mailgame05',
-          component: () => import(/* webpackChunkName: "mail05" */ '../components/Campaign/Mail05.vue'),
+          component: () => import(/* webpackChunkName: "mail05" */ '../components/Game/MailHtml5.vue'),
   
         }
       ]
