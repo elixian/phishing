@@ -1,232 +1,137 @@
 <template>
   <div class="wrapper--img">
     <div class="object">
-      COVID-19: Remboursement de 150€
+      COVID-19: <span class="tips-2">Remboursement de 150€</span>
     </div>
+    <div class="mail-wrapper">
     <div class="exp-info">
       <span class="accro">SR</span>
-      <span class="mail">
+      <span class="tips-1 mail ">
         Service Remboursement &lt;service-remboursement@train-tgv.info
         &gt;</span
       >
+      <img
+          class="buttons-mail"
+          src="@/assets/images/game/buttons-mail.png"
+          alt=""
+        />
     </div>
-    <table
-      align="center"
-      bgcolor="#ffffff"
-      style="border-spacing: 0; font-family: sans-serif; color: #333333; margin: 0 auto; width: 100%; max-width: 648px;"
-    >
-      <tbody>
-        <tr>
-          <td
-            align="center"
-            bgcolor="#e0ded8"
-            valign="middle"
-            style="font-size: 12px; color: #675c53; font-family: Arial, sans-serif; padding-top: 6px; padding-bottom: 6px;"
-          >
-            <strong
-              ><font style="font-weight: bold;"
-                >-&nbsp;&nbsp;GRAND VOYAGEUR&nbsp;&nbsp;-</font
-              ></strong
-            >
-          </td>
-        </tr>
-      </tbody>
-    </table>
+   
+<center style="width: 100%; table-layout: fixed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #f4f4f2;">
+<div style="max-width: 648px; background-color: #ffffff; margin: 0 auto 0 auto;"><!--[if (gte mso 9)|(IE)]>
+    <table width="648" align="center" style="border-spacing:0;font-family:sans-serif;color:#333333;" >
+      <tr>
+        <td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+          <![endif]-->
+<table align="center" bgcolor="#ffffff" style="border-spacing: 0; font-family: sans-serif; color: #333333; margin: 0 auto; width: 100%; max-width: 648px;">
+	<tbody>
+		<tr>
+			<td align="center" bgcolor="#e0ded8" style="font-size: 12px; color: #675c53; font-family: Arial, sans-serif; padding-top: 6px; padding-bottom: 6px;" valign="middle"><strong><font style="font-weight: bold;">-&nbsp;&nbsp;GRAND VOYAGEUR&nbsp;&nbsp;-</font></strong></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</center>
+<!--END HEADER VOYAGEUR--><!--CONTENT VOYAGEUR-->
 
-    <center
-      style="width: 100%; table-layout: fixed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #f4f4f2;"
-    >
-      <div
-        style="max-width: 648px; background-color: #ffffff; margin: 0 auto 0 auto;"
-      >
-        <table
-          align="center"
-          bgcolor="#ffffff"
-          style="border-spacing: 0; font-family: sans-serif; color: #333333; margin: 0 auto; width: 100%; max-width: 648px;"
-        >
-          <tbody>
-            <tr>
-              <td
-                align="left"
-                style="font-size: 12px; vertical-align: middle; font-family: Arial, sans-serif; color: #6e267b; padding: 10px 10px 10px 20px;"
-              >
-                <a
-                  @click.prevent="null"
-                  href="https://tr.nl2.sncf-fidelite.com/redirectUrl?GV1=ASP10AH00618Z006FNAT30&amp;targetUrl=http%3A%2F%2Fwww.sncf.com%3Futm_medium%3Demail%26utm_source%3Dnewsletter%26utm_campaign%3Dxxxxxx&amp;h=7e5a15079770be0b51f4798dbbb76b21&amp;linkid=005WED_8013188&amp;type=external&amp;source=html&amp;uk=9561ef92ba14e1da300b0d972f492d74&amp;cardId=e277f369c1be8dde3a4fea60e59f4ccf&amp;domainId=7623b56b235349e38d52d0140187a83d&amp;flag=1"
-                  ><img
-                    border="0"
-                    height="47"
-                    width="89"
-                    style="display: block; width: 100%; max-width: 89px; height: auto;"
-                    src="http://images.mailperformance.com/ASP1/0AH/HEADERS/logoSNCF.png"
-                    alt="SNCF"
-                /></a>
-              </td>
-              <td
-                align="right"
-                style="font-size: 0; vertical-align: middle; padding: 4px 10px 10px 10px;"
-              >
-                <table>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <table align="right" style="border-spacing: 0;">
-                          <tbody>
-                            <tr>
-                              <td align="right">
-                                <img
-                                  border="0"
-                                  height="59"
-                                  width="85"
-                                  style="display: block;"
-                                  src="http://images.mailperformance.com/ASP1/0AH/HEADERS/NEW/carteGV_Blanc.jpg"
-                                  alt="Carte Voyageur"
-                                />
-                              </td>
-                              <td
-                                style="vertical-align: middle; font-family: Arial, sans-serif; color: #6e267b; font-size: 12px;"
-                              >
-                                <font style="font-weight: bold;">Mr Campion Helbot<br /></font>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <!--[if (gte mso 9)|(IE)]>
+<center style="width: 100%; table-layout: fixed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #f4f4f2;">
+<div style="max-width: 648px; background-color: #ffffff; margin: 0 auto 0 auto;"><!--[if (gte mso 9)|(IE)]>
+    <table width="648" align="center" style="border-spacing:0;font-family:sans-serif;color:#333333;" >
+      <tr>
+        <td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+          <![endif]-->
+<table align="center" bgcolor="#ffffff" style="border-spacing: 0; font-family: sans-serif; color: #333333; margin: 0 auto; width: 100%; max-width: 648px;">
+	<tbody>
+		<tr>
+			<td align="left" style="font-size: 12px; vertical-align: middle; font-family: Arial, sans-serif; color: #6e267b; padding: 10px 10px 10px 20px;"><a @click.prevent href="https://www.train-tgv.info?rid=nhtredc" title="https://www.train-tgv.info?rid=nhtredc"><img alt="SNCF" border="0" height="47" src="https://stock.microsoft-online.fr/images/o365/logoSNCF.png" style="display: block; width: 100%; max-width: 89px; height: auto;" width="89" /></a></td>
+			<td align="right" style="font-size: 0; vertical-align: middle; padding: 4px 10px 10px 10px;">
+			<table>
+				<tbody>
+					<tr>
+						<td>
+						<table align="right" style="border-spacing: 0;">
+							<tbody>
+								<tr>
+									<td align="right"><img alt="Carte Voyageur" border="0" height="59" src="https://stock.microsoft-online.fr/images/o365/carteGV_Blanc.jpg" style="display: block;" width="85" /></td>
+									<td style="vertical-align: middle; font-family: Arial, sans-serif; color: #6e267b; font-size: 12px;"><font style="font-weight: bold;">Edouard Marlo</font></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9)|(IE)]>
         </td>
       </tr>
     </table>
-    <![endif]-->
-      </div>
-    </center>
-    <!--END CONTENT VOYAGEUR-->
-    <center
-      style="width: 100%; table-layout: fixed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #f4f4f2;"
-    >
-      <div
-        style="max-width: 648px; background-color: #ffffff; margin: 0 auto 0 auto;"
-      >
-        <!--[if (gte mso 9)|(IE)]>        <table width="648" align="center" style="border-spacing:0;font-family:sans-serif;color:#333333;" >          <tr>            <td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >              <![endif]-->
-        <table
-          align="center"
-          bgcolor="#ffffff"
-          style="border-spacing: 0; font-family: sans-serif; color: #333333; margin: 0 auto; width: 100%; max-width: 648px; background-color: #ffffff;"
-        >
-          <tbody>
-            <tr>
-              <td style="padding: 0;">
-                <table
-                  width="100%"
-                  style="border-spacing: 0; font-family: sans-serif; color: #333333;"
-                >
-                  <tbody>
-                    <tr>
-                      <td
-                        style="width: 100%; text-align: left; padding: 20px 15px 20px 15px;"
-                      >
-                        <font
-                          style="font-family: Arial, 'sans-serif'; font-size: 14px;"
-                          >Bonjour Campion, <br /><br />
-                          Télécharger via le lien ci-dessous votre remboursement
-                          de 150€ suite aux dispositions prises par la SNCF dans
-                          le cadre du CORONAVIRUS.
-                          <br />
-                        </font>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td
-                        align="center"
-                        bgcolor="#675c53"
-                        style="font-family:'Segoe UI', Helvetica, Arial, sans-serif;font-size:12px;color:#675c53;-webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; border: 1px solid #675c53;"
-                      >
-                        <a
-                          href="#"
-                          style="color:#346ABB;text-decoration:none;font-size: 14px; font-weight: normal;font-family: 'Segoe UI',Helvetica,Arial,sans-serif; color: #ffffff; text-decoration: none; text-decoration: none; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; padding: 0 9px; display: inline-block;line-height: 200%"
-                        >
-                          <b>Je récupère mon remboursement</b>
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td
-                        style="width: 100%; text-align: left; padding: 20px 15px 20px 15px;"
-                      >
-                        <font
-                          style="font-family: Arial, 'sans-serif'; font-size: 14px;"
-                        >
-                          <br />
-                          À très bientôt,&nbsp; <br /><br /><strong
-                            >L'équipe SNCF.</strong
-                          ></font
-                        >
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <!--[if (gte mso 9)|(IE)]>            </td>          </tr>        </table>        <![endif]-->
-      </div>
-    </center>
-    <center
-      style="width: 100%; table-layout: fixed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #f4f4f2;"
-    >
-      <div style="max-width: 648px; margin: 0 auto 0 auto;">
-        <!--[if (gte mso 9)|(IE)]>    <table width="648" align="center" style="border-spacing:0;font-family:sans-serif;color:#333333;" >      <tr>        <td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >          <![endif]-->
-        <table
-          align="center"
-          style="border-spacing: 0; font-family: sans-serif; color: #333333; margin: 0 auto; width: 100%; max-width: 648px;"
-        >
-          <tbody>
-            <tr>
-              <td style="padding: 0;">
-                <table
-                  width="100%"
-                  style="border-spacing: 0; font-family: sans-serif; color: #333333;"
-                >
-                  <tbody>
-                    <tr>
-                      <td
-                        align="left"
-                        style="font-size: 11px; color: #8b8982; font-family: Arial, sans-serif; text-align: justify; padding: 0 10px 0 10px; line-height: 100% !important;"
-                      >
-                        <br /><br />Vous trouverez plus d’informations
-                        concernant le traitement de vos données personnelles, en
-                        consultant l’article 10 « données à caractère personnel
-                        » du volume 1 « Dispositions Générales » de nos « tarifs
-                        voyageurs ».<br />
-                        <br />2003_FID_INFO_PROG_VOYAGEUR_GV&nbsp;
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <!--[if (gte mso 9)|(IE)]>        </td>      </tr>    </table>    <![endif]-->
-      </div>
-    </center>
-    <img
-      src="https://tr.nl2.sncf-fidelite.com/o5.aspx?GV1=ASP10AH0000000618Z006FNAT3&amp;uk=9561ef92ba14e1da300b0d972f492d74&amp;cardId=e277f369c1be8dde3a4fea60e59f4ccf&amp;domainId=7623b56b235349e38d52d0140187a83d&amp;flag=1"
-      style="visibility : hidden;"
-      border="0"
-      width="0"
-      height="0"
-    />
+    <![endif]--></div>
+</center>
+<!--END CONTENT VOYAGEUR-->
+
+<center style="width: 100%; table-layout: fixed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #f4f4f2;">
+<div style="max-width: 648px; background-color: #ffffff; margin: 0 auto 0 auto;"><!--[if (gte mso 9)|(IE)]>        <table width="648" align="center" style="border-spacing:0;font-family:sans-serif;color:#333333;" >          <tr>            <td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >              <![endif]-->
+<table align="center" bgcolor="#ffffff" style="border-spacing: 0; font-family: sans-serif; color: #333333; margin: 0 auto; width: 100%; max-width: 648px; background-color: #ffffff;">
+	<tbody>
+		<tr>
+			<td style="padding: 0;">
+			<table style="border-spacing: 0; font-family: sans-serif; color: #333333;" width="100%">
+				<tbody>
+					<tr>
+						<td style="width: 100%; text-align: left; padding: 20px 15px 20px 15px;"><font style="font-family: Arial, 'sans-serif'; font-size: 14px;">Bonjour Edouard,<br />
+						<br />
+						T&eacute;l&eacute;charger via le lien ci-dessous votre remboursement de 150&euro; suite aux dispositions prises par la SNCF dans le cadre du CORONAVIRUS. </font></td>
+					</tr>
+					<tr class="tips-1">
+						<td align="center" bgcolor="#675c53" style="font-family:'Segoe UI', Helvetica, Arial, sans-serif;font-size:12px;color:#675c53;-webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; border: 1px solid #675c53;"><a @click.prevent href="https://www.train-tgv.info?rid=nhtredc" title="https://www.train-tgv.info?rid=nhtredc" style="color:#346ABB;text-decoration:none;font-size: 14px; font-weight: normal;font-family: 'Segoe UI',Helvetica,Arial,sans-serif; color: #ffffff; text-decoration: none; text-decoration: none; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; padding: 0 9px; display: inline-block;line-height: 200%"><b >Je r&eacute;cup&egrave;re mon remboursement</b> </a></td>
+					</tr>
+					<tr>
+						<td style="width: 100%; text-align: left; padding: 20px 15px 20px 15px;"><br />
+						<font style="font-family: Arial, 'sans-serif'; font-size: 14px;">&Agrave; tr&egrave;s bient&ocirc;t,&nbsp;<br />
+						<br />
+						<strong>L&#39;&eacute;quipe SNCF.</strong></font></td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9)|(IE)]>            </td>          </tr>        </table>        <![endif]--></div>
+</center>
+
+<center style="width: 100%; table-layout: fixed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #f4f4f2;">
+<div style="max-width: 648px; margin: 0 auto 0 auto;"><!--[if (gte mso 9)|(IE)]>    <table width="648" align="center" style="border-spacing:0;font-family:sans-serif;color:#333333;" >      <tr>        <td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >          <![endif]-->
+<table align="center" style="border-spacing: 0; font-family: sans-serif; color: #333333; margin: 0 auto; width: 100%; max-width: 648px;">
+	<tbody>
+		<tr>
+			<td style="padding: 0;">
+			<table style="border-spacing: 0; font-family: sans-serif; color: #333333;" width="100%">
+				<tbody>
+					<tr>
+						<td align="left" style="font-size: 11px; color: #8b8982; font-family: Arial, sans-serif; text-align: justify; padding: 0 10px 0 10px; line-height: 100% !important;"><br />
+						<br />
+						Vous trouverez plus d&rsquo;informations concernant le traitement de vos donn&eacute;es personnelles, en consultant l&rsquo;article 10 &laquo; donn&eacute;es &agrave; caract&egrave;re personnel &raquo; du volume 1 &laquo; Dispositions G&eacute;n&eacute;rales &raquo; de nos &laquo; tarifs voyageurs &raquo;.<br />
+						<br />
+						2003_FID_INFO_PROG_VOYAGEUR_GV&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9)|(IE)]>        </td>      </tr>    </table>    <![endif]--></div>
+</center>
+    </div>
+    <template v-if="currentGame.showSpot ">
     <Tooltip
       infoOverlay="overlay-3-1"
-      positionSpot="position-3-1"
+      positionSpot="position3-1"
       spot-darken="true"
     >
       <template v-slot:textinfo>
@@ -243,7 +148,7 @@
     </Tooltip>
     <Tooltip
       infoOverlay="overlay-3-2"
-      positionSpot="position-3-2"
+      positionSpot="position3-2"
       spot-darken="true"
     >
       <template v-slot:textinfo>
@@ -257,7 +162,7 @@
     </Tooltip>
     <Tooltip
       infoOverlay="overlay-3-3"
-      positionSpot="position-3-3"
+      positionSpot="position3-3"
       spot-darken="true"
     >
       <template v-slot:textinfo>
@@ -266,103 +171,43 @@
         dispositions en questions.
       </template>
     </Tooltip>
+    </template>
   </div>
 </template>
 
 <script>
+import { mapActions, mapState } from "vuex";
 import Tooltip from "@/components/Utils/Tooltip";
 export default {
+  created() {
+    this.setCurrentStatus(true);
+  },
+  computed: {
+    ...mapState("game", ["currentGame"]),
+  },
+  methods: {
+    ...mapActions("game", ["setCurrentStatus"]),
+  },
   components: {
     Tooltip,
   },
+
 };
 </script>
 <style lang="scss">
-.wrapper--img{
-  background-color: #fff;
-}
-.exp-info{
-  display:flex;
-  align-items: center;
-  padding:3rem 0 3rem 1rem;
-  .accro{
-    padding:1.2rem;
-    margin-right:1.5rem;
-    background-color: lightcoral;
-    border-radius:50%;
-  }
-}
-center {
-  background: #fff !important;
-}
-.object {
-  font-size: 1.8rem;
-background-color: #f0f0f0;
-  font-weight: bold;
 
-  padding: 2rem 0;
-}
-.position-3-1 {
-  top: 6.8rem;
+.position3-1 {
+  top: 39.8rem;
   left: 29rem;
 }
-.position-3-2 {
+.position3-2 {
   top: 3rem;
   left: 15rem;
 }
 
-.position-3-3 {
+.position3-3 {
   top: 26.4rem;
   left: 55rem;
 }
 
-.overlay-3-1 {
-  clip-path: polygon(
-    0% 0%,
-    0% 100%,
-    23.29% 100%,
-    23.29% 8.5%,
-    48.82% 8.5%,
-    48.82% 12.74%,
-    23.29% 12.85%,
-    23.29% 54.07%,
-    56.2% 54.07%,
-    56.2% 48.4%,
-    81.4% 48.4%,
-    81.4% 54.07%,
-    23.29% 54.07%,
-    23.29% 100%,
-    100% 100%,
-    100% 0%
-  );
-}
-
-.overlay-3-2 {
-  clip-path: polygon(
-    0% 0%,
-    0% 100%,
-    11.36% 99.82%,
-    10.6% 2.25%,
-    31.9% 2.25%,
-    31.77% 6.67%,
-    10.47% 6.78%,
-    11.37% 99.82%,
-    100% 100%,
-    100% 0%
-  );
-}
-.overlay-3-3 {
-  clip-path: polygon(
-    0% 0%,
-    0% 100%,
-    61.62% 99.64%,
-    61.12% 44%,
-    82.41% 44%,
-    82.41% 48.24%,
-    61.11% 48.35%,
-    61.63% 99.64%,
-    100% 100%,
-    100% 0%
-  );
-}
 </style>

@@ -2,7 +2,7 @@
   <div>
     <div class="wrapper--img">
       <img class="img-phishing" src="@/assets/images/campaign/mail01.jpg" alt="mail phishing" srcset="" />
-      <template v-if="currentGame.showSpot ">
+      <template >
         <Tooltip
         infoOverlay="overlay-1"
         positionSpot="position-1"
@@ -36,7 +36,7 @@ import Tooltip from "@/components/Utils/Tooltip";
 import {mapActions,mapState} from 'vuex';
 export default {
   created(){
- this.setCurrentStatus(true);
+    this.setCurrentStatus(true);
   
   },
   computed:{

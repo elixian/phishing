@@ -58,7 +58,7 @@
         </tbody>
       </table>
     </div>
-    <template v-if="true">
+    <template v-if="currentGame.showSpot ">
       <Tooltip
         infoOverlay="overlay2"
         positionSpot="position2-1"

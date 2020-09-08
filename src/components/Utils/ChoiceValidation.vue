@@ -59,8 +59,8 @@ import {  Power4,gsap } from "gsap";
 import { mapActions, mapState, mapGetters } from "vuex";
 export default {
   mounted() {
-    // const timeline = new Timeline({ delay: 0.5 });
-    gsap.fromTo(
+    let tl = new gsap.timeline({delay:1})
+    tl.fromTo(
       "#wrapper-choice",
       0.5,
       {y:200, opacity: 0 },
@@ -99,6 +99,7 @@ export default {
       this.incrementStepper();
       this.nextStatmentButton = false; // initialise le boutton suivant à false
       this.isPhishing = null; //on set à null
+      this.setShowSpot(false);
 
      
     },
