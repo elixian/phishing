@@ -5,6 +5,7 @@ const state = ()=>({
         currentOverlay:null,
         infoTooltip: null,
         isOverlay : false,
+        tips : null
       }
 })
 
@@ -20,6 +21,7 @@ const mutations = {
      SET_OVERLAY(state,overlay){
        state.overlay.currentOverlay = overlay.overlay;
        state.overlay.infoTooltip = overlay.tooltipInfo;
+       state.overlay.tips = overlay.tips;
      }
 }
 

@@ -85,6 +85,7 @@ Vue.use(VueRouter)
         name: 'mail09',
         component: () => import(/* webpackChunkName: "mail09" */ '../components/Campaign/Mail09.vue'),
       },
+      
     ]
   },
   {
@@ -96,7 +97,7 @@ Vue.use(VueRouter)
         {
           path:dev ? '1':'(AlP1|d_1)',
           name: 'mailgame01',
-          component: () => import(/* webpackChunkName: "mail01" */ '../components/Campaign/Mail01.vue'),
+          component: () => import(/* webpackChunkName: "mail01" */ '../components/Game/MailHtml1.vue'),
   
         },
         {
@@ -108,7 +109,7 @@ Vue.use(VueRouter)
         {
           path:dev ? '3':'(AlP1|d_1)',
           name: 'mailgame03',
-          component: () => import(/* webpackChunkName: "mail03" */ '../components/Campaign/Mail03.vue'),
+          component: () => import(/* webpackChunkName: "mail03" */ '../components/Game/MailHtml3.vue'),
   
         },
         {
@@ -122,7 +123,7 @@ Vue.use(VueRouter)
           name: 'mailgame05',
           component: () => import(/* webpackChunkName: "mail05" */ '../components/Campaign/Mail05.vue'),
   
-        },
+        }
       ]
 
   },

@@ -5,7 +5,7 @@ export default{
         gameIsStarted:false,
         currentGame:{
             isPhishing:null,
-            showSpot:false,
+            showSpot:true, //TODO
         }
     },
     mutations:{

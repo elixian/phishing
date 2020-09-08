@@ -27,15 +27,37 @@
 import { mapActions } from "vuex";
 export default {
   props: ["infoOverlay", "positionSpot", "spotDarken"],
+  data() {
+    return {
+      tipsMemory: null,
+    };
+  },
   methods: {
     ...mapActions("presentation", ["showOverlay", "hideOverlay"]),
     showInfo(event) {
+      console.log(this.positionSpot.split("-"));
+      let tipnumber = this.positionSpot.split("-")[1];
       this.showOverlay({
         overlay: `.${this.infoOverlay}`,
         tooltipInfo: event.target.nextSibling,
+        tips: `tips-${tipnumber}`,
       });
+      let g = document.getElementsByClassName(`tips-${tipnumber}`);
+
+      this.tipsMemory = [...g];
+      if (this.tipsMemory.length > 0) {
+        [...g].forEach((f) => {
+          f.style.position = "relative";
+          f.style.backgroundColor = "#fff";
+        });
+      }
     },
     hideInfo() {
+      this.tipsMemory.forEach((f) => {
+        f.style.position = "initial";
+        f.style.backgroundColor = "inherit";
+        this.tipsMemory = null;
+      });
       this.hideOverlay();
     },
   },
