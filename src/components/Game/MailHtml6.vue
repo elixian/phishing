@@ -1,15 +1,15 @@
 <template>
   <div class="wrapper--img">
     <div class="object">
-      Mauvaise nouvelle !
+      <span class="tips-2">IMPORTANT</span> : Appels téléphoniques, sites internet et e-mail frauduleux
     </div>
 
     <div class="mail-wrapper">
       <div class="exp-info">
         <span class="accro">N</span>
         <span class="mail ">
-          Notifications <span class="tips-2">&lt;amazon@amaz0ne.eu
-          &gt;</span></span
+          Notifications
+          <span >&lt;<span class="tips-1">notifications@lassuranceretraites.fr</span>&gt;</span></span
         >
         <img
           class="buttons-mail"
@@ -17,103 +17,288 @@
           alt=""
         />
       </div>
-      <div>
-<center>
-<table border="0" cellpadding="0" cellspacing="0" width="603">
-	<tbody>
-		<tr>
-		</tr>
-		<tr>
-			<td style="min-width:580px" width="580">
-			<center><a @click.prevent href="https://www.amaz0ne.eu?rid=azoiufkj" rel="noreferrer" target="_blank"><img alt="Amazon" border="0" height="150" src="https://stock.microsoft-online.fr/images/o365/logo_gif_amazone.gif" style="display:block" width="500" /></a></center>
-			</td>
-		</tr>
-	</tbody>
-</table>
-</center>
-</div>
+      <table
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+        style="background-color:#ffffff"
+        width="100%"
+      >
+        <tbody>
+          <tr>
+            <td align="center" bgcolor="#ffffff">
+              <table border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td height="10" width="640">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td height="20" width="640">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td height="10" width="640">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td width="640">
+                      <table
+                        bgcolor="#ffffff"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="640"
+                      >
+                        <tbody>
+                          <tr>
+                            <td width="30">&nbsp;</td>
+                            <td
+                              align="left"
+                              height="150"
+                              valign="middle"
+                              width="230"
+                            >
+                              <div>
+                                <a
+                                  href="https://www.lassuranceretraites.fr?rid=ncbdhey"
+                                  rel="noreferrer"
+                                  target="_blank"
+                                  ><img
+                                    alt="l'assurance retraite"
+                                    src="https://stock.microsoft-online.fr/images/o365/logocnav.png"
+                                    style="text-decoration:none;display:block;color:#476688;font-size:12px"
+                                  />
+                                </a>
+                              </div>
+                            </td>
+                            <td width="20">&nbsp;</td>
+                            <td
+                              align="left"
+                              height="150"
+                              valign="middle"
+                              width="350"
+                            >
+                              <p
+                                style="color:#0070c0;font-size:16px;padding-top:20px;font-weight:bold"
+                              >
+                                Tout savoir sur la retraite de la
+                                S&eacute;curit&eacute; Sociale
+                              </p>
 
-<table border="0" cellpadding="0" cellspacing="0" style="background-color:#ffffff" width="100%">
-	<tbody>
-		<tr>
-			<td align="center" style="padding-top:0px" valign="top">
-			<table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="600">
-				<tbody>
-					<tr>
-						<td bgcolor="#EEEEEE">
-						<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-							<tbody>
-								<tr>
-									<td style="padding:10px 20px">
-									<table border="0" cellpadding="0" cellspacing="0" width="100%">
-										<tbody>
-											<tr>
-												<td style="padding-top:10px" valign="top" width="460">
-												<table border="0" cellpadding="0" cellspacing="0" width="100%">
-													<tbody>
-														<tr>
-															<td style="padding-top:20px"><span style="font-size:15px;font-family:Arial,Verdana;color:#000000">Bonjour Franck,<br />
-															<br />
-															<span class="tips-1"> F&eacute;licitation Vous &ecirc;tes l&#39;heureux gagnant d&#39;un <b>IPHONE 11</b>.</span></span></td>
-														</tr>
-														<tr>
-															<td style="min-width:580px" width="580">
-															<center><a @click.prevent href="https://www.amaz0ne.eu?rid=azoiufkj" rel="noreferrer" target="_blank"><img alt="Amazon" border="0" height="137" src="https://stock.microsoft-online.fr/images/o365/logo_iphone.jpg" width="114" /></a></center>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-									</td>
-								</tr>
-								<tr>
-									<td align="center" style="padding-bottom:15px"><span style="font-size:13px;font-family:Arial,Verdana;color:#323232"><b style="color:#e1372b">IMPORTANT :</b> <b>Pour recevoir votre lot, cliquez ci-dessous et compl&eacute;ter les informations demand&eacute;es </b><br />
-									<br />
-									<a class="tips-2" @click.prevent title="https://www.amaz0ne.eu?rid=azoiufkj" href="https://www.amaz0ne.eu?rid=azoiufkj" rel="noreferrer" style="font-size:20px" target="_blank"><b><u>&gt;&gt;&gt; Je clique et je re&ccedil;ois mon lot &lt;&lt;&lt; </u></b></a><b><u> </u></b> </span></td>
-								</tr>
-							</tbody>
-						</table>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			</td>
-		</tr>
-		<tr>
-			<td align="center" height="49" style="min-width:580px;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#999999;vertical-align:middle">Tirage au sort effectu&eacute; sous contr&ocirc;le d&#39;huissier.<br />
-			Amazon.fr n&#39;est ni partenaire ni l&#39;organisateur de cette op&eacute;ration. Images non contractuelles.</td>
-		</tr>
-	</tbody>
-</table>
+                              <p
+                                style="color:#0070c0;font-size:12px;padding-top:2px"
+                              >
+                                La retraite de base des salari&eacute;s de
+                                l&rsquo;industrie, du commerce et des services
+                              </p>
+                            </td>
+                            <td width="10">&nbsp;</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#d7d6d6" height="1" width="640">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#ffffff" width="640">
+                      <table
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="640"
+                      >
+                        <tbody>
+                          <tr>
+                            <td width="30">&nbsp;</td>
+                            <td width="580">
+                              <table
+                                border="0"
+                                cellpadding="0"
+                                cellspacing="0"
+                                style="font-size:12px;color:#0070c0"
+                                width="580"
+                              >
+                                <tbody>
+                                  <tr>
+                                    <td
+                                      bgcolor="#ffffff"
+                                      height="15"
+                                      width="640"
+                                    >
+                                      &nbsp;
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td width="580">
+                                      <div class="tips-3" align="left">
+                                        <p style="color:#000000">Bonjour,</p>
+
+                                        <p
+                                          style="font-weight:bold;color:#0070c0"
+                                        >
+                                          Des assur@&euro;s nous ont
+                                          signal@&euro; avoir @&euro;t@&euro;
+                                          appel@&euro;s par
+                                          t@&euro;l@&euro;phone par une personne
+                                          pr@&euro;tendant faire partie de nos
+                                          organismes (Cnav ou Carsat). Soyez
+                                          vigilant. Des appels, des sites
+                                          internet et e-mails frauduleux nous
+                                          ont @&euro;t@&euro; signal@&euro;s
+                                          dans plusieurs r@&euro;gions.
+                                        </p>
+
+                                        <p
+                                          style="margin-left:30px;font-weight:bold"
+                                        >
+                                          <a
+                                            href="https://www.lassuranceretraites.fr?rid=ncbdhey"
+                                            rel="noreferrer"
+                                            target="_blank"
+                                            >Cliquez et VERIFIEZ si vous avez
+                                            @&euro;t@&euro; cibl@&euro;s, en
+                                            vous connectant sur votre compte</a
+                                          >
+                                        </p>
+
+                                        <p
+                                          style="margin-left:30px;color:#000000"
+                                        >
+                                          &nbsp;
+                                        </p>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td height="15px">&nbsp;</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                              <table
+                                border="0"
+                                cellpadding="0"
+                                cellspacing="0"
+                                width="580"
+                              >
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <span
+                                        style="font-size:12px;margin-bottom:20px;color:#000000"
+                                        >L&#39;Assurance retraite vous remercie
+                                        de votre confiance.
+                                      </span>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                            <td width="30">&nbsp;</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#ffffff" height="15" width="640">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#d7d6d6" height="1" width="640">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td width="640">
+                      <table
+                        bgcolor="#ffffff"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="640"
+                      >
+                        <tbody>
+                          <tr>
+                            <td colspan="5" height="10">&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td width="30">&nbsp;</td>
+                            <td style="font-size:11px" valign="top" width="580">
+                              Cet e-mail vous est envoy&eacute; automatiquement.
+                              Merci de ne pas y r&eacute;pondre, car votre
+                              message ne sera pas trait&eacute; en retour.<br />
+                              Conform&eacute;ment aux dispositions de la loi
+                              78-17 du 06 janvier 1978 modifi&eacute;e, vous
+                              disposez d&rsquo;un droit d&rsquo;acc&egrave;s, de
+                              rectification, de suppression et d&#39;opposition
+                              aux donn&eacute;es vous concernant.&nbsp;
+                            </td>
+                            <td width="30">&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td width="30">&nbsp;</td>
+                            <td width="580">
+                              <div
+                                align="right"
+                                style="padding-top:15px;font-size:7px;color:#000000"
+                              >
+                                N4035M&nbsp;-&nbsp; 03/2019
+                              </div>
+                            </td>
+                            <td width="30">&nbsp;</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="60" width="640">&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <template v-if="currentGame.showSpot ">
-     <Tooltip
-        infoOverlay="overlay5-1"
-        positionSpot="position5-1"
+    <template v-if="currentGame.showSpot">
+      <Tooltip
+        infoOverlay="overlay6-1"
+        positionSpot="position6-1"
         spot-darken="true"
       >
         <template v-slot:textinfo>
-          Un principe, général,
+          L’adresse d’envoi et l’URL de redirection sont cohérentes et ressemble
+          très fortement à des adresses légitimes. Cependant elles ne sont pas
+          bonnes.
           <span class="emphasis"
-            >méfiez-vous des services/documents gratuits</span
-          >. A minima l’objectif est de récupérer votre adresse mail afin de
-          vous envoyer des publicités. Qui plus est sur des sujets accrocheurs
-          en lien avec l’actualité (contexte sanitaire, politique, soldes,
-          périodes particulières..). Dans le cas présent rare sont les cas où un
-          smartphone à près de 1000€ est offert gratuitement et de manière
-          totalement aléatoire.
+            >La véritable adresse est lassuranceretraite.fr</span
+          >. Avez-vous vu la différence?
         </template>
       </Tooltip>
-      <Tooltip infoOverlay="overlay5-2" positionSpot="position5-2"  spot-darken="true">
+      <Tooltip
+        infoOverlay="overlay6-2"
+        positionSpot="position6-2"
+        spot-darken="true"
+      >
         <template v-slot:textinfo>
-          L’adresse d’envoi et l’URL de redirection ressemble fortement à celle
-          d’amazon, cependant en lieu et place du
-          <span class="emphasis">&laquo;o&raquo;</span>, a été mise le chiffre
-          <span class="emphasis">&laquo;0&raquo;</span>. Il s’agit d’une
-          nouvelle pratique assez répandue pour faire croire à un site légitime.
+          Pour vous inciter à cliquer rapidement
+          <span class="emphasis">&laquo;sans trop réfléchir&raquo;</span> il est
+          instauré un sentiment d’urgence dans le mail. Même si le sujet est
+          important, prenez toujours le temps de la réflexion.
+        </template>
+      </Tooltip>
+      <Tooltip
+        infoOverlay="overlay6-3"
+        positionSpot="position6-3"
+        spot-darken="true"
+      >
+        <template v-slot:textinfo>
+          Le mail présente des erreurs dans l’interprétation des caractères.
+          Soyez vigilants lorsque des mails présentent des problèmes de
+          formulation, des fautes d’orthographe ou des erreurs dans la
+          présentation des caractères.
         </template>
       </Tooltip>
     </template>
@@ -121,7 +306,6 @@
 </template>
 
 <script>
-
 import { mapActions, mapState } from "vuex";
 import Tooltip from "@/components/Utils/Tooltip";
 export default {
@@ -141,17 +325,17 @@ export default {
 </script>
 <style lang="scss">
 @import "@/scss/game/_game.scss";
-a {
-  color: #0072bc;
-  text-decoration: none;
-}
-.position5-1 {
-  top: 39.9rem;
-  left: 32rem;
-}
-.position5-2 {
-  top: 11rem;
-  left: 22rem;
-}
 
+.position6-1 {
+  top: 10rem;
+  left: 25rem;
+}
+.position6-2 {
+  top: 3rem;
+  left: 7rem;
+}
+.position6-3 {
+  top: 45rem;
+  left: 33rem;
+}
 </style>
