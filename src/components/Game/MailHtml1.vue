@@ -115,7 +115,7 @@
 </div>
 <template v-if="true ">
         <Tooltip
-        infoOverlay="overlay-1"
+        infoOverlay="overlay"
         positionSpot="position-1"
         spot-darken="true"
       >
@@ -127,7 +127,7 @@
         </template>
       </Tooltip>
       <Tooltip
-        infoOverlay="overlay-1"
+        infoOverlay="overlay"
         positionSpot="position-2"
         spot-darken="true"
       >

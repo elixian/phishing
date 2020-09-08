@@ -55,16 +55,16 @@
 </template>
 
 <script>
-import { TimelineMax, Power4 } from "gsap";
+import {  Power4,gsap } from "gsap";
 import { mapActions, mapState, mapGetters } from "vuex";
 export default {
   mounted() {
-    const timeline = new TimelineMax({ delay: 0.5 });
-    timeline.fromTo(
+    // const timeline = new Timeline({ delay: 0.5 });
+    gsap.fromTo(
       "#wrapper-choice",
       0.5,
-      { y: "200px", autoAlpha: 0 },
-      { y: "0", autoAlpha: 1, ease: Power4.easeOut }
+      {y:200, opacity: 0 },
+      { y: 0, opacity: 1, ease: Power4.easeOut }
     );
   },
   data() {

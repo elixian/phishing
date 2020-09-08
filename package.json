@@ -2,14 +2,14 @@
   "name": "phishing",
   "version": "1.0.0",
   "private": true,
-    "scripts": {
+  "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "gsap": "^3.4.0",
+    "gsap": "^3.5.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
