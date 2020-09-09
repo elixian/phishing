@@ -58,8 +58,9 @@
         Nous allons vous présenter 10 mails où se sont glissés des mails de
         phising. L’objectif est de les identifier.
       </p>
-      <router-link :to="{name:'mailgame01'}" @click.native="startGame" id="startGame">Commencer</router-link>
+      <router-link :to="{name:'mailgame07'}" @click.native="startGame" id="startGame">Commencer</router-link>
     </div>
+    <footer><img class="logo-AR" src="@/assets/images/AR.png" alt="logo Assurance retraite"></footer>
   </div>
 </template>
 <script>
@@ -91,6 +92,19 @@ export default {
     top: 18rem;
     left: 0;
     right: 0;
+  }
+}
+footer{
+  position:absolute;
+  bottom:0;
+  height:8rem;
+  background-color: #fff;
+  width:100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .log-AR{
+    height:80px;
   }
 }
 h2{
