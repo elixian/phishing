@@ -153,14 +153,14 @@
 </table>
     </div>
     <template v-if="currentGame.showSpot">
-        <Tooltip infoOverlay="overlay-1" positionSpot="position9-1" spot-darken=1>
+        <Tooltip infoOverlay="overlay9-1" positionSpot="position9-1" spot-darken=1>
         <template v-slot:textinfo>
           Attention aux sujets alléchants… Souvent ils sont la pour vous inciter à cliquer.
 
         </template>
       </Tooltip>
       <Tooltip
-        infoOverlay="overlay-2"
+        infoOverlay="overlay9-2"
         positionSpot="position9-2"
         spot-darken="1"
       >
@@ -169,7 +169,7 @@
         </template>
       </Tooltip>
       <Tooltip
-        infoOverlay="overlay-3"
+        infoOverlay="overlay9-3"
         positionSpot="position9-3"
         spot-darken="true"
       >

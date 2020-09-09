@@ -108,9 +108,9 @@
                                                 Le r&eacute;glement pour la
                                                 <span class="tips-3">facture N&deg;461643726</span>,
                                                 d&#39;un montant de<span class="tips-3"> 377,54&euro;</span>
-                                                TTC n&#39;ait toujours pas
+                                                TTC <span class="tips-5">n&#39;ait toujours pas
                                                 arriv&eacute; &agrave;
-                                                nous.</span
+                                                nous</span>.</span
                                               >
                                             </td>
                                           </tr>
@@ -166,7 +166,7 @@
               <span
                 style="font-size:13px;font-family:Arial,Verdana;color:#323232;margin-top:20px;"
                 ><b
-                  >A d&eacute;faut de r&eacute;glement de ta part <span class="tips-2">dans les 8
+                  ><span class="tips-5">A d&eacute;faut de r&eacute;glement de ta part</span> <span class="tips-2">dans les 8
                   jours</span>, nous nous verrons dans l&#39;obligation de poursuivre
                   ce recouvrement par voie judiciaire.</b
                 ></span
@@ -299,7 +299,7 @@ left: 59rem;
 left: 44rem;
 }
 .position8-5 {
-  top: 32rem;
-  left: 18rem;
+ top: 43rem;
+left: 10rem;
 }
 </style>
