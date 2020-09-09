@@ -5,7 +5,7 @@
         <div :class="['choice choice__left', { active: isPhishing }]">
           <label for="phishing" @mouseup="setValue(true)">
             <input id="phishing" type="radio" name="choices" class="js_radio"  />
-            <span>Phishing</span>
+            <span><img class="icone" src="@/assets/images/game/warning-sign.png" alt="" srcset=""> Phishing</span>
           </label>
         </div>
         <div
@@ -21,7 +21,7 @@
               name="choices"
               class="js_radio"
             />
-            <span>Authentique</span>
+            <span><img class="icone" src="@/assets/images/game/check-mark.png" alt="" srcset="">Authentique</span>
           </label>
         </div>
         <span class="separator" v-if="isPhishing === null"></span>
@@ -145,6 +145,10 @@ $grey-border: #bdbdbd;
   border-radius: 4px;
   border-style: solid;
   //overflow: hidden;
+  .icone{
+    width:20px;
+    margin: 0 5px 0 10px;
+  }
 }
 .wrapper-result {
   @extend .choices;

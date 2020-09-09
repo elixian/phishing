@@ -146,6 +146,12 @@ Vue.use(VueRouter)
           component: () => import(/* webpackChunkName: "mail09" */ '../components/Game/MailHtml9.vue'),
   
         },
+        {
+          path:'10',
+          name: 'mailgame10',
+          component: () => import(/* webpackChunkName: "mail10" */ '../components/Game/MailHtml10.vue'),
+  
+        },
       ]
 
    }
