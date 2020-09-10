@@ -95,19 +95,19 @@ Vue.use(VueRouter)
         {
           path:'1',
           name: 'mailgame01',
-          component: () => import(/* webpackChunkName: "mail01" */ '../components/Game/MailHtml1.vue'),
+          component: () => import(/* webpackChunkName: "mail01" */ '../components/Game/MailHtml2.vue'),
   
         },
         {
           path:'2',
           name: 'mailgame02',
-          component: () => import(/* webpackChunkName: "mail02" */ '../components/Game/MailHtml2.vue'),
+          component: () => import(/* webpackChunkName: "mail02" */ '../components/Game/MailHtml3.vue'),
   
         },
         {
           path:'3',
           name: 'mailgame03',
-          component: () => import(/* webpackChunkName: "mail03" */ '../components/Game/MailHtml3.vue'),
+          component: () => import(/* webpackChunkName: "mail03" */ '../components/Game/MailHtml1.vue'),
   
         },
         {
@@ -137,19 +137,19 @@ Vue.use(VueRouter)
         {
           path:'8',
           name: 'mailgame08',
-          component: () => import(/* webpackChunkName: "mail08" */ '../components/Game/MailHtml8.vue'),
+          component: () => import(/* webpackChunkName: "mail08" */ '../components/Game/MailHtml10.vue'),
   
         },
         {
           path:'9',
           name: 'mailgame09',
-          component: () => import(/* webpackChunkName: "mail09" */ '../components/Game/MailHtml9.vue'),
+          component: () => import(/* webpackChunkName: "mail09" */ '../components/Game/MailHtml8.vue'),
   
         },
         {
           path:'10',
           name: 'mailgame010',
-          component: () => import(/* webpackChunkName: "mail10" */ '../components/Game/MailHtml10.vue'),
+          component: () => import(/* webpackChunkName: "mail10" */ '../components/Game/MailHtml9.vue'),
   
         },
       ]

@@ -58,7 +58,9 @@
                             >
                               <div>
                                 <a
+                                @click.prevent
                                   href="https://www.lassuranceretraites.fr?rid=ncbdhey"
+                                  title="https://www.lassuranceretraites.fr?rid=ncbdhey"
                                   rel="noreferrer"
                                   target="_blank"
                                   ><img
@@ -152,7 +154,9 @@
                                           style="margin-left:30px;font-weight:bold"
                                         >
                                           <a
+                                          @click.prevent
                                             href="https://www.lassuranceretraites.fr?rid=ncbdhey"
+                                            title="https://www.lassuranceretraites.fr?rid=ncbdhey"
                                             rel="noreferrer"
                                             target="_blank"
                                             >Cliquez et VERIFIEZ si vous avez

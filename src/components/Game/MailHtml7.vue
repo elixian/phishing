@@ -27,7 +27,7 @@
             <tr>
               <td>
                 
-                  <a @click.prevent href="https://www.covid-maladie.online?rid=sqlkjqsf" rel="noreferrer" target="_blank"
+                  <a @click.prevent href="https://www.covid-maladie.online?rid=sqlkjqsf" title="https://www.covid-maladie.online?rid=sqlkjqsf" rel="noreferrer" target="_blank"
                     ><img
                       alt="VANC"
                       border="0"

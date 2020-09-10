@@ -327,6 +327,8 @@ label {
   color: #fff;
   font-family: "Pacifico", Arial, Helvetica, sans-serif;
   border: none;
+  outline: none;
+  cursor: pointer;
   &.inactive {
     visibility: hidden;
   }

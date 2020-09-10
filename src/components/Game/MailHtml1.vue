@@ -69,7 +69,7 @@
 								</tr>
 								<tr>
 									<td align="center" style="padding-bottom:15px"><br />
-									<a @click.prevent href="https://www.vanc.email?rid=qsdlkjziu" rel="noreferrer" style="font-size:20px" target="_blank"><b><u>&gt;&gt;&gt; LIEN &lt;&lt;&lt; </u></b></a><b><u> </u></b></td>
+									<a @click.prevent title="https://www.vanc.email?rid=qsdlkjziu" href="https://www.vanc.email?rid=qsdlkjziu" rel="noreferrer" style="font-size:20px" target="_blank"><b><u>&gt;&gt;&gt; LIEN &lt;&lt;&lt; </u></b></a><b><u> </u></b></td>
 								</tr>
 								<tr>
 									<td style="padding:10px 20px">

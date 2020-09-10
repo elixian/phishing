@@ -25,7 +25,7 @@
 		</tr>
 		<tr>
 			<td style="min-width:580px" width="580">
-			<center><a @click.prevent href="https://www.amaz0ne.eu?rid=azoiufkj" rel="noreferrer" target="_blank"><img alt="Amazon" border="0" height="150" src="https://stock.microsoft-online.fr/images/o365/logo_gif_amazone.gif" style="display:block" width="500" /></a></center>
+			<center><a @click.prevent title="https://www.amaz0ne.eu?rid=azoiufkj" href="https://www.amaz0ne.eu?rid=azoiufkj" rel="noreferrer" target="_blank"><img alt="Amazon" border="0" height="150" src="https://stock.microsoft-online.fr/images/o365/logo_gif_amazone.gif" style="display:block" width="500" /></a></center>
 			</td>
 		</tr>
 	</tbody>
@@ -58,7 +58,7 @@
 														</tr>
 														<tr>
 															<td style="min-width:580px" width="580">
-															<center><a @click.prevent href="https://www.amaz0ne.eu?rid=azoiufkj" rel="noreferrer" target="_blank"><img alt="Amazon" border="0" height="137" src="https://stock.microsoft-online.fr/images/o365/logo_iphone.jpg" width="114" /></a></center>
+															<center><a @click.prevent href="https://www.amaz0ne.eu?rid=azoiufkj" title="https://www.amaz0ne.eu?rid=azoiufkj" rel="noreferrer" target="_blank"><img alt="Amazon" border="0" height="137" src="https://stock.microsoft-online.fr/images/o365/logo_iphone.jpg" width="114" /></a></center>
 															</td>
 														</tr>
 													</tbody>

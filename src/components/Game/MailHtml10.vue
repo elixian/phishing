@@ -1,16 +1,16 @@
 <template>
   <div class="wrapper--img">
     <div class="object">
-      <span>Plage et Bikini</span>: Vos plus beaux clichés
+      Réinitialisation de votre mot de passe
     </div>
 
     <div class="mail-wrapper">
       <div class="exp-info">
-        <span class="accro">NC</span>
+        <span class="accro">R</span>
         <span class="mail ">
-          Nouvelle Conversation
+          Réinitialisation 
           <span
-            >&lt;<span class="tips-3">notifications@yammeronline.info</span
+            >&lt;<span>noreply@cnav.fr</span
             >&gt;</span
           ></span
         >

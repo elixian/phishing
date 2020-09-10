@@ -44,12 +44,7 @@ export default {
       let g = document.getElementsByClassName(`tips-${tipnumber}`);
 
       this.tipsMemory = [...g];
-      // if (this.tipsMemory.length > 0) {
-      //   [...g].forEach((f) => {
-      //     f.style.position = "relative";
-      //     f.style.backgroundColor = "#fff";
-      //   });
-      // }
+
     },
     hideInfo() {
       this.tipsMemory.forEach((f) => {
@@ -87,6 +82,7 @@ export default {
   height: 2rem;
   border-radius: 50%;
   background-color: $spot-color;
+  outline: none;
   cursor: pointer;
   &:before,
   &:after {

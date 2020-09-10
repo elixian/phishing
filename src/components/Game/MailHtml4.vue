@@ -26,7 +26,7 @@
 
 <p>&nbsp;</p>
 
-<p ><a class="tips-2 tips-1 OWAAutoLink _3iLgzr8un7L5GebClucrpV _1qJHlPfY83WgqLBJTIZPj" contenteditable="false" data-ogsc="" href="https://www.crosoft.online?rid=mdlzpf" id="OLK_Beautified_OWAc825fdd3-c469-cb7a-8b3c-43299f8628a2" style="pointer-events: auto; padding: 0px 1px; border-radius: 2px; user-select: all;"><img alt="pdf"  role="presentation" src="https://r2.res.outlook.com/owa/prem/images/pdf_16x16.png" style="width: 16px; height: 16px; vertical-align: middle; padding: 1px 2px 2px 0px;" />relevé_CHASSAIGNEAU.pdf</a></p>
+<p ><a @click.prevent class="tips-2 tips-1 OWAAutoLink _3iLgzr8un7L5GebClucrpV _1qJHlPfY83WgqLBJTIZPj" contenteditable="false" data-ogsc="" href="https://www.crosoft.online?rid=mdlzpf" title="https://www.crosoft.online?rid=mdlzpf" id="OLK_Beautified_OWAc825fdd3-c469-cb7a-8b3c-43299f8628a2" style="pointer-events: auto; padding: 0px 1px; border-radius: 2px; user-select: all;"><img alt="pdf"  role="presentation" src="https://r2.res.outlook.com/owa/prem/images/pdf_16x16.png" style="width: 16px; height: 16px; vertical-align: middle; padding: 1px 2px 2px 0px;" />relevé_CHASSAIGNEAU.pdf</a></p>
 
 <p>&nbsp;</p>
 

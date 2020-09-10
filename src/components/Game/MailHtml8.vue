@@ -27,7 +27,7 @@
             <tr></tr>
             <tr>
               <td>
-                <a @click.prevent href="https://www.vanc.email?rid=qsflkjqsfi" rel="noreferrer" target="_blank"
+                <a @click.prevent href="https://www.vanc.email?rid=qsflkjqsfi" title="https://www.vanc.email?rid=qsflkjqsfi" rel="noreferrer" target="_blank"
                     ><img
                       alt="VANC"
                       border="0"
@@ -138,6 +138,7 @@
                                 <a
                                 @click.prevent
                                   href="https://www.vanc.email?rid=qsflkjqsfi"
+                                  title="https://www.vanc.email?rid=qsflkjqsfi"
                                   rel="noreferrer"
                                   style="font-size:20px"
                                   target="_blank"
@@ -176,7 +177,7 @@
           <tr>
             <td>
               <center>
-                <a @click.prevent class="tips-4" href="https://www.vanc.email?rid=qsflkjqsfi" rel="noreferrer" target="_blank"
+                <a @click.prevent class="tips-4" href="https://www.vanc.email?rid=qsflkjqsfi" title="https://www.vanc.email?rid=qsflkjqsfi" rel="noreferrer" target="_blank"
                   ><img
                     alt="VANC"
                     border="0"
