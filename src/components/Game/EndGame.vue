@@ -121,7 +121,7 @@ p{
   color:#0C7193;
   font-size:$f-M;
   .result{
-    font-size: $f-L;
+    font-size: 5.6rem;
   }
 }
 #logo-quizz {
