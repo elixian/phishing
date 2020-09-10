@@ -1,37 +1,56 @@
 <template>
   <div id="wrapper-choice">
-    
-      <div class="choices" v-if="!nextStatmentButton">
-        <div :class="['choice choice__left', { active: isPhishing }]">
-          <label for="phishing" @mouseup="setValue(true)">
-            <input id="phishing" type="radio" name="choices" class="js_radio"  />
-            <span><img class="icone" src="@/assets/images/game/warning-sign.png" alt="" srcset=""> Phishing</span>
-          </label>
-        </div>
-        <div
-          :class="[
-            'choice choice__right',
-            { active: !isPhishing && isPhishing !== null },
-          ]"
-        >
-          <label for="authentic" @mouseup="setValue(false)">
-            <input
-              id="authentic"
-              type="radio"
-              name="choices"
-              class="js_radio"
+    <div class="choices" v-if="!nextStatmentButton">
+      <div :class="['choice choice__left', { active: isPhishing }]">
+        <label for="phishing" @mouseup="setValue(true)">
+          <input id="phishing" type="radio" name="choices" class="js_radio" />
+          <span
+            ><img
+              class="icone"
+              src="@/assets/images/game/warning-sign.png"
+              alt=""
+              srcset=""
             />
-            <span><img class="icone" src="@/assets/images/game/check-mark.png" alt="" srcset="">Authentique</span>
-          </label>
-        </div>
-        <span class="separator" v-if="isPhishing === null"></span>
+            Phishing</span
+          >
+        </label>
       </div>
-      <transition name="bounce" >
-    
-      
-      <div :class="['wrapper-result',d]" v-if="nextStatmentButton" >
-        <div class="result-info" v-if="isPhishing == currentGame.isPhishing"><img src="@/assets/images/game/clapping-hands.png" alt=""> <p> Bien vu ! c’est bien un mail frauduleux</p></div>
-        <div class="result-info" v-else><img src="@/assets/images/game/anxious.png" alt=""> <p>Raté, c’est un mail frauduleux</p></div>
+      <div
+        :class="[
+          'choice choice__right',
+          { active: !isPhishing && isPhishing !== null },
+        ]"
+      >
+        <label for="authentic" @mouseup="setValue(false)">
+          <input id="authentic" type="radio" name="choices" class="js_radio" />
+          <span
+            ><img
+              class="icone"
+              src="@/assets/images/game/check-mark.png"
+              alt=""
+              srcset=""
+            />Authentique</span
+          >
+        </label>
+      </div>
+      <span class="separator" v-if="isPhishing === null"></span>
+    </div>
+    <transition name="bounce">
+      <div :class="['wrapper-result', stateResult]" v-if="nextStatmentButton">
+        <div class="result-info" v-if="isPhishing == currentGame.isPhishing">
+          <img src="@/assets/images/game/clapping-hands.png" alt="" />
+          <p>
+            Bien vu ! c’est bien un mail
+            {{ isSuccess ? "frauduleux" : "authentique" }}
+          </p>
+        </div>
+        <div class="result-info" v-else>
+          <img src="@/assets/images/game/anxious.png" alt="" />
+          <p>
+            Raté, c’est un mail
+            {{ currentGame.isPhishing ? "frauduleux" : "authentique" }}
+          </p>
+        </div>
       </div>
     </transition>
 
@@ -44,7 +63,7 @@
       Valider
     </button>
     <button
-      :class="['choice__validation', { inactive: isLastPage }]"
+      :class="['choice__validation']"
       type="button"
       @click="next"
       v-if="nextStatmentButton"
@@ -55,15 +74,15 @@
 </template>
 
 <script>
-import {  Power4,gsap } from "gsap";
+import { Power4, gsap } from "gsap";
 import { mapActions, mapState, mapGetters } from "vuex";
 export default {
   mounted() {
-    let tl = new gsap.timeline({delay:1})
+    let tl = new gsap.timeline({ delay: 1 });
     tl.fromTo(
       "#wrapper-choice",
       0.5,
-      {y:200, opacity: 0 },
+      { y: 200, opacity: 0 },
       { y: 0, opacity: 1, ease: Power4.easeOut }
     );
   },
@@ -71,15 +90,19 @@ export default {
     return {
       isPhishing: null, //default null no choice
       nextStatmentButton: false,
+      isSuccess: false,
     };
   },
   computed: {
     ...mapState("stepper", ["activePage"]),
-    ...mapState('game',["currentGame"]),
+    ...mapState("game", ["currentGame"]),
     ...mapGetters("stepper", ["isLastPage"]),
-    d:function(){
-      return this.currentGame.isPhishing === this.isPhishing ? 'success' : 'error';
-    }
+
+    stateResult: function() {
+      return this.currentGame.isPhishing === this.isPhishing
+        ? "success"
+        : "error";
+    },
   },
   methods: {
     setValue(v) {
@@ -87,9 +110,10 @@ export default {
     },
     checkResponse() {
       this.nextStatmentButton = true;
-     if(this.isPhishing === this.currentGame.isPhishing){
+      this.isSuccess = this.currentGame.isPhishing && this.isPhishing;
+      if (this.isPhishing === this.currentGame.isPhishing) {
         this.setScore();
-     }
+      }
       this.setShowSpot(true);
     },
     next() {
@@ -97,17 +121,19 @@ export default {
       let radios = [...document.querySelectorAll(".js_radio")];
       let f = radios.find((b) => b.checked);
       f !== undefined ?? (f.checked = false);
-
-      this.$router.replace({ name: `mailgame0${this.activePage + 1}` });
-      this.incrementStepper();
-      this.nextStatmentButton = false; // initialise le boutton suivant à false
       this.isPhishing = null; //on set à null
       this.setShowSpot(false);
-
-     
+    
+      if (!this.isLastPage) {
+        this.$router.replace({ name: `mailgame0${this.activePage + 1}` });
+        this.incrementStepper();
+        this.nextStatmentButton = false; // initialise le boutton suivant à false
+      } else {
+        this.setEndGame();
+      }
     },
     ...mapActions("stepper", ["incrementStepper"]),
-    ...mapActions("game", ["setShowSpot","setScore"]),
+    ...mapActions("game", ["setShowSpot", "setScore", "setEndGame"]),
   },
 };
 </script>
@@ -118,9 +144,9 @@ $grey-border: #bdbdbd;
   --width-button: 9.3rem;
   display: flex;
   align-items: center;
-  
-  width:40rem;
-  margin:3rem auto 0;
+
+  width: 40rem;
+  margin: 3rem auto 0;
   justify-content: center;
 }
 .separator {
@@ -145,8 +171,8 @@ $grey-border: #bdbdbd;
   border-radius: 4px;
   border-style: solid;
   //overflow: hidden;
-  .icone{
-    width:20px;
+  .icone {
+    width: 20px;
     margin: 0 5px 0 10px;
   }
 }
@@ -170,30 +196,29 @@ $grey-border: #bdbdbd;
     border-top: none;
     border-bottom-right-radius: 3px;
   }
-  &.error{
-    border-color:#eb5757;
-    &::before{
-      border-color:red#eb5757;
+  &.error {
+    border-color: #eb5757;
+    &::before {
+      border-color: red#eb5757;
     }
   }
-  &.success{
-    border-color:#219653;
-    &::before{
+  &.success {
+    border-color: #219653;
+    &::before {
       border-color: #219653;
     }
   }
-  .result-info{
+  .result-info {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin:0 auto;
-    img{
-      width:20px;
-      height:20px;
+    margin: 0 auto;
+    img {
+      width: 20px;
+      height: 20px;
       margin-right: 1rem;
     }
-  
   }
 }
 .choice {
@@ -293,8 +318,8 @@ label {
 
 // Button validation
 .choice__validation {
-  position:absolute;
-  right:-15rem;
+  position: absolute;
+  right: -15rem;
   background-color: #0c7193;
   border-radius: 4px;
   width: var(--width-button);

@@ -1,7 +1,8 @@
 <template>
   <div>
+    <app-introduction v-if="!gameIsStarted"/>
     <transition name="fade">
-      <div id="game" v-if="gameIsStarted">
+      <div id="game" v-if="gameIsStarted && !gameIsFinished">
         <span>
           <div id="logo-quizz">
             <img
@@ -12,21 +13,19 @@
           </div>
 
           <app-stepper class="app-stepper" />
-            <div class="app-choice">
-                <app-choice-validation  />
-            </div>
-           
+          <div class="app-choice">
+            <app-choice-validation />
+          </div>
 
           <div class="visual-report">
-              <keep-alive>
-              <router-view />
-              </keep-alive>
-            
+            <router-view />
           </div>
         </span>
       </div>
     </transition>
-    <app-introduction/>
+    <transition name="fade">
+    <app-end-game v-if="gameIsFinished"/>
+    </transition>
   </div>
 </template>
 
@@ -34,26 +33,24 @@
 import Stepper from "@/components/Utils/Stepper";
 import ChoiceValidation from "@/components/Utils/ChoiceValidation";
 import Introduction from "@/components/Game/Introduction";
-import { mapGetters,mapState } from "vuex";
+import EndGame from "@/components/Game/EndGame";
+import { mapGetters, mapState } from "vuex";
 
 export default {
-
-
   computed: {
     ...mapGetters("presentation", ["overlay"]),
-    ...mapState("game", ["gameIsStarted"]),
-    
+    ...mapState("game", ["gameIsStarted","gameIsFinished"]),
   },
   components: {
     appStepper: Stepper,
     appChoiceValidation: ChoiceValidation,
-    appIntroduction : Introduction
+    appIntroduction: Introduction,
+    appEndGame :EndGame
   },
 };
 </script>
 
 <style lang="scss" scoped>
-
 #game {
   background-color: #f2f2f2;
   padding-top: 2rem;

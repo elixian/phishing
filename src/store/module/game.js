@@ -3,9 +3,10 @@ export default{
     namespaced: true,
     state:{
         gameIsStarted:false,
+        gameIsFinished:false,
         currentGame:{
             isPhishing:null,
-            showSpot:false, //TODO
+            showSpot:false, 
         },
         scoring:0
     },
@@ -21,6 +22,9 @@ export default{
         },
         SET_SCORING(state){
             state.scoring ++;
+        },
+        SET_END_GAME(state){
+            state.gameIsFinished=true;
         }
     },
     actions:{
@@ -35,6 +39,9 @@ export default{
         },
         setScore({commit}){
             commit('SET_SCORING');
+        },
+        setEndGame({commit}){
+            commit('SET_END_GAME');
         }
     },   
 }
