@@ -4,7 +4,7 @@
       <div :class="['choice choice__left', { active: isPhishing }]">
         <label for="phishing" @mouseup="setValue(true)">
           <input id="phishing" type="radio" name="choices" class="js_radio" />
-          <span
+          <span class="bold"
             ><img
               class="icone"
               src="@/assets/images/game/warning-sign.png"
@@ -23,7 +23,7 @@
       >
         <label for="authentic" @mouseup="setValue(false)">
           <input id="authentic" type="radio" name="choices" class="js_radio" />
-          <span
+          <span  class="bold"
             ><img
               class="icone"
               src="@/assets/images/game/check-mark.png"
@@ -40,14 +40,14 @@
         <div class="result-info" v-if="isPhishing == currentGame.isPhishing">
           <img src="@/assets/images/game/clapping-hands.png" alt="" />
           <p>
-            Bien vu ! c’est bien un mail
+            <span  class="bold">Bien vu !</span> c’est bien un mail
             {{ isSuccess ? "frauduleux" : "authentique" }}
           </p>
         </div>
         <div class="result-info" v-else>
           <img src="@/assets/images/game/anxious.png" alt="" />
           <p>
-            Raté, c’est un mail
+            <span  class="bold">Raté</span>, c’est un mail
             {{ currentGame.isPhishing ? "frauduleux" : "authentique" }}
           </p>
         </div>
@@ -172,7 +172,7 @@ $grey-border: #bdbdbd;
   border-style: solid;
   //overflow: hidden;
   .icone {
-    width: 20px;
+    width: 18px;
     margin: 0 5px 0 10px;
   }
 }

@@ -114,6 +114,7 @@ export default {
   background: white;
   right: 50%;
   font-size: $f-S;
+  line-height: 1.5 * $f-S;
   padding-bottom: 1.5rem;
   box-shadow: 0px 3px 2px #0000003d;
   top: -15px;
