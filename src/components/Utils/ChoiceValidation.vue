@@ -7,7 +7,7 @@
           <span class="bold"
             ><img
               class="icone"
-              src="@/assets/images/game/warning-sign.png"
+              src="@/assets/images/game/thumbs-down.png"
               alt=""
               srcset=""
             />
@@ -26,7 +26,7 @@
           <span  class="bold"
             ><img
               class="icone"
-              src="@/assets/images/game/check-mark.png"
+              src="@/assets/images/game/thumbs-up.png"
               alt=""
               srcset=""
             />Authentique</span
@@ -164,8 +164,7 @@ $grey-border: #bdbdbd;
   position: relative;
   height: 6.6rem;
   width: 40rem;
-  //margin-right: 2rem;
-  //margin-left: calc(2rem + var(--width-button));
+  user-select: none;
   border-width: 1px;
   border-color: $grey-border;
   border-radius: 4px;

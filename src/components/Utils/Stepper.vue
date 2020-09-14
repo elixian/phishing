@@ -26,6 +26,7 @@ export default {
     width:min-content;
     padding:0;
     .step{
+      position:relative;
         width:20px;
         height:1px;
         border:none;
@@ -35,9 +36,23 @@ export default {
         &:not(:first-child){
           margin-left:3px;
         }
-        &.active{
+        &.active::before{
           background-color:#0C7193;
+          background: linear-gradient(to right,#0C7193,#0C7193);
+          position: absolute;
+          width: 0%;
+          height: 100%;
+          z-index: 10000;
+          content: "";
+          animation: fluidStep 0.5s ease-in-out forwards;
         }
+        
+        
     }
+}
+@keyframes fluidStep{
+  100%{
+    width: 100%;
+  }
 }
 </style>
