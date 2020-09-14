@@ -60,7 +60,7 @@
       </p>
       <router-link :to="{name:'mailgame01'}" @click.native="startGame" id="startGame">Commencer</router-link>
     </div>
-    <footer><img class="logo-AR" src="@/assets/images/AR.png" alt="logo Assurance retraite"></footer>
+    <footer><img class="logo-ar" src="@/assets/images/AR.png" alt="logo Assurance retraite"></footer>
   </div>
 </template>
 <script>
@@ -76,7 +76,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  
     #intro {
+      --height-footer:6rem;
   background: #f2f2f2;
   background-image: url("~@/assets/images/game/pattern-phishing.png");
   height: 100vh;
@@ -89,7 +91,8 @@ export default {
     border-radius: 5px;
     position: absolute;
     margin: 0 auto;
-    top: 18rem;
+    top: 50%;
+    transform:translateY(calc(-50% - var(--height-footer)));
     left: 0;
     right: 0;
   }
@@ -97,14 +100,14 @@ export default {
 footer{
   position:absolute;
   bottom:0;
-  height:8rem;
+  height:var(--height-footer);
   background-color: #fff;
   width:100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  .log-AR{
-    height:80px;
+  .logo-ar{
+    height:37px;
   }
 }
 h2{

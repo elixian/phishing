@@ -8,6 +8,9 @@ export default {
     getters:{
         isLastPage(state){
             return state.totalSteps === state.activePage;
+        },
+        percentStage(state){
+            return (state.activePage * 100) / state.totalSteps;
         }
     },
     mutations:{
