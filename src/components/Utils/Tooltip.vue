@@ -116,21 +116,21 @@ export default {
   font-size: $f-S;
   line-height: 1.5 * $f-S;
   padding-bottom: 1.5rem;
-  box-shadow: 0px 3px 2px #0000003d;
+  box-shadow: 0px 3px 2px hsla(0, 0%, 0%, 0.239);
   top: -15px;
   &::before {
-    bottom: 100%;
+    
+    //@at-root
     left: 50%;
-    border: solid transparent;
     content: " ";
-    height: 0;
-    width: 0;
+    height: 15px;
+    width: 15px;
     position: absolute;
     pointer-events: none;
-    border-color: rgba(136, 183, 213, 0);
-    border-bottom-color: #ffffff;
-    border-width: 10px;
-    margin-left: -10px;
+    background: #fff;
+    border-top-left-radius: 3px;
+    transform: translate(-50%,-50%) rotate(45deg);
+    transform-origin: center center;
   }
   p {
     padding-top: 1.5rem;
