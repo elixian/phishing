@@ -77,9 +77,10 @@ export default {
   z-index: 10;
 }
 .spot {
+  $size-spot:1.2rem;
   position: relative;
-  width: 2rem;
-  height: 2rem;
+  width: $size-spot;
+  height: $size-spot;
   border-radius: 50%;
   background-color: $spot-color;
   outline: none;
@@ -98,7 +99,7 @@ export default {
     border-radius: 50%;
     opacity: 0;
     transition: all 0.25s ease-in-out;
-    animation: social-button-beat 1.5s ease-out infinite;
+    animation: social-button-beat 1.5s ease-in infinite ;
   }
   &.darken {
     background-color: $spot-color-darken;
@@ -120,7 +121,6 @@ export default {
   top: -15px;
   &::before {
     
-    //@at-root
     left: 50%;
     content: " ";
     height: 15px;
@@ -141,18 +141,19 @@ export default {
 
 // Animation
 @keyframes social-button-beat {
+  $opacity:0.2;
   0% {
-    opacity: 0;
+    opacity: $opacity;
     transform: scale(1);
   }
 
   70% {
-    opacity: 0.4;
+    opacity: $opacity;
     transform: scale(2);
   }
 
   100% {
-    opacity: 0.4;
+    opacity: $opacity;
   }
 }
 </style>
