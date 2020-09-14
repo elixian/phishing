@@ -34,7 +34,7 @@ const actions = {
           .to(event.target.nextSibling, 0.5, { opacity: 1, display: "block" })
           .to(".spot", 0.8, { visibility: "hidden", opacity:0 }, "-= 0.5")
           .to(state.overlay.currentOverlay, 0.5, { opacity: 1, display: "block" }, "-= .3")
-          .to(`.${state.overlay.tips}` ,0.5, { zIndex:300, position: "relative",backgroundColor:"#fff" }, "-= .3");
+          .to(`.${state.overlay.tips}` ,0.5, { zIndex:300, position: "relative",backgroundColor:"#fff" }, "-= 1.2");
       },
       hideOverlay({commit,state}){
         

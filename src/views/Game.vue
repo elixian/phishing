@@ -19,6 +19,7 @@
 
           <div class="visual-report">
             <router-view />
+            <div v-if="overlay" class="overlay-off" @click.self="hideOverlay"></div>
           </div>
         </span>
       </div>
@@ -34,7 +35,7 @@ import Stepper from "@/components/Utils/Stepper";
 import ChoiceValidation from "@/components/Utils/ChoiceValidation";
 import Introduction from "@/components/Game/Introduction";
 import EndGame from "@/components/Game/EndGame";
-import { mapGetters, mapState } from "vuex";
+import { mapActions, mapGetters, mapState } from "vuex";
 
 export default {
   computed: {
@@ -47,6 +48,9 @@ export default {
     appIntroduction: Introduction,
     appEndGame :EndGame
   },
+  methods:{
+    ...mapActions('presentation',{hideOverlay: 'hideOverlay'})
+  }
 };
 </script>
 
@@ -69,5 +73,14 @@ export default {
 }
 .visual-report {
   background: none;
+}
+.overlay-off {
+  position: fixed;
+  background-color: transparent;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  z-index: 9;
 }
 </style>
