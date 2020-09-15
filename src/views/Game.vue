@@ -4,6 +4,7 @@
     <transition name="fade">
       <div id="game" v-if="gameIsStarted && !gameIsFinished">
         <span>
+          <header class="header">
           <div id="logo-quizz">
             <img
               src="@/assets/images/game/LOGO-quizz.png"
@@ -11,6 +12,8 @@
               srcset=""
             />
           </div>
+          <p class="rules">Analysez soigneusement le mail ci-dessous, et dites si c’est un mail authentique ou si c’est un mail de phishing.</p>
+          </header>
 
           <app-stepper class="app-stepper" />
           <div class="app-choice">
@@ -58,11 +61,23 @@ export default {
 #game {
   background-color: #f2f2f2;
   min-height: 100vh;
+  .header{
+    height:14.4rem;
+    background-color: #fff;
+    margin-top: 2rem;
+
+  }
+  .rules{
+    width:52rem;
+    text-align: center;
+    margin:2rem auto;
+    line-height: $f-R * 1.4;
+  }
 }
 #logo-quizz {
   width: 7.8rem;
   margin: 0 auto 2rem;
-  padding-top: 2rem;
+
 }
 .fade-enter-active,
 .fade-leave-active {
