@@ -55,7 +55,7 @@
     </transition>
 
     <button
-      :class="['choice__validation']"
+      class="choice__validation"
       type="button"
       @click.prevent="checkResponse"
       v-if="!nextStatmentButton && isPhishing !== null"
@@ -63,12 +63,12 @@
       Valider
     </button>
     <button
-      :class="['choice__validation']"
+      :class="['choice__validation',{result: isLastPage}]"
       type="button"
       @click="next"
       v-if="nextStatmentButton"
     >
-      Suivant
+      {{ isLastPage ? 'Résulat' : 'Suivant'}}
     </button>
   </div>
 </template>
@@ -178,6 +178,7 @@ $grey-border: #bdbdbd;
 .wrapper-result {
   @extend .choices;
   background-color: #fff;
+
   &::before {
     content: "";
     width: 15px;
@@ -318,7 +319,7 @@ label {
 // Button validation
 .choice__validation {
   position: absolute;
-  right: -15rem;
+  right: -11.2rem;
   background-color: #0c7193;
   border-radius: 4px;
   width: var(--width-button);
@@ -328,8 +329,13 @@ label {
   border: none;
   outline: none;
   cursor: pointer;
+  z-index: 100;
   &.inactive {
     visibility: hidden;
+  }
+  &.result{
+    background-color:#FFe980;
+    color: #0c7193 ;
   }
 }
 
@@ -346,7 +352,7 @@ label {
     transform: scale(0);
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.08);
   }
   100% {
     transform: scale(1);
