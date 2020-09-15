@@ -30,19 +30,22 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-/****************************
-    *          Tooltip Wiki                
-    *****************************/
-
+<style lang="scss">
 .inline{
   display: inline-block;
 }
 .wrapper-tooltip {
   position: relative;
   color: $primary-color;
-  border-bottom: 2px dashed currentColor;
   cursor: help;
+  &::before{
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 100%;
+    border-bottom: 2px dashed currentColor;
+  }
 }
 
 #Tooltips {

@@ -36,13 +36,9 @@
       </div>
       <div class="description-info">
         Vous venez de cliquer sur un
-        <span
-          class="bold wrapper-tooltip"
-          @mouseover="showTip"
-          @mouseleave="hideTip"
-          @mouseout="hideTip"
-          >email d'hameçonnage</span
-        >. Pas de panique, il s’agit d’un exercice mis en place par
+       <app-wiki-tooltip :definition="definition">
+          <template v-slot:text>email d'hameçonnage</template>
+          </app-wiki-tooltip>. Pas de panique, il s’agit d’un exercice mis en place par
         <span class="bold"
           >la sécurité informatique de l’Assurance retraite </span
         >pour <span class="bold">sensibiliser à cette pratique.</span><span class="span italic"> Ce traitement ne fait pas l’objet de conservation des données.</span>
@@ -89,24 +85,21 @@
 
 <script>
 import { mapGetters, mapActions } from "vuex";
+import WikiTooltip from "@/components/Utils/WikiTooltip";
 export default {
+   data(){
+    return{
+      definition: `Le hameçonnage est une pratique de piratage informatiques qui consiste à envoyer un message destiné à amener une personne à se connecter sur un site et fournir des informations personnelles.`
+    }
+  },
+  components:{
+    appWikiTooltip : WikiTooltip
+  },
   computed: {
     ...mapGetters("presentation", ["overlay"]),
   },
   methods: {
     ...mapActions("presentation", ["hideOverlay"]),
-    showTip(event) {
-      let tooltip = document.getElementById("Tooltips");
-      if (tooltip === null) {
-        event.target.innerHTML =
-          event.target.innerHTML +
-          `<div id='Tooltips' role="tooltip"><p class="box-tip" @mouseleave.self="hideTip">Le hameçonnage est une pratique de piratage informatiques qui consiste à envoyer un message destiné à amener une personne à se connecter sur un site et fournir des informations personnelles.</p></div>`;
-      }
-    },
-    hideTip() {
-      let tooltip = document.getElementById("Tooltips");
-      tooltip !== null ? tooltip.remove() : null;
-    },
   },
 };
 </script>

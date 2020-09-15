@@ -98,18 +98,6 @@ export default {
   },
   methods: {
     ...mapActions("game", ["startGame"]),
-    showTip(event) {
-      let tooltip = document.getElementById("Tooltips");
-      if (tooltip === null) {
-        event.target.innerHTML =
-          event.target.innerHTML +
-          `<div id='Tooltips' role="tooltip"><p class="box-tip" @mouseleave.self="hideTip">Le hameçonnage est une pratique de piratage informatiques qui consiste à envoyer un message destiné à amener une personne à se connecter sur un site et fournir des informations personnelles.</p></div>`;
-      }
-    },
-    hideTip() {
-      let tooltip = document.getElementById("Tooltips");
-      tooltip !== null ? tooltip.remove() : null;
-    },
   },
 };
 </script>
@@ -195,8 +183,8 @@ p {
     position: absolute;
     width: 100%;
     display: block;
-    height: 5px;
-    bottom:-3px;
+    height: 6px;
+    bottom:0px;
     left:0;
   }
 }
