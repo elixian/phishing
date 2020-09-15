@@ -25,6 +25,10 @@ export default{
         },
         SET_END_GAME(state){
             state.gameIsFinished=true;
+        },
+        RESTART_GAME(state){
+            state.gameIsFinished= false;
+            state.scoring= 0;
         }
     },
     actions:{
@@ -42,6 +46,9 @@ export default{
         },
         setEndGame({commit}){
             commit('SET_END_GAME');
+        },
+        restartGame({commit}){
+            commit('RESTART_GAME');
         }
     },   
 }

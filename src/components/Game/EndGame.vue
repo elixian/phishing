@@ -57,7 +57,12 @@
       <p class="result__score">
         <span class="bold result">{{scoring}}</span> / 10
       </p>
-
+      <router-link
+        :to="{ name: 'mailgame01' }"
+        @click.native="restartGame"
+        id="startGame"
+        >Recommencer</router-link
+      >
     </div>
     <!-- <footer><img class="logo-AR" src="@/assets/images/AR.png" alt="logo Assurance retraite"></footer> -->
   </div>
@@ -65,7 +70,7 @@
 
 
 <script>
-import { mapState } from 'vuex'
+import { mapActions, mapState } from 'vuex'
 export default {
   computed: {
     ...mapState("game",["scoring"]),
@@ -73,6 +78,12 @@ export default {
       return this.scoring >=9?'Excellent !! ' : this.scoring < 6 ? '':'Bravo ! '  ;
       
       }
+  },
+  methods:{
+    ...mapActions("game",["restartGame"]),
+    startGame(){
+
+    }
   }
   
 }

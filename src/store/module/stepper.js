@@ -16,11 +16,17 @@ export default {
     mutations:{
         SET_ACTIVE_PAGE(state){
             state.activePage = state.activePage + 1; 
+        },
+        RESET_PAGE(state){
+            state.activePage = 1;
         }
     },
     actions:{
         incrementStepper({commit}){
             commit('SET_ACTIVE_PAGE');
+        },
+        resetPage({commit}){
+            commit('RESET_PAGE');
         }
     }
 }

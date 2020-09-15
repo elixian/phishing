@@ -130,9 +130,10 @@ export default {
         this.nextStatmentButton = false; // initialise le boutton suivant à false
       } else {
         this.setEndGame();
+        this.resetPage();
       }
     },
-    ...mapActions("stepper", ["incrementStepper"]),
+    ...mapActions("stepper", ["incrementStepper","resetPage"]),
     ...mapActions("game", ["setShowSpot", "setScore", "setEndGame"]),
   },
 };
