@@ -70,16 +70,9 @@ export default {
   computed: {
     ...mapState("game",["scoring"]),
     congratulation:function(){
-      return this.setCongratulation();
+      return this.scoring >=9?'Excellent !! ' : this.scoring < 6 ? '':'Bravo ! '  ;
       
       }
-  },
-  methods:{
-    setCongratulation(){
-    
-      if(this.scroring < 6) return;
-      return this.scoring >=9?'Excellent !! ' : 'Bravo ! '  ;
-    }
   }
   
 }

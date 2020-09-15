@@ -61,6 +61,7 @@ export default {
 #game {
   background-color: #f2f2f2;
   min-height: 100vh;
+
   .header{
     height:12.4rem;
     background-color: #fff;
