@@ -57,12 +57,12 @@ export default {
 <style lang="scss" scoped>
 #game {
   background-color: #f2f2f2;
-  padding-top: 2rem;
   min-height: 100vh;
 }
 #logo-quizz {
   width: 7.8rem;
   margin: 0 auto 2rem;
+  padding-top: 2rem;
 }
 .fade-enter-active,
 .fade-leave-active {

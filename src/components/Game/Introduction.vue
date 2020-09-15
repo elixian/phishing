@@ -77,6 +77,7 @@ export default {
 
 <style lang="scss" scoped>
     #intro {
+  --footer-size:6rem;
   background: #f2f2f2;
   background-image: url("~@/assets/images/game/pattern-phishing.png");
   height: 100vh;
@@ -89,22 +90,23 @@ export default {
     border-radius: 5px;
     position: absolute;
     margin: 0 auto;
-    top: 18rem;
+    top: 50%;
     left: 0;
     right: 0;
+    transform:translateY(calc(-50% - var(--footer-size)));
   }
 }
 footer{
   position:absolute;
   bottom:0;
-  height:8rem;
+  height:var(--footer-size);
   background-color: #fff;
   width:100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  .log-AR{
-    height:80px;
+  .logo-AR{
+    width:10rem;
   }
 }
 h2{
