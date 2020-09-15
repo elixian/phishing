@@ -55,29 +55,58 @@
       </div>
       <h2>Entraîner vous à débusquer les mails de phising</h2>
       <p>
-        Nous allons vous présenter 10 mails où se sont glissés des mails de
-        phising. L’objectif est de les identifier.
+        Nous allons vous présenter 10 mails où se sont glissés des
+        <span
+          class="bold wrapper-tooltip"
+          @mouseover="showTip"
+          @mouseleave="hideTip"
+          @mouseout="hideTip"
+          >tentatives d'hameçonnage</span
+        >. <span class="stabilo bold">L’objectif est de les identifier</span>.
       </p>
-      <router-link :to="{name:'mailgame01'}" @click.native="startGame" id="startGame">Commencer</router-link>
+      <router-link
+        :to="{ name: 'mailgame01' }"
+        @click.native="startGame"
+        id="startGame"
+        >Commencer</router-link
+      >
     </div>
-    <footer><img class="logo-AR" src="@/assets/images/AR.png" alt="logo Assurance retraite"></footer>
+    <footer>
+      <img
+        class="logo-AR"
+        src="@/assets/images/AR.png"
+        alt="logo Assurance retraite"
+      />
+    </footer>
   </div>
 </template>
 <script>
-import {mapActions,mapState} from 'vuex';
+import { mapActions, mapState } from "vuex";
 export default {
-    computed:{
-        ...mapState('game',['gameIsStarted'])
+  computed: {
+    ...mapState("game", ["gameIsStarted"]),
+  },
+  methods: {
+    ...mapActions("game", ["startGame"]),
+    showTip(event) {
+      let tooltip = document.getElementById("Tooltips");
+      if (tooltip === null) {
+        event.target.innerHTML =
+          event.target.innerHTML +
+          `<div id='Tooltips' role="tooltip"><p class="box-tip" @mouseleave.self="hideTip">Le hameçonnage est une pratique de piratage informatiques qui consiste à envoyer un message destiné à amener une personne à se connecter sur un site et fournir des informations personnelles.</p></div>`;
+      }
     },
-    methods:{
-        ...mapActions('game',['startGame'])
-    }
-}
+    hideTip() {
+      let tooltip = document.getElementById("Tooltips");
+      tooltip !== null ? tooltip.remove() : null;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-    #intro {
-  --footer-size:6rem;
+#intro {
+  --footer-size: 6rem;
   background: #f2f2f2;
   background-image: url("~@/assets/images/game/pattern-phishing.png");
   height: 100vh;
@@ -93,59 +122,72 @@ export default {
     top: 50%;
     left: 0;
     right: 0;
-    transform:translateY(calc(-50% - var(--footer-size)));
+    transform: translateY(calc(-50% - var(--footer-size)));
   }
 }
-footer{
-  position:absolute;
-  bottom:0;
-  height:var(--footer-size);
+footer {
+  position: absolute;
+  bottom: 0;
+  height: var(--footer-size);
   background-color: #fff;
-  width:100vw;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  .logo-AR{
-    width:10rem;
+  .logo-AR {
+    width: 10rem;
   }
 }
-h2{
-    width:370px;
-    margin:6.2rem auto 0;
-    text-align:center;
+h2 {
+  width: 370px;
+  margin: 6.2rem auto 0;
+  text-align: center;
 }
-p{
-    width:408px;
-    margin:2.9rem auto 0;
-    text-align: center;
+p {
+  width: 470px;
+  margin: 2.9rem auto 0;
+  text-align: center;
 }
 #logo-quizz {
-   width:14rem;
+  width: 14rem;
   margin: 0 auto 2rem;
   position: absolute;
-  top:-24px;
-  left:0;
-  right:0;
+  top: -24px;
+  left: 0;
+  right: 0;
 }
-#startGame{
-    position:absolute;
-    bottom:4.5 /2 * -1rem;
+#startGame {
+  position: absolute;
+  bottom: 4.5 /2 * -1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 4.5rem;
+  width: 14rem;
+  background-color: $spot-color;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #0c7193;
+  line-height: 4.25rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2.1rem;
+  font-family: "Pacifico", Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+.stabilo {
+  position: relative;
+  &::before {
+    background: url(#), $spot-color;
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    width: 100%;
+    display: block;
+    height: 5px;
+    bottom:-3px;
     left:0;
-    right:0;
-    margin:0 auto;
-    height:4.5rem;
-    width:14rem;
-    background-color: $spot-color;
-    border:none;
-    outline:none;
-    border-radius: 5px;
-    color: #0c7193;
-    line-height: 4.25rem;
-    text-align: center;
-    text-decoration: none;
-    font-size:2.1rem;
-    font-family: 'Pacifico', Arial, Helvetica, sans-serif;
-    cursor:pointer;
-
+  }
 }
 </style>
