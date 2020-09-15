@@ -89,7 +89,10 @@ export default {
 <style lang="scss" scoped>
     #intro {
   background: #f2f2f2;
-  background-image: url("~@/assets/images/game/pattern-phishing.png");
+  background-image: url("~@/assets/images/game/manga-victory.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   height: 100vh;
   background-blend-mode: multiply;
 
