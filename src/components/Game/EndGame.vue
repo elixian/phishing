@@ -59,7 +59,7 @@
       </p>
 
     </div>
-    <footer><img class="logo-AR" src="@/assets/images/AR.png" alt="logo Assurance retraite"></footer>
+    <!-- <footer><img class="logo-AR" src="@/assets/images/AR.png" alt="logo Assurance retraite"></footer> -->
   </div>
 </template>
 
@@ -88,7 +88,9 @@ export default {
     border-radius: 5px;
     position: absolute;
     margin: 0 auto;
-    top: 18rem;
+    top: 50%;
+
+    transform:translateY(-50%) ;
     left: 0;
     right: 0;
   }
