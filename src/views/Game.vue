@@ -62,21 +62,21 @@ export default {
   background-color: #f2f2f2;
   min-height: 100vh;
   .header{
-    height:14.4rem;
+    height:12.4rem;
     background-color: #fff;
-    margin-top: 2rem;
-
+    margin:0;
+    padding-top: 2rem;
   }
   .rules{
     width:52rem;
     text-align: center;
-    margin:2rem auto;
+    margin:1rem auto 2rem;
     line-height: $f-R * 1.4;
   }
 }
 #logo-quizz {
   width: 7.8rem;
-  margin: 0 auto 2rem;
+  margin: 0rem auto ;
 
 }
 .fade-enter-active,
