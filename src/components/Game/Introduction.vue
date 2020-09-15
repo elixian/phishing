@@ -56,13 +56,14 @@
       <h2>Entraîner vous à débusquer les mails de phising</h2>
       <p>
         Nous allons vous présenter 10 mails où se sont glissés des
-        <span
+        <app-wiki-tooltip :definition="definition"><template v-slot:text>tentatives d'hameçonnage</template></app-wiki-tooltip>
+        <!-- <span
           class="bold wrapper-tooltip"
           @mouseover="showTip"
           @mouseleave="hideTip"
           @mouseout="hideTip"
           >tentatives d'hameçonnage</span
-        >. <span class="stabilo bold">L’objectif est de les identifier</span>.
+        >-->. <span class="stabilo bold">L’objectif est de les identifier</span>. 
       </p>
       <router-link
         :to="{ name: 'mailgame01' }"
@@ -82,7 +83,16 @@
 </template>
 <script>
 import { mapActions, mapState } from "vuex";
+import WikiTooltip from "@/components/Utils/WikiTooltip";
 export default {
+  data(){
+    return{
+      definition: `Le hameçonnage est une pratique de piratage informatiques qui consiste à envoyer un message destiné à amener une personne à se connecter sur un site et fournir des informations personnelles.`
+    }
+  },
+  components:{
+    appWikiTooltip: WikiTooltip
+  },
   computed: {
     ...mapState("game", ["gameIsStarted"]),
   },
