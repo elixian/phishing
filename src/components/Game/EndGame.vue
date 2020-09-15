@@ -120,7 +120,7 @@ p{
 }
 
 .score{
-  color:#0C7193;
+  color:$primary-color;
   font-size:$f-M;
   .result{
     font-size: 5.6rem;
@@ -142,11 +142,11 @@ p{
     margin:0 auto;
     height:4.5rem;
     width:14rem;
-    background-color: #FFe980;
+    background-color: $spot-color;
     border:none;
     outline:none;
     border-radius: 5px;
-    color: #0c7193;
+    color: $primary-color;
     line-height: 4.25rem;
     text-align: center;
     text-decoration: none;

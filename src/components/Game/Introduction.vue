@@ -135,7 +135,7 @@ p{
     margin:0 auto;
     height:4.5rem;
     width:14rem;
-    background-color: #FFe980;
+    background-color: $spot-color;
     border:none;
     outline:none;
     border-radius: 5px;

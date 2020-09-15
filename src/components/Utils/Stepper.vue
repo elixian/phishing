@@ -23,7 +23,7 @@ export default {
   left:0;
   height: 2px;
   width: 0%;
-  background:#0C7193;
+  background:$primary-color;
   transition: width 1s ease-out;
 }
 

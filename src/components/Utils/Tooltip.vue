@@ -63,7 +63,7 @@ export default {
   display: block;
   border: none;
   outline: none;
-  background: #0c7193;
+  background: $primary-color;
   color: #fff;
   border-radius: 6px;
   height: 24px;

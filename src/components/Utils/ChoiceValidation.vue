@@ -320,7 +320,7 @@ label {
 .choice__validation {
   position: absolute;
   right: -11.2rem;
-  background-color: #0c7193;
+  background-color: $primary-color;
   border-radius: 4px;
   width: var(--width-button);
   height: 4rem;
@@ -334,8 +334,8 @@ label {
     visibility: hidden;
   }
   &.result{
-    background-color:#FFe980;
-    color: #0c7193 ;
+    background-color:$spot-color;
+    color: $primary-color ;
   }
 }
 
