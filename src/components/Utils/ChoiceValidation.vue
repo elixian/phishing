@@ -145,7 +145,6 @@ $grey-border: #bdbdbd;
   --width-button: 9.3rem;
   display: flex;
   align-items: center;
-
   width: 40rem;
   margin: 3rem auto 0;
   justify-content: center;
@@ -174,6 +173,7 @@ $grey-border: #bdbdbd;
   .icone {
     width: 18px;
     margin: 0 5px 0 10px;
+    margin-bottom: 6px;
   }
 }
 .wrapper-result {
@@ -228,6 +228,7 @@ $grey-border: #bdbdbd;
   background-color: #fff;
   display: flex;
   justify-content: center;
+  font-size: $f-R;
   &.active {
     background-color: #f2f2f2;
     &::after {
@@ -291,21 +292,21 @@ label {
     display: none;
     &:checked + span {
       &:before {
-        box-shadow: inset 0 0 0 4px #fff;
+        box-shadow: inset 0 0 0 3px #fff;
       }
     }
   }
   span {
     display: flex;
     align-items: center;
-    border-radius: 14px;
+//border-radius: 14px;
     padding: 2px 12px 2px 2px;
     transition: 0.25s;
 
     &:before {
       display: flex;
       content: "";
-      background-color: hsl(205, 100%, 65%);
+      background-color: #07485E;
       width: 18px;
       height: 18px;
       border-radius: 50%;

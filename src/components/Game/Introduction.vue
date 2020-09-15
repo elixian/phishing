@@ -144,6 +144,7 @@ h2 {
 p {
   width: 470px;
   margin: 2.9rem auto 0;
+  line-height: calc(1.6rem * 1.4);
   text-align: center;
 }
 #logo-quizz {
