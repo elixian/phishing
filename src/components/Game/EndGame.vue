@@ -53,8 +53,8 @@
           />
         </svg>
       </div>
-      <h2>Bravo! votre score est de</h2>
-      <p class="score">
+      <p class="result__text"><span class="bold">{{ congratulation }}</span> votre score est de</p>
+      <p class="result__score">
         <span class="bold result">{{scoring}}</span> / 10
       </p>
 
@@ -68,8 +68,20 @@
 import { mapState } from 'vuex'
 export default {
   computed: {
-    ...mapState("game",["scoring"])
+    ...mapState("game",["scoring"]),
+    congratulation:function(){
+      return this.setCongratulation();
+      
+      }
   },
+  methods:{
+    setCongratulation(){
+    
+      if(this.scroring < 6) return;
+      return this.scoring >=9?'Excellent !! ' : 'Bravo ! '  ;
+    }
+  }
+  
 }
 </script>
 
@@ -115,13 +127,19 @@ h2{
 }
 p{
     width:408px;
-    margin:2.9rem auto 0;
+    margin:0 auto 0;
+    font-size: $f-M;
+    color:$primary-color;
     text-align: center;
+    
 }
-
-.score{
+.result__text{
+  margin-top: 6.2rem
+}
+.result__score{
   color:$primary-color;
   font-size:$f-M;
+  margin-top:5px;
   .result{
     font-size: 5.6rem;
   }
