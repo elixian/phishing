@@ -34,6 +34,8 @@
 </template>
 
 <script>
+document.addEventListener('contextmenu', event => event.preventDefault());
+
 import Stepper from "@/components/Utils/Stepper";
 import ChoiceValidation from "@/components/Utils/ChoiceValidation";
 import Introduction from "@/components/Game/Introduction";

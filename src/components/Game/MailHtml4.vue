@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper--img">
     <div class="object">
-      Mauvaise nouvelle !
+      Important !
     </div>
 
     <div class="mail-wrapper">

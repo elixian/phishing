@@ -77,6 +77,7 @@
                                   <p class="MsoNormal">
                                     <span style="color:black"
                                       ><a
+                                        @click.prevent
                                         href="https://www.lassuranceretraite.fr/portail-services-ng/authentication"
                                         target="_blank"
                                         data-saferedirecturl="https://www.google.com/url?q=https://www.lassuranceretraite.fr/portail-services-ng/authentication&amp;source=gmail&amp;ust=1599674979816000&amp;usg=AFQjCNGxh_rZpCYgxvjU-PWyBFJu0zydPw"
@@ -188,6 +189,7 @@
                                               afin de pouvoir accéder à votre
                                               espace personnel sur
                                               <a
+                                              @click.prevent
                                                 href="http://lassuranceretraite.fr"
                                                 target="_blank"
                                                 data-saferedirecturl="https://www.google.com/url?q=http://lassuranceretraite.fr&amp;source=gmail&amp;ust=1599674979816000&amp;usg=AFQjCNHHWGqU6Ad4jK_j2cvuib9uo8_EoQ"
@@ -200,6 +202,7 @@
                                             ><span
                                               style="font-size:9.0pt;color:#0070c0"
                                               ><a
+                                                @click.prevent
                                                 href="https://www.lassuranceretraite.fr/portail-services-ng/resetStep4/08e33728-e9c1-4d1c-91b1-2c8297afd2d8"
                                                 target="_blank"
                                                 data-saferedirecturl="https://www.google.com/url?q=https://www.lassuranceretraite.fr/portail-services-ng/resetStep4/08e33728-e9c1-4d1c-91b1-2c8297afd2d8&amp;source=gmail&amp;ust=1599674979817000&amp;usg=AFQjCNEH8x6fZg5sc5FQMcM7GEhBcpWu9Q"

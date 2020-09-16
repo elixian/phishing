@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper--img">
     <div class="object">
-      Mauvaise nouvelle !
+      L'administrateur a répondu à votre demande !
     </div>
 
     <div class="mail-wrapper">

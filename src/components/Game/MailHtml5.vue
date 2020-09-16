@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper--img">
     <div class="object">
-      Mauvaise nouvelle !
+      Tirage au sort N° 462845712345846: Lot IPHONE 11
     </div>
 
     <div class="mail-wrapper">
