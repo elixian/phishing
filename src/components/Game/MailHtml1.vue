@@ -116,7 +116,7 @@
 <template v-if="currentGame.showSpot ">
         <Tooltip
         infoOverlay="overlay1"
-        positionSpot="position-1"
+        positionSpot="position1-1"
         spot-darken="true"
       >
         <template v-slot:textinfo>
@@ -128,7 +128,7 @@
       </Tooltip>
       <Tooltip
         infoOverlay="overlay2"
-        positionSpot="position-2"
+        positionSpot="position1-2"
         spot-darken="true"
       >
         <template v-slot:textinfo>
@@ -161,13 +161,12 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-@import "@/scss/game/_game.scss";
-.position-1 {
+<style lang="scss" scoped>
+.position1-1 {
 	top: 45rem;
   left: 44rem;
 }
-.position-2 {
+.position1-2 {
   top: 57.7rem;
   left: 47rem;
 }

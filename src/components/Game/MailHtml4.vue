@@ -92,7 +92,7 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "@/scss/game/_game.scss";
+
 a {
   color: #0072bc;
   text-decoration: none;

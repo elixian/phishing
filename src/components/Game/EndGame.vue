@@ -97,7 +97,7 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 100vh;
+  height: calc(100vh - 60px);
   background-blend-mode: multiply;
 
   .wrapper-intro {
@@ -109,24 +109,12 @@ export default {
     margin: 0 auto;
     top: 50%;
 
-    transform:translateY(-50%) ;
+    transform:translateY(calc(-50% - 6rem)) ;
     left: 0;
     right: 0;
   }
 }
-footer{
-  position:absolute;
-  bottom:0;
-  height:8rem;
-  background-color: #fff;
-  width:100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .log-AR{
-    height:80px;
-  }
-}
+
 h2{
     width:370px;
     margin:6.2rem auto 0;

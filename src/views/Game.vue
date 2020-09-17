@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="wrapper-game">
     <app-introduction v-if="!gameIsStarted"/>
     <transition name="fade">
       <div id="game" v-if="gameIsStarted && !gameIsFinished">
-        <span>
+       
           <header class="header">
           <div id="logo-quizz">
             <img
@@ -24,12 +24,19 @@
             <router-view />
             <div v-if="overlay" class="overlay-off" @click.self="hideOverlay"></div>
           </div>
-        </span>
+      
       </div>
     </transition>
     <transition name="fade">
     <app-end-game v-if="gameIsFinished"/>
     </transition>
+     <footer>
+      <img
+        class="logo-AR"
+        src="@/assets/images/AR.png"
+        alt="logo Assurance retraite"
+      />
+    </footer>
   </div>
 </template>
 
@@ -59,11 +66,21 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-#game {
-  background-color: #f2f2f2;
-  min-height: 100vh;
+<style lang="scss" >
+@import "@/scss/game/_game";
 
+#game {
+   --footer-size: 6rem;
+   width:100vw;
+  background-color: #f2f2f2;
+  min-height: calc(100vh - var(--footer-size));
+  .visual-report{
+    background: none;
+    // height: calc(100vh - 120px);
+        margin: 0 auto;
+        margin-top: 5rem;
+        padding-bottom: 20rem;
+  }
   .header{
     height:12.4rem;
     background-color: #fff;
@@ -89,9 +106,7 @@ export default {
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
-.visual-report {
-  background: none;
-}
+
 .overlay-off {
   position: fixed;
   background-color: transparent;
@@ -101,4 +116,6 @@ export default {
   bottom: 0;
   z-index: 9;
 }
+
+
 </style>

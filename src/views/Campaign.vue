@@ -89,7 +89,7 @@ import WikiTooltip from "@/components/Utils/WikiTooltip";
 export default {
    data(){
     return{
-      definition: `Le hameçonnage est une pratique de piratage informatiques qui consiste à envoyer un message destiné à amener une personne à se connecter sur un site et fournir des informations personnelles.`
+      definition: `Le hameçonnage est une pratique de piratage informatique qui consiste à envoyer un message destiné à amener une personne à se connecter sur un site et fournir des informations personnelles.`
     }
   },
   components:{

@@ -205,8 +205,6 @@ export default {
 };
 </script>
 <style lang="scss"  >
-@import "@/scss/game/_game.scss";
-
 
 .position9-1 {
   top: 37rem;

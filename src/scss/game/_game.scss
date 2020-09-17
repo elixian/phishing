@@ -1,14 +1,19 @@
 
 html{
   overflow-y: scroll;// afin d'aviter les saut de marge a droite à l'apparition du scroll
+  overflow-x: hidden;
+  // width: 100vw;
+
 }
-#app{
-  height: 100vh;
-}
+
 .wrapper--img{
+  position: relative;
+        width: 780px; 
+        margin: 0 auto;
     background-color: #faf9f7;
     border:1px solid #dfdfdf;
     border-radius: 5px;
+
   }
   .mail-wrapper{
     margin:0  1.8rem 2rem;
@@ -47,4 +52,20 @@ html{
   }
   [class^="tips-"]{	
     border-radius:3px;
+  }
+
+  //FOOTER
+
+  footer{
+    bottom:0;
+    height:6rem;
+    background-color: #fff;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logo-AR{
+      width:100px;
+      margin:0 auto;
+    }
   }

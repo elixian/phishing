@@ -23,7 +23,7 @@
       >
         <label for="authentic" @mouseup="setValue(false)">
           <input id="authentic" type="radio" name="choices" class="js_radio" />
-          <span  class="bold"
+          <span class="bold"
             ><img
               class="icone"
               src="@/assets/images/game/thumbs-up.png"
@@ -38,18 +38,28 @@
     <transition name="bounce">
       <div :class="['wrapper-result', stateResult]" v-if="nextStatmentButton">
         <div class="result-info" v-if="isPhishing == currentGame.isPhishing">
-          <img src="@/assets/images/game/clapping-hands.png" alt="" />
-          <p>
-            <span  class="bold">Bien vu !</span> c’est bien un mail
+          <div class="result">
+            <img src="@/assets/images/game/clapping-hands.png" alt="" />
+
+            <span class="bold">Bien vu !</span> c’est bien un mail
             {{ isSuccess ? "frauduleux" : "authentique" }}
-          </p>
+          </div>
+          <span class="result-info__spot"
+            >Découvrez les indices en cliquant ci-dessous sur
+            <span class="spot"></span
+          ></span>
         </div>
         <div class="result-info" v-else>
-          <img src="@/assets/images/game/anxious.png" alt="" />
-          <p>
-            <span  class="bold">Raté</span>, c’est un mail
+          <div class="result">
+            <img src="@/assets/images/game/anxious.png" alt="" />
+
+            <span class="bold">Raté</span>, c’est un mail
             {{ currentGame.isPhishing ? "frauduleux" : "authentique" }}
-          </p>
+          </div>
+          <span class="result-info__spot"
+            >Découvrez les indices en cliquant ci-dessous sur
+            <span class="spot"></span
+          ></span>
         </div>
       </div>
     </transition>
@@ -63,12 +73,12 @@
       Valider
     </button>
     <button
-      :class="['choice__validation',{result: isLastPage}]"
+      :class="['choice__validation', { result: isLastPage }]"
       type="button"
       @click="next"
       v-if="nextStatmentButton"
     >
-      {{ isLastPage ? 'Résulat' : 'Suivant'}}
+      {{ isLastPage ? "Résulat" : "Suivant" }}
     </button>
   </div>
 </template>
@@ -123,7 +133,7 @@ export default {
       f !== undefined ?? (f.checked = false);
       this.isPhishing = null; //on set à null
       this.setShowSpot(false);
-    
+
       if (!this.isLastPage) {
         this.$router.replace({ name: `mailgame0${this.activePage + 1}` });
         this.incrementStepper();
@@ -133,7 +143,7 @@ export default {
         this.resetPage();
       }
     },
-    ...mapActions("stepper", ["incrementStepper","resetPage"]),
+    ...mapActions("stepper", ["incrementStepper", "resetPage"]),
     ...mapActions("game", ["setShowSpot", "setScore", "setEndGame"]),
   },
 };
@@ -178,6 +188,7 @@ $grey-border: #bdbdbd;
 }
 .wrapper-result {
   @extend .choices;
+
   background-color: #fff;
 
   &::before {
@@ -211,14 +222,23 @@ $grey-border: #bdbdbd;
   }
   .result-info {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    font-size: 1.8rem;
+    width: 351px;
+    &__spot {
+      font-size: 1.2rem;
+    }
     img {
       width: 20px;
       height: 20px;
       margin-right: 1rem;
+    }
+    .result {
+      margin-top: -5px;
+      margin-bottom: 5px;
     }
   }
 }
@@ -299,14 +319,14 @@ label {
   span {
     display: flex;
     align-items: center;
-//border-radius: 14px;
+    //border-radius: 14px;
     padding: 2px 12px 2px 2px;
     transition: 0.25s;
 
     &:before {
       display: flex;
       content: "";
-      background-color: #07485E;
+      background-color: #07485e;
       width: 18px;
       height: 18px;
       border-radius: 50%;
@@ -335,9 +355,38 @@ label {
   &.inactive {
     visibility: hidden;
   }
-  &.result{
-    background-color:$spot-color;
-    color: $primary-color ;
+  &.result {
+    background-color: $spot-color;
+    color: $primary-color;
+  }
+}
+
+.spot {
+  display: inline-block;
+  position: relative;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: 5px;
+  border-radius: 50%;
+  background-color: #0c7193;
+  outline: none;
+  z-index: 50;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: inherit;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+    animation: beat 1.5s ease-in infinite;
   }
 }
 
@@ -358,6 +407,23 @@ label {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes beat {
+  $opacity: 0.2;
+  0% {
+    opacity: $opacity;
+    transform: scale(1);
+  }
+
+  70% {
+    opacity: $opacity;
+    transform: scale(2);
+  }
+
+  100% {
+    opacity: $opacity;
   }
 }
 </style>
