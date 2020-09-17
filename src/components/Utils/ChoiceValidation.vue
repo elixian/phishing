@@ -44,10 +44,6 @@
             <span class="bold">Bien vu !</span> c’est bien un mail
             {{ isSuccess ? "frauduleux" : "authentique" }}
           </div>
-          <!-- <span class="result-info__spot"
-            >Découvrez les indices en cliquant ci-dessous sur
-            <span class="spot"></span
-          ></span> -->
         </div>
         <div class="result-info" v-else>
           <div class="result">
@@ -56,10 +52,6 @@
             <span class="bold">Raté</span>, c’est un mail
             {{ currentGame.isPhishing ? "frauduleux" : "authentique" }}
           </div>
-          <!-- <span class="result-info__spot"
-            >Découvrez les indices en cliquant ci-dessous sur
-            <span class="spot"></span
-          ></span> -->
         </div>
       </div>
     </transition>
@@ -76,6 +68,7 @@
       :class="['choice__validation', { result: isLastPage }]"
       type="button"
       @click="next"
+      :disabled="disabled"
       v-if="nextStatmentButton"
     >
       {{ isLastPage ? "Résulat" : "Suivant" }}
@@ -101,6 +94,7 @@ export default {
       isPhishing: null, //default null no choice
       nextStatmentButton: false,
       isSuccess: false,
+      disabled:false
     };
   },
   computed: {
@@ -119,6 +113,13 @@ export default {
       this.isPhishing = v;
     },
     checkResponse() {
+      if(this.activePage === 1){
+        this.disabled = true;
+        var self = this;
+        setTimeout(function(){
+          self.disabled = false;
+        },1500)
+      }
       this.nextStatmentButton = true;
       this.isSuccess = this.currentGame.isPhishing && this.isPhishing;
       if (this.isPhishing === this.currentGame.isPhishing) {
@@ -128,20 +129,29 @@ export default {
     },
     next() {
       //get input checked and set to false
-      let radios = [...document.querySelectorAll(".js_radio")];
-      let f = radios.find((b) => b.checked);
-      f !== undefined ?? (f.checked = false);
-      this.isPhishing = null; //on set à null
-      this.setShowSpot(false);
 
-      if (!this.isLastPage) {
-        this.$router.replace({ name: `mailgame0${this.activePage + 1}` });
-        this.incrementStepper();
-        this.nextStatmentButton = false; // initialise le boutton suivant à false
-      } else {
-        this.setEndGame();
-        this.resetPage();
+
+      if (!this.disabled) {
+        let radios = [...document.querySelectorAll(".js_radio")];
+        let f = radios.find((b) => b.checked);
+        f !== undefined ?? (f.checked = false);
+        this.isPhishing = null; //on set à null
+        this.setShowSpot(false);
+
+        if (!this.isLastPage) {
+          this.$router.replace({ name: `mailgame0${this.activePage + 1}` });
+          this.incrementStepper();
+          this.nextStatmentButton = false; // initialise le boutton suivant à false
+        } else {
+          this.setEndGame();
+          this.resetPage();
+        }
       }
+    },
+    disabledTimer() {
+      return setTimeout(() => {
+        return false;
+      }, 1500);
     },
     ...mapActions("stepper", ["incrementStepper", "resetPage"]),
     ...mapActions("game", ["setShowSpot", "setScore", "setEndGame"]),
