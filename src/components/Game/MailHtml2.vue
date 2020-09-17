@@ -65,7 +65,7 @@
       <div class="wrapper--tooltip positionSpot" v-if="!understood">
         <div class="tooltip--info_start" role="tooltip">
           <p>
-            Découvrez les indices en cliquant sur les points :)
+            Découvrez les indices en cliquant sur les points bleus.
           </p>
           <button class="validationInfo_start" @mouseup="hideInfo">
             Compris
@@ -193,13 +193,12 @@ left: 21rem;
   background: white;
   border:1px solid $primary-color;
   left: 216%;
-  bottom:262px;
+  bottom:211px;
   font-size: $f-S;
   line-height: 1.5 * $f-S;
   padding-bottom: 1.5rem;
-  box-shadow: 0px 3px 2px hsla(0, 0%, 0%, 0.239);
-  
   animation: fadeIn 0.5s 1.2s ease-in-out forwards;
+  text-align: center;
   &::before {
     
     left: 50%;
@@ -227,7 +226,7 @@ border-bottom-width:0 ;
 @keyframes fadeIn{
   100%{
     opacity: 1;
-    transform: translateY(30px);
+    transform: translateY(-30px);
   }
 }
 </style>

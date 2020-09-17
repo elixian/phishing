@@ -44,10 +44,10 @@
             <span class="bold">Bien vu !</span> c’est bien un mail
             {{ isSuccess ? "frauduleux" : "authentique" }}
           </div>
-          <span class="result-info__spot"
+          <!-- <span class="result-info__spot"
             >Découvrez les indices en cliquant ci-dessous sur
             <span class="spot"></span
-          ></span>
+          ></span> -->
         </div>
         <div class="result-info" v-else>
           <div class="result">
@@ -56,10 +56,10 @@
             <span class="bold">Raté</span>, c’est un mail
             {{ currentGame.isPhishing ? "frauduleux" : "authentique" }}
           </div>
-          <span class="result-info__spot"
+          <!-- <span class="result-info__spot"
             >Découvrez les indices en cliquant ci-dessous sur
             <span class="spot"></span
-          ></span>
+          ></span> -->
         </div>
       </div>
     </transition>
