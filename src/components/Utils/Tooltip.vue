@@ -26,7 +26,15 @@
 <script>
 import { mapActions } from "vuex";
 export default {
-  props: ["infoOverlay", "positionSpot", "spotDarken"],
+  props: {
+    infoOverlay: String,
+    positionSpot: String,
+    spotDarken: String,
+    inactive: {
+      type: Boolean,
+      default: true,
+    },
+  },
   data() {
     return {
       tipsMemory: null,
@@ -35,16 +43,17 @@ export default {
   methods: {
     ...mapActions("presentation", ["showOverlay", "hideOverlay"]),
     showInfo(event) {
-      let tipnumber = this.positionSpot.split("-")[1];
-      this.showOverlay({
-        overlay: `.${this.infoOverlay}`,
-        tooltipInfo: event.target.nextSibling,
-        tips: `tips-${tipnumber}`,
-      });
-      let g = document.getElementsByClassName(`tips-${tipnumber}`);
+      if (this.inactive) {
+        let tipnumber = this.positionSpot.split("-")[1];
+        this.showOverlay({
+          overlay: `.${this.infoOverlay}`,
+          tooltipInfo: event.target.nextSibling,
+          tips: `tips-${tipnumber}`,
+        });
+        let g = document.getElementsByClassName(`tips-${tipnumber}`);
 
-      this.tipsMemory = [...g];
-
+        this.tipsMemory = [...g];
+      }
     },
     hideInfo() {
       this.tipsMemory.forEach((f) => {
@@ -75,10 +84,10 @@ export default {
 .wrapper--tooltip {
   position: absolute;
   z-index: 10;
-  height: 0;// hide wrapper
+  height: 0; // hide wrapper
 }
 .spot {
-  $size-spot:1.2rem;
+  $size-spot: 1.2rem;
   position: relative;
   width: $size-spot;
   height: $size-spot;
@@ -100,7 +109,7 @@ export default {
     border-radius: 50%;
     opacity: 0;
     transition: all 0.25s ease-in-out;
-    animation: social-button-beat 1.5s ease-in infinite ;
+    animation: social-button-beat 1.5s ease-in infinite;
   }
   &.darken {
     background-color: $spot-color-darken;
@@ -121,7 +130,6 @@ export default {
   box-shadow: 0px 3px 2px hsla(0, 0%, 0%, 0.239);
   top: -15px;
   &::before {
-    
     left: 50%;
     content: " ";
     height: 15px;
@@ -130,7 +138,7 @@ export default {
     pointer-events: none;
     background: #fff;
     border-top-left-radius: 3px;
-    transform: translate(-50%,-50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
     transform-origin: center center;
   }
   p {
@@ -142,7 +150,7 @@ export default {
 
 // Animation
 @keyframes social-button-beat {
-  $opacity:0.2;
+  $opacity: 0.2;
   0% {
     opacity: $opacity;
     transform: scale(1);
