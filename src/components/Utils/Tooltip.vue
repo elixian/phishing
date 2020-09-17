@@ -75,6 +75,7 @@ export default {
 .wrapper--tooltip {
   position: absolute;
   z-index: 10;
+  height: 0;// hide wrapper
 }
 .spot {
   $size-spot:1.2rem;

@@ -7,6 +7,7 @@
     <div class="mail-wrapper">
       <div class="exp-info">
         <span class="accro">R</span>
+        <div>
         <span class="mail ">
           Réinitialisation 
           <span
@@ -14,6 +15,8 @@
             >&gt;</span
           ></span
         >
+        <div class="time-zone">le 15/07/2020 à 10:17</div>
+        </div>
         <img
           class="buttons-mail"
           src="@/assets/images/game/buttons-mail.png"

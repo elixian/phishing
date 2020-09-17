@@ -7,10 +7,13 @@
     <div class="mail-wrapper">
       <div class="exp-info">
         <span class="accro">N</span>
+        <div>
         <span class="mail ">
           Notifications
           <span >&lt;<span class="tips-1">notifications@lassuranceretraites.fr</span>&gt;</span></span
         >
+        <div class="time-zone">le 26/03/2020 à 18:59</div>
+        </div>
         <img
           class="buttons-mail"
           src="@/assets/images/game/buttons-mail.png"
@@ -331,11 +334,11 @@ export default {
 
 
 .position6-1 {
-  top: 10rem;
+  top: 9rem;
   left: 25rem;
 }
 .position6-2 {
-  top: 3rem;
+  top: 4rem;
   left: 7rem;
 }
 .position6-3 {

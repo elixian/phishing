@@ -7,10 +7,14 @@
     <div class="mail-wrapper">
       <div class="exp-info">
         <span class="accro">N</span>
+        <div>
         <span class="mail ">
           Notifications <span class="tips-2">&lt;amazon@amaz0ne.eu
           &gt;</span></span
         >
+        <div class="time-zone">le 24/03/2020 à 18:07</div>
+
+        </div>
         <img
           class="buttons-mail"
           src="@/assets/images/game/buttons-mail.png"
@@ -146,11 +150,11 @@ a {
   text-decoration: none;
 }
 .position5-1 {
-  top: 39.9rem;
+  top: 38.9rem;
   left: 32rem;
 }
 .position5-2 {
-  top: 11rem;
+  top: 9rem;
   left: 22rem;
 }
 

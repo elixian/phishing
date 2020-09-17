@@ -7,13 +7,15 @@
     <div class="mail-wrapper">
       <div class="exp-info">
         <span class="accro">NA</span>
+        <div>
         <span class="mail ">
           News Assurance Maladie 
           <span
             >&lt;<span class="tips-2">infos@covid-maladie.online</span
-            >&gt;</span
-          ></span
-        >
+            >&gt;</span></span>
+                    <div class="time-zone">le 05/04/2020 à 15:59</div>
+
+        </div>
         <img
           class="buttons-mail"
           src="@/assets/images/game/buttons-mail.png"
@@ -229,7 +231,7 @@ export default {
 
 
 .position7-1 {
-  top: 3rem;
+  top: 4rem;
   left: 2rem;
 }
 .position7-2 {

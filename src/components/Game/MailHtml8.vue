@@ -7,6 +7,7 @@
     <div class="mail-wrapper">
       <div class="exp-info">
         <span class="accro">SC</span>
+        <div>
         <span class="mail ">
           Service Créance
           <span
@@ -14,6 +15,8 @@
             >&gt;</span
           ></span
         >
+        <div class="time-zone">le 25/05/2020 à 11:39</div>
+        </div>
         <img
           class="buttons-mail"
           src="@/assets/images/game/buttons-mail.png"

@@ -7,10 +7,13 @@
     <div class="mail-wrapper">
       <div class="exp-info">
         <span class="accro">NO</span>
+        <div>
         <span class="mail">
           Notifications Office &lt;notifications@crosoft.online
           &gt;</span
         >
+        <div class="time-zone">le 01/02/2020 à 17:05</div>
+        </div>
         <img
           class="buttons-mail"
           src="@/assets/images/game/buttons-mail.png"
