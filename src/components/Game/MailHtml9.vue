@@ -158,7 +158,7 @@
     <template v-if="currentGame.showSpot">
         <Tooltip infoOverlay="overlay9-1" positionSpot="position9-1" spot-darken=1>
         <template v-slot:textinfo>
-          Attention aux sujets aguichants ou décalés… Souvent ils sont la pour vous inciter à cliquer.
+          Attention aux sujets croustillants ou décalés… Souvent ils sont la pour vous inciter à cliquer.
 
         </template>
       </Tooltip>
