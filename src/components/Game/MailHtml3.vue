@@ -101,4 +101,8 @@ export default {
   top: 16.4rem;
   left: 12rem;
 }
+
+.tips-2{
+  padding: 2px;
+}
 </style>
