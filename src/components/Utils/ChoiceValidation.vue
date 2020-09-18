@@ -118,7 +118,7 @@ export default {
         var self = this;
         setTimeout(function(){
           self.disabled = false;
-        },1500)
+        },1800)
       }
       this.nextStatmentButton = true;
       this.isSuccess = this.currentGame.isPhishing && this.isPhishing;

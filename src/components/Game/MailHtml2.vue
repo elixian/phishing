@@ -226,7 +226,7 @@ border-bottom-width:0 ;
 @keyframes fadeIn{
   100%{
     opacity: 1;
-    transform: translateY(-30px);
+    transform: translateY(-25px);
   }
 }
 </style>
