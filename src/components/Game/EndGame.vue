@@ -306,6 +306,7 @@ margin-bottom: 10rem;
     }
     .sub-title {
       margin-top: 0.5rem;
+      font-weight: normal;
     }
   }
 }
@@ -322,6 +323,9 @@ margin-bottom: 10rem;
     font-size: $f-R;
     margin-bottom: 1rem;
     font-weight: bold;
+  }
+  &_desciption{
+    line-height: 1.6rem * 1.4;
   }
 }
 .tip-img {

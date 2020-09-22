@@ -3,7 +3,7 @@
     <div class="choices" v-if="!nextStatmentButton">
       <div :class="['choice choice__left', { active: isPhishing }]">
         <label for="phishing" @mouseup="setValue(true)">
-          <input id="phishing" type="radio" name="choices" class="js_radio" />
+          <input id="phishing" type="radio" name="choices" class="js_radio" :checked="isPhishing"/>
           <span class="bold"
             ><img
               class="icone"
@@ -22,7 +22,7 @@
         ]"
       >
         <label for="authentic" @mouseup="setValue(false)">
-          <input id="authentic" type="radio" name="choices" class="js_radio" />
+          <input id="authentic" type="radio" name="choices" class="js_radio" :checked="isPhishing == false" />
           <span class="bold"
             ><img
               class="icone"
