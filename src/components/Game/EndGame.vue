@@ -180,7 +180,7 @@ On vous explique qu’on vous a piraté votre <span class="router">routeur</span
       <section class="tip-item">
         <img
           class="tip-img"
-          src="@/assets/images/game/img-reflexe-06.png"
+          src="@/assets/images/game/img-reflexe-07.png"
           alt=""
         />
         <div class="tip-item_info">

@@ -173,6 +173,7 @@ p {
     height: 6px;
     bottom: 0px;
     left: 0;
+    z-index: -1;
   }
 }
 </style>
