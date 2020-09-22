@@ -313,8 +313,10 @@ margin-bottom: 10rem;
 .tip-item {
   display: flex;
   margin-bottom: 3rem;
+
   &_info {
     margin-left: 2rem;
+    margin-top: 1rem;
   }
   &_title {
     font-size: $f-R;
@@ -323,6 +325,6 @@ margin-bottom: 10rem;
   }
 }
 .tip-img {
-  height: 20px;
+  height: 40px;
 }
 </style>
