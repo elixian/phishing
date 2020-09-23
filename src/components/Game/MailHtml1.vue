@@ -6,11 +6,11 @@
 
     <div class="mail-wrapper">
       <div class="exp-info">
-        <span class="accro">SR</span>
+        <span class="accro">SC</span>
         <div>
           <span class="mail">
             Service Remboursement
-            &lt;service-remboursement@train-tgv.info&gt;</span
+            &lt;service-creance@vanc.email&gt;</span
           >
           <div class="time-zone">le 04/06/2020 à 07:56</div>
         </div>
