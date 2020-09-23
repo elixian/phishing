@@ -9,7 +9,7 @@
         <span class="accro">SC</span>
         <div>
           <span class="mail">
-            Service Remboursement
+            Service Créance
             &lt;service-creance@vanc.email&gt;</span
           >
           <div class="time-zone">le 04/06/2020 à 07:56</div>
