@@ -134,7 +134,6 @@ export default {
         this.understood= true;
     },
     handler(event){
-      console.log('in handler ', event)
       if(!this.understood){
           event.stopPropagation();
       }  
