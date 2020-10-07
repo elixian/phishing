@@ -15,7 +15,8 @@
             >&gt;</span
           ></span
         >
-        <div class="time-zone">le 15/07/2020 à 10:17</div>
+        <div class="time-zone">le 26/02/2020 à 10:17</div>
+        
         </div>
         <img
           class="buttons-mail"
@@ -188,7 +189,7 @@
                                               >Suite à votre demande du
                                               26/02/2020, nous vous communiquons
                                               un lien permettant de
-                                              reinitialiser votre mot de passe
+                                              réinitialiser votre mot de passe
                                               afin de pouvoir accéder à votre
                                               espace personnel sur
                                               <a
