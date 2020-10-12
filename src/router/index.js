@@ -3,9 +3,6 @@ import VueRouter from 'vue-router'
 
 
 
-import Home from '@/views/Home'
-
-
 const dev = process.env.NODE_ENV !== 'production';
 Vue.use(VueRouter)
 
@@ -16,9 +13,9 @@ Vue.use(VueRouter)
       component: () => import(/* webpackChunkName: "NotFound" */ '../views/NotFound.vue')
     },
   {
-    path: '/d',
-    name: 'Home',
-    component: Home
+    path: '/ಥ_ಥ',
+    name: 'Omg',
+    component: () => import(/* webpackChunkName: "NotFound" */ '../views/Omg.vue')
   },
   {
     path: '/camp',
