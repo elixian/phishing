@@ -3,7 +3,7 @@ version: "3.7"
 services:
 
   ui:
-    image: rodolpheche/phishing-ui:${VERSION:-latest}
+    image: registry.dev.n18.an.cnav/phishing/phishing-ui:${VERSION:-latest}
     networks:
       - front-network
     deploy:
