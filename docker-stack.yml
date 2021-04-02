@@ -8,11 +8,11 @@ services:
       - front-network
     deploy:
       labels:
-        - "traefik.docker.network=front-network"
-        - "traefik.http.routers.phishing-${NEWCOLOR:-blue}.priority=10"
-        - "traefik.http.routers.phishing-${NEWCOLOR:-blue}.rule=HostRegexp(`phishing.{domain:[a-z0-9\\.]+}`)"
-        # - "traefik.http.routers.phishing-${NEWCOLOR:-blue}.rule=Host(`slt03092.dev.n18.an.cnav`)"
-        - "traefik.http.services.phishing-${NEWCOLOR:-blue}.loadbalancer.server.port=80"
+        # - "traefik.docker.network=front-network"
+        # - "traefik.http.routers.phishing-${NEWCOLOR:-blue}.priority=10"
+        # - "traefik.http.routers.phishing-${NEWCOLOR:-blue}.rule=HostRegexp(`phishing.{domain:[a-z0-9\\.]+}`)"
+        # # - "traefik.http.routers.phishing-${NEWCOLOR:-blue}.rule=Host(`slt03092.dev.n18.an.cnav`)"
+        # - "traefik.http.services.phishing-${NEWCOLOR:-blue}.loadbalancer.server.port=80"
 
 networks:
 
